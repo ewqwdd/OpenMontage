@@ -1,0 +1,5616 @@
+{
+ "meta": {
+  "fps": 30,
+  "bpm": 117.46,
+  "beat_period_s": 0.5108,
+  "beat_period_frames": 15.324,
+  "grid_phase_s": 0.1,
+  "note": "beat index b: t = 0.100 + 0.5108*b; bar = floor(b/4)+1; bar 5 = bass entry (8.27 s), bar 9 = drop (16.45 s). frames are 0-based video frames; frame f spans [f/30,(f+1)/30).",
+  "part2_cycle": "30 frames (1.000 s) vs 2 beats = 30.65 frames; cycle start drifts +1.9 -> -1.9 frames around the even beats over 7 cycles",
+  "sources": [
+   "song.wav",
+   "build.py tables",
+   "reports/glitch_v2.py SCHED_TXT",
+   "reports/motion.md XF",
+   "reports/text_v2.py AMP/BAND"
+  ]
+ },
+ "events": [
+  {
+   "time": 0.0,
+   "frame": 0,
+   "beat": -0.2,
+   "nearest_beat": 0,
+   "beat_offset_frames": -3.0,
+   "bar": 0,
+   "beat_in_bar": 4.8,
+   "type": "audio_section",
+   "name": "intro (4 bars, no sub-bass)",
+   "bars": "1-4"
+  },
+  {
+   "frame": 0,
+   "time": 0.0,
+   "beat": -0.2,
+   "nearest_beat": 0,
+   "beat_offset_frames": -3.0,
+   "bar": 0,
+   "beat_in_bar": 4.8,
+   "type": "line_start",
+   "line": 0,
+   "part": 1,
+   "text": "я стою на остановке",
+   "n_words": 4,
+   "n_chars": 19,
+   "case": "lower",
+   "red": false,
+   "end_frame": 88,
+   "dur_beats": 5.81
+  },
+  {
+   "frame": 0,
+   "time": 0.0,
+   "beat": -0.2,
+   "nearest_beat": 0,
+   "beat_offset_frames": -3.0,
+   "bar": 0,
+   "beat_in_bar": 4.8,
+   "type": "word_onset",
+   "word": "я",
+   "line": 0,
+   "part": 1,
+   "reveal": "hard cut, cumulative within line; o-1 and o horizontally echoed ~4px and dimmed to ~0.8",
+   "red": false
+  },
+  {
+   "frame": 24,
+   "time": 0.8,
+   "beat": 1.37,
+   "nearest_beat": 1,
+   "beat_offset_frames": 5.7,
+   "bar": 1,
+   "beat_in_bar": 2.37,
+   "type": "word_onset",
+   "word": "стою",
+   "line": 0,
+   "part": 1,
+   "reveal": "hard cut, cumulative within line; o-1 and o horizontally echoed ~4px and dimmed to ~0.8",
+   "red": false
+  },
+  {
+   "frame": 31,
+   "time": 1.033,
+   "beat": 1.83,
+   "nearest_beat": 2,
+   "beat_offset_frames": -2.6,
+   "bar": 1,
+   "beat_in_bar": 2.83,
+   "type": "overlay_loop_tear_burst",
+   "loop_period_frames": 89,
+   "params": "text-only scanline displacement burst amp~1 decaying over 5 fr (free-running, not beat-locked)"
+  },
+  {
+   "frame": 43,
+   "time": 1.433,
+   "beat": 2.61,
+   "nearest_beat": 3,
+   "beat_offset_frames": -6.0,
+   "bar": 1,
+   "beat_in_bar": 3.61,
+   "type": "word_onset",
+   "word": "на",
+   "line": 0,
+   "part": 1,
+   "reveal": "hard cut, cumulative within line; o-1 and o horizontally echoed ~4px and dimmed to ~0.8",
+   "red": false
+  },
+  {
+   "frame": 53,
+   "time": 1.767,
+   "beat": 3.26,
+   "nearest_beat": 3,
+   "beat_offset_frames": 4.0,
+   "bar": 1,
+   "beat_in_bar": 4.26,
+   "type": "word_onset",
+   "word": "остановке",
+   "line": 0,
+   "part": 1,
+   "reveal": "hard cut, cumulative within line; o-1 and o horizontally echoed ~4px and dimmed to ~0.8",
+   "red": false
+  },
+  {
+   "frame": 60,
+   "time": 2.0,
+   "beat": 3.72,
+   "nearest_beat": 4,
+   "beat_offset_frames": -4.3,
+   "bar": 1,
+   "beat_in_bar": 4.72,
+   "type": "overlay_loop_tear_burst_small",
+   "loop_period_frames": 89,
+   "params": "amp~0.4"
+  },
+  {
+   "frame": 77,
+   "time": 2.567,
+   "beat": 4.83,
+   "nearest_beat": 5,
+   "beat_offset_frames": -2.6,
+   "bar": 2,
+   "beat_in_bar": 1.83,
+   "type": "bg_crossfade_start",
+   "to_line_start": 89,
+   "length_frames": 12,
+   "length_beats": 0.78
+  },
+  {
+   "frame": 89,
+   "time": 2.967,
+   "beat": 5.61,
+   "nearest_beat": 6,
+   "beat_offset_frames": -5.9,
+   "bar": 2,
+   "beat_in_bar": 2.61,
+   "type": "bg_crossfade_end_clip_change",
+   "length_frames": 12,
+   "clip_change": true
+  },
+  {
+   "frame": 89,
+   "time": 2.967,
+   "beat": 5.61,
+   "nearest_beat": 6,
+   "beat_offset_frames": -5.9,
+   "bar": 2,
+   "beat_in_bar": 2.61,
+   "type": "line_start",
+   "line": 1,
+   "part": 1,
+   "text": "и жду автобус",
+   "n_words": 3,
+   "n_chars": 13,
+   "case": "lower",
+   "red": false,
+   "end_frame": 130,
+   "dur_beats": 2.74
+  },
+  {
+   "frame": 89,
+   "time": 2.967,
+   "beat": 5.61,
+   "nearest_beat": 6,
+   "beat_offset_frames": -5.9,
+   "bar": 2,
+   "beat_in_bar": 2.61,
+   "type": "word_onset",
+   "word": "и",
+   "line": 1,
+   "part": 1,
+   "reveal": "hard cut, cumulative within line; o-1 and o horizontally echoed ~4px and dimmed to ~0.8",
+   "red": false
+  },
+  {
+   "frame": 96,
+   "time": 3.2,
+   "beat": 6.07,
+   "nearest_beat": 6,
+   "beat_offset_frames": 1.1,
+   "bar": 2,
+   "beat_in_bar": 3.07,
+   "type": "word_onset",
+   "word": "жду",
+   "line": 1,
+   "part": 1,
+   "reveal": "hard cut, cumulative within line; o-1 and o horizontally echoed ~4px and dimmed to ~0.8",
+   "red": false
+  },
+  {
+   "frame": 107,
+   "time": 3.567,
+   "beat": 6.79,
+   "nearest_beat": 7,
+   "beat_offset_frames": -3.3,
+   "bar": 2,
+   "beat_in_bar": 3.79,
+   "type": "word_onset",
+   "word": "автобус",
+   "line": 1,
+   "part": 1,
+   "reveal": "hard cut, cumulative within line; o-1 and o horizontally echoed ~4px and dimmed to ~0.8",
+   "red": false
+  },
+  {
+   "frame": 120,
+   "time": 4.0,
+   "beat": 7.64,
+   "nearest_beat": 8,
+   "beat_offset_frames": -5.6,
+   "bar": 2,
+   "beat_in_bar": 4.64,
+   "type": "overlay_loop_tear_burst",
+   "loop_period_frames": 89,
+   "params": "text-only scanline displacement burst amp~1 decaying over 5 fr (free-running, not beat-locked)"
+  },
+  {
+   "frame": 122,
+   "time": 4.067,
+   "beat": 7.77,
+   "nearest_beat": 8,
+   "beat_offset_frames": -3.6,
+   "bar": 2,
+   "beat_in_bar": 4.77,
+   "type": "bg_crossfade_start",
+   "to_line_start": 131,
+   "length_frames": 9,
+   "length_beats": 0.59
+  },
+  {
+   "frame": 131,
+   "time": 4.367,
+   "beat": 8.35,
+   "nearest_beat": 8,
+   "beat_offset_frames": 5.4,
+   "bar": 3,
+   "beat_in_bar": 1.35,
+   "type": "bg_crossfade_end_clip_change",
+   "length_frames": 9,
+   "clip_change": true
+  },
+  {
+   "frame": 131,
+   "time": 4.367,
+   "beat": 8.35,
+   "nearest_beat": 8,
+   "beat_offset_frames": 5.4,
+   "bar": 3,
+   "beat_in_bar": 1.35,
+   "type": "line_start",
+   "line": 2,
+   "part": 1,
+   "text": "я замарала все кроссовки",
+   "n_words": 4,
+   "n_chars": 24,
+   "case": "lower",
+   "red": false,
+   "end_frame": 211,
+   "dur_beats": 5.29
+  },
+  {
+   "frame": 131,
+   "time": 4.367,
+   "beat": 8.35,
+   "nearest_beat": 8,
+   "beat_offset_frames": 5.4,
+   "bar": 3,
+   "beat_in_bar": 1.35,
+   "type": "word_onset",
+   "word": "я",
+   "line": 2,
+   "part": 1,
+   "reveal": "hard cut, cumulative within line; o-1 and o horizontally echoed ~4px and dimmed to ~0.8",
+   "red": false
+  },
+  {
+   "frame": 145,
+   "time": 4.833,
+   "beat": 9.27,
+   "nearest_beat": 9,
+   "beat_offset_frames": 4.1,
+   "bar": 3,
+   "beat_in_bar": 2.27,
+   "type": "word_onset",
+   "word": "замарала",
+   "line": 2,
+   "part": 1,
+   "reveal": "hard cut, cumulative within line; o-1 and o horizontally echoed ~4px and dimmed to ~0.8",
+   "red": false
+  },
+  {
+   "frame": 149,
+   "time": 4.967,
+   "beat": 9.53,
+   "nearest_beat": 10,
+   "beat_offset_frames": -7.2,
+   "bar": 3,
+   "beat_in_bar": 2.53,
+   "type": "overlay_loop_tear_burst_small",
+   "loop_period_frames": 89,
+   "params": "amp~0.4"
+  },
+  {
+   "frame": 172,
+   "time": 5.733,
+   "beat": 11.03,
+   "nearest_beat": 11,
+   "beat_offset_frames": 0.4,
+   "bar": 3,
+   "beat_in_bar": 4.03,
+   "type": "word_onset",
+   "word": "все",
+   "line": 2,
+   "part": 1,
+   "reveal": "hard cut, cumulative within line; o-1 and o horizontally echoed ~4px and dimmed to ~0.8",
+   "red": false
+  },
+  {
+   "frame": 182,
+   "time": 6.067,
+   "beat": 11.68,
+   "nearest_beat": 12,
+   "beat_offset_frames": -4.9,
+   "bar": 3,
+   "beat_in_bar": 4.68,
+   "type": "word_onset",
+   "word": "кроссовки",
+   "line": 2,
+   "part": 1,
+   "reveal": "hard cut, cumulative within line; o-1 and o horizontally echoed ~4px and dimmed to ~0.8",
+   "red": false
+  },
+  {
+   "frame": 205,
+   "time": 6.833,
+   "beat": 13.18,
+   "nearest_beat": 13,
+   "beat_offset_frames": 2.8,
+   "bar": 4,
+   "beat_in_bar": 2.18,
+   "type": "bg_crossfade_start",
+   "to_line_start": 212,
+   "length_frames": 7,
+   "length_beats": 0.46
+  },
+  {
+   "frame": 209,
+   "time": 6.967,
+   "beat": 13.44,
+   "nearest_beat": 13,
+   "beat_offset_frames": 6.8,
+   "bar": 4,
+   "beat_in_bar": 2.44,
+   "type": "overlay_loop_tear_burst",
+   "loop_period_frames": 89,
+   "params": "text-only scanline displacement burst amp~1 decaying over 5 fr (free-running, not beat-locked)"
+  },
+  {
+   "frame": 212,
+   "time": 7.067,
+   "beat": 13.64,
+   "nearest_beat": 14,
+   "beat_offset_frames": -5.5,
+   "bar": 4,
+   "beat_in_bar": 2.64,
+   "type": "bg_crossfade_end_clip_change",
+   "length_frames": 7,
+   "clip_change": true
+  },
+  {
+   "frame": 212,
+   "time": 7.067,
+   "beat": 13.64,
+   "nearest_beat": 14,
+   "beat_offset_frames": -5.5,
+   "bar": 4,
+   "beat_in_bar": 2.64,
+   "type": "line_start",
+   "line": 3,
+   "part": 1,
+   "text": "слякоть и холод",
+   "n_words": 3,
+   "n_chars": 15,
+   "case": "lower",
+   "red": false,
+   "end_frame": 250,
+   "dur_beats": 2.55
+  },
+  {
+   "frame": 212,
+   "time": 7.067,
+   "beat": 13.64,
+   "nearest_beat": 14,
+   "beat_offset_frames": -5.5,
+   "bar": 4,
+   "beat_in_bar": 2.64,
+   "type": "word_onset",
+   "word": "слякоть",
+   "line": 3,
+   "part": 1,
+   "reveal": "hard cut, cumulative within line; o-1 and o horizontally echoed ~4px and dimmed to ~0.8",
+   "red": false
+  },
+  {
+   "frame": 228,
+   "time": 7.6,
+   "beat": 14.68,
+   "nearest_beat": 15,
+   "beat_offset_frames": -4.9,
+   "bar": 4,
+   "beat_in_bar": 3.68,
+   "type": "word_onset",
+   "word": "и",
+   "line": 3,
+   "part": 1,
+   "reveal": "hard cut, cumulative within line; o-1 and o horizontally echoed ~4px and dimmed to ~0.8",
+   "red": false
+  },
+  {
+   "frame": 238,
+   "time": 7.933,
+   "beat": 15.34,
+   "nearest_beat": 15,
+   "beat_offset_frames": 5.1,
+   "bar": 4,
+   "beat_in_bar": 4.34,
+   "type": "overlay_loop_tear_burst_small",
+   "loop_period_frames": 89,
+   "params": "amp~0.4"
+  },
+  {
+   "frame": 238,
+   "time": 7.933,
+   "beat": 15.34,
+   "nearest_beat": 15,
+   "beat_offset_frames": 5.1,
+   "bar": 4,
+   "beat_in_bar": 4.34,
+   "type": "word_onset",
+   "word": "холод",
+   "line": 3,
+   "part": 1,
+   "reveal": "hard cut, cumulative within line; o-1 and o horizontally echoed ~4px and dimmed to ~0.8",
+   "red": false
+  },
+  {
+   "frame": 240,
+   "time": 8.0,
+   "beat": 15.47,
+   "nearest_beat": 15,
+   "beat_offset_frames": 7.1,
+   "bar": 4,
+   "beat_in_bar": 4.47,
+   "type": "bg_crossfade_start",
+   "to_line_start": 251,
+   "length_frames": 11,
+   "length_beats": 0.72
+  },
+  {
+   "time": 8.273,
+   "frame": 248,
+   "beat": 16.0,
+   "nearest_beat": 16,
+   "beat_offset_frames": 0.0,
+   "bar": 5,
+   "beat_in_bar": 1.0,
+   "type": "audio_section",
+   "name": "bass/808 enters (+30 dB sub), preceded by 0.12 s mid/high dip 8.15-8.26 s; NO visual event",
+   "bars": "5-8"
+  },
+  {
+   "frame": 251,
+   "time": 8.367,
+   "beat": 16.18,
+   "nearest_beat": 16,
+   "beat_offset_frames": 2.8,
+   "bar": 5,
+   "beat_in_bar": 1.18,
+   "type": "bg_crossfade_end_clip_change",
+   "length_frames": 11,
+   "clip_change": true
+  },
+  {
+   "frame": 251,
+   "time": 8.367,
+   "beat": 16.18,
+   "nearest_beat": 16,
+   "beat_offset_frames": 2.8,
+   "bar": 5,
+   "beat_in_bar": 1.18,
+   "type": "line_start",
+   "line": 4,
+   "part": 1,
+   "text": "на улице хочется сдохнуть",
+   "n_words": 4,
+   "n_chars": 25,
+   "case": "lower",
+   "red": false,
+   "end_frame": 334,
+   "dur_beats": 5.48
+  },
+  {
+   "frame": 251,
+   "time": 8.367,
+   "beat": 16.18,
+   "nearest_beat": 16,
+   "beat_offset_frames": 2.8,
+   "bar": 5,
+   "beat_in_bar": 1.18,
+   "type": "word_onset",
+   "word": "на",
+   "line": 4,
+   "part": 1,
+   "reveal": "hard cut, cumulative within line; o-1 and o horizontally echoed ~4px and dimmed to ~0.8",
+   "red": false
+  },
+  {
+   "frame": 264,
+   "time": 8.8,
+   "beat": 17.03,
+   "nearest_beat": 17,
+   "beat_offset_frames": 0.5,
+   "bar": 5,
+   "beat_in_bar": 2.03,
+   "type": "word_onset",
+   "word": "улице",
+   "line": 4,
+   "part": 1,
+   "reveal": "hard cut, cumulative within line; o-1 and o horizontally echoed ~4px and dimmed to ~0.8",
+   "red": false
+  },
+  {
+   "frame": 290,
+   "time": 9.667,
+   "beat": 18.73,
+   "nearest_beat": 19,
+   "beat_offset_frames": -4.2,
+   "bar": 5,
+   "beat_in_bar": 3.73,
+   "type": "word_onset",
+   "word": "хочется",
+   "line": 4,
+   "part": 1,
+   "reveal": "hard cut, cumulative within line; o-1 and o horizontally echoed ~4px and dimmed to ~0.8",
+   "red": false
+  },
+  {
+   "frame": 298,
+   "time": 9.933,
+   "beat": 19.25,
+   "nearest_beat": 19,
+   "beat_offset_frames": 3.8,
+   "bar": 5,
+   "beat_in_bar": 4.25,
+   "type": "overlay_loop_tear_burst",
+   "loop_period_frames": 89,
+   "params": "text-only scanline displacement burst amp~1 decaying over 5 fr (free-running, not beat-locked)"
+  },
+  {
+   "frame": 313,
+   "time": 10.433,
+   "beat": 20.23,
+   "nearest_beat": 20,
+   "beat_offset_frames": 3.5,
+   "bar": 6,
+   "beat_in_bar": 1.23,
+   "type": "word_onset",
+   "word": "сдохнуть",
+   "line": 4,
+   "part": 1,
+   "reveal": "hard cut, cumulative within line; o-1 and o horizontally echoed ~4px and dimmed to ~0.8",
+   "red": false
+  },
+  {
+   "frame": 327,
+   "time": 10.9,
+   "beat": 21.14,
+   "nearest_beat": 21,
+   "beat_offset_frames": 2.2,
+   "bar": 6,
+   "beat_in_bar": 2.14,
+   "type": "overlay_loop_tear_burst_small",
+   "loop_period_frames": 89,
+   "params": "amp~0.4"
+  },
+  {
+   "frame": 335,
+   "time": 11.167,
+   "beat": 21.67,
+   "nearest_beat": 22,
+   "beat_offset_frames": -5.1,
+   "bar": 6,
+   "beat_in_bar": 2.67,
+   "type": "line_change_without_clip_change",
+   "note": "same bus shot continues"
+  },
+  {
+   "frame": 335,
+   "time": 11.167,
+   "beat": 21.67,
+   "nearest_beat": 22,
+   "beat_offset_frames": -5.1,
+   "bar": 6,
+   "beat_in_bar": 2.67,
+   "type": "line_start",
+   "line": 5,
+   "part": 1,
+   "text": "сажусь в автобус",
+   "n_words": 3,
+   "n_chars": 16,
+   "case": "lower",
+   "red": false,
+   "end_frame": 393,
+   "dur_beats": 3.85
+  },
+  {
+   "frame": 335,
+   "time": 11.167,
+   "beat": 21.67,
+   "nearest_beat": 22,
+   "beat_offset_frames": -5.1,
+   "bar": 6,
+   "beat_in_bar": 2.67,
+   "type": "word_onset",
+   "word": "сажусь",
+   "line": 5,
+   "part": 1,
+   "reveal": "hard cut, cumulative within line; o-1 and o horizontally echoed ~4px and dimmed to ~0.8",
+   "red": false
+  },
+  {
+   "frame": 347,
+   "time": 11.567,
+   "beat": 22.45,
+   "nearest_beat": 22,
+   "beat_offset_frames": 6.9,
+   "bar": 6,
+   "beat_in_bar": 3.45,
+   "type": "word_onset",
+   "word": "в",
+   "line": 5,
+   "part": 1,
+   "reveal": "hard cut, cumulative within line; o-1 and o horizontally echoed ~4px and dimmed to ~0.8",
+   "red": false
+  },
+  {
+   "frame": 356,
+   "time": 11.867,
+   "beat": 23.04,
+   "nearest_beat": 23,
+   "beat_offset_frames": 0.5,
+   "bar": 6,
+   "beat_in_bar": 4.04,
+   "type": "word_onset",
+   "word": "автобус",
+   "line": 5,
+   "part": 1,
+   "reveal": "hard cut, cumulative within line; o-1 and o horizontally echoed ~4px and dimmed to ~0.8",
+   "red": false
+  },
+  {
+   "frame": 385,
+   "time": 12.833,
+   "beat": 24.93,
+   "nearest_beat": 25,
+   "beat_offset_frames": -1.1,
+   "bar": 7,
+   "beat_in_bar": 1.93,
+   "type": "bg_crossfade_start",
+   "to_line_start": 394,
+   "length_frames": 9,
+   "length_beats": 0.59
+  },
+  {
+   "frame": 387,
+   "time": 12.9,
+   "beat": 25.06,
+   "nearest_beat": 25,
+   "beat_offset_frames": 0.9,
+   "bar": 7,
+   "beat_in_bar": 2.06,
+   "type": "overlay_loop_tear_burst",
+   "loop_period_frames": 89,
+   "params": "text-only scanline displacement burst amp~1 decaying over 5 fr (free-running, not beat-locked)"
+  },
+  {
+   "frame": 394,
+   "time": 13.133,
+   "beat": 25.52,
+   "nearest_beat": 26,
+   "beat_offset_frames": -7.4,
+   "bar": 7,
+   "beat_in_bar": 2.52,
+   "type": "bg_crossfade_end_clip_change",
+   "length_frames": 9,
+   "clip_change": true
+  },
+  {
+   "frame": 394,
+   "time": 13.133,
+   "beat": 25.52,
+   "nearest_beat": 26,
+   "beat_offset_frames": -7.4,
+   "bar": 7,
+   "beat_in_bar": 2.52,
+   "type": "line_start",
+   "line": 6,
+   "part": 1,
+   "text": "но когда я вижу тебя",
+   "n_words": 5,
+   "n_chars": 20,
+   "case": "lower",
+   "red": false,
+   "end_frame": 455,
+   "dur_beats": 4.05
+  },
+  {
+   "frame": 394,
+   "time": 13.133,
+   "beat": 25.52,
+   "nearest_beat": 26,
+   "beat_offset_frames": -7.4,
+   "bar": 7,
+   "beat_in_bar": 2.52,
+   "type": "word_onset",
+   "word": "но",
+   "line": 6,
+   "part": 1,
+   "reveal": "hard cut, cumulative within line; o-1 and o horizontally echoed ~4px and dimmed to ~0.8",
+   "red": false
+  },
+  {
+   "frame": 405,
+   "time": 13.5,
+   "beat": 26.23,
+   "nearest_beat": 26,
+   "beat_offset_frames": 3.6,
+   "bar": 7,
+   "beat_in_bar": 3.23,
+   "type": "word_onset",
+   "word": "когда",
+   "line": 6,
+   "part": 1,
+   "reveal": "hard cut, cumulative within line; o-1 and o horizontally echoed ~4px and dimmed to ~0.8",
+   "red": false
+  },
+  {
+   "frame": 416,
+   "time": 13.867,
+   "beat": 26.95,
+   "nearest_beat": 27,
+   "beat_offset_frames": -0.7,
+   "bar": 7,
+   "beat_in_bar": 3.95,
+   "type": "overlay_loop_tear_burst_small",
+   "loop_period_frames": 89,
+   "params": "amp~0.4"
+  },
+  {
+   "frame": 418,
+   "time": 13.933,
+   "beat": 27.08,
+   "nearest_beat": 27,
+   "beat_offset_frames": 1.3,
+   "bar": 7,
+   "beat_in_bar": 4.08,
+   "type": "word_onset",
+   "word": "я",
+   "line": 6,
+   "part": 1,
+   "reveal": "hard cut, cumulative within line; o-1 and o horizontally echoed ~4px and dimmed to ~0.8",
+   "red": false
+  },
+  {
+   "frame": 427,
+   "time": 14.233,
+   "beat": 27.67,
+   "nearest_beat": 28,
+   "beat_offset_frames": -5.1,
+   "bar": 7,
+   "beat_in_bar": 4.67,
+   "type": "word_onset",
+   "word": "вижу",
+   "line": 6,
+   "part": 1,
+   "reveal": "hard cut, cumulative within line; o-1 and o horizontally echoed ~4px and dimmed to ~0.8",
+   "red": false
+  },
+  {
+   "frame": 440,
+   "time": 14.667,
+   "beat": 28.52,
+   "nearest_beat": 29,
+   "beat_offset_frames": -7.4,
+   "bar": 8,
+   "beat_in_bar": 1.52,
+   "type": "word_onset",
+   "word": "тебя",
+   "line": 6,
+   "part": 1,
+   "reveal": "hard cut, cumulative within line; o-1 and o horizontally echoed ~4px and dimmed to ~0.8",
+   "red": false
+  },
+  {
+   "frame": 450,
+   "time": 15.0,
+   "beat": 29.17,
+   "nearest_beat": 29,
+   "beat_offset_frames": 2.6,
+   "bar": 8,
+   "beat_in_bar": 2.17,
+   "type": "bg_crossfade_start",
+   "to_line_start": 456,
+   "length_frames": 6,
+   "length_beats": 0.39
+  },
+  {
+   "frame": 456,
+   "time": 15.2,
+   "beat": 29.56,
+   "nearest_beat": 30,
+   "beat_offset_frames": -6.7,
+   "bar": 8,
+   "beat_in_bar": 2.56,
+   "type": "bg_crossfade_end_clip_change",
+   "length_frames": 6,
+   "clip_change": true
+  },
+  {
+   "frame": 456,
+   "time": 15.2,
+   "beat": 29.56,
+   "nearest_beat": 30,
+   "beat_offset_frames": -6.7,
+   "bar": 8,
+   "beat_in_bar": 2.56,
+   "type": "line_start",
+   "line": 7,
+   "part": 1,
+   "text": "мне кажется что",
+   "n_words": 3,
+   "n_chars": 15,
+   "case": "lower",
+   "red": false,
+   "end_frame": 494,
+   "dur_beats": 2.55
+  },
+  {
+   "frame": 456,
+   "time": 15.2,
+   "beat": 29.56,
+   "nearest_beat": 30,
+   "beat_offset_frames": -6.7,
+   "bar": 8,
+   "beat_in_bar": 2.56,
+   "type": "word_onset",
+   "word": "мне",
+   "line": 7,
+   "part": 1,
+   "reveal": "hard cut, cumulative within line; o-1 and o horizontally echoed ~4px and dimmed to ~0.8",
+   "red": false
+  },
+  {
+   "frame": 465,
+   "time": 15.5,
+   "beat": 30.15,
+   "nearest_beat": 30,
+   "beat_offset_frames": 2.3,
+   "bar": 8,
+   "beat_in_bar": 3.15,
+   "type": "word_onset",
+   "word": "кажется",
+   "line": 7,
+   "part": 1,
+   "reveal": "hard cut, cumulative within line; o-1 and o horizontally echoed ~4px and dimmed to ~0.8",
+   "red": false
+  },
+  {
+   "frame": 476,
+   "time": 15.867,
+   "beat": 30.87,
+   "nearest_beat": 31,
+   "beat_offset_frames": -2.0,
+   "bar": 8,
+   "beat_in_bar": 3.87,
+   "type": "overlay_loop_tear_burst",
+   "loop_period_frames": 89,
+   "params": "text-only scanline displacement burst amp~1 decaying over 5 fr (free-running, not beat-locked)"
+  },
+  {
+   "frame": 487,
+   "time": 16.233,
+   "beat": 31.58,
+   "nearest_beat": 32,
+   "beat_offset_frames": -6.4,
+   "bar": 8,
+   "beat_in_bar": 4.58,
+   "type": "word_onset",
+   "word": "что",
+   "line": 7,
+   "part": 1,
+   "reveal": "hard cut, cumulative within line; o-1 and o horizontally echoed ~4px and dimmed to ~0.8",
+   "red": false
+  },
+  {
+   "time": 16.446,
+   "frame": 493,
+   "beat": 32.0,
+   "nearest_beat": 32,
+   "beat_offset_frames": 0.0,
+   "bar": 9,
+   "beat_in_bar": 1.0,
+   "type": "audio_section",
+   "name": "DROP: high band +6 dB, presence +4-5 dB, flatness 0.30->0.44, centroid +400 Hz, low +6 dB vs bars 5-7",
+   "bars": "9-12"
+  },
+  {
+   "frame": 493,
+   "time": 16.433,
+   "beat": 31.98,
+   "nearest_beat": 32,
+   "beat_offset_frames": -0.4,
+   "bar": 8,
+   "beat_in_bar": 4.98,
+   "type": "transition_into_drop",
+   "frames": [
+    493,
+    494,
+    495
+   ],
+   "params": "493 slight lift (p5 15->25), 494 grey wash (mean 49->113), 495-497 over-exposure to white (158/210/230)"
+  },
+  {
+   "frame": 495,
+   "time": 16.5,
+   "beat": 32.11,
+   "nearest_beat": 32,
+   "beat_offset_frames": 1.6,
+   "bar": 9,
+   "beat_in_bar": 1.11,
+   "type": "glitch_cycle_start",
+   "cycle": 0,
+   "loop90_slot": "A",
+   "inv_layer": "on",
+   "offset_vs_even_beat_frames": 1.6
+  },
+  {
+   "frame": 495,
+   "time": 16.5,
+   "beat": 32.11,
+   "nearest_beat": 32,
+   "beat_offset_frames": 1.6,
+   "bar": 9,
+   "beat_in_bar": 1.11,
+   "type": "glitch_frame",
+   "cycle": 0,
+   "p": 0,
+   "cycle_beat": 0.0,
+   "loop90": 0,
+   "frame_ops": [
+    "overexpose(1.9)",
+    "bottom_white(300,1)",
+    "h_smear(26)"
+   ],
+   "text_ops": [
+    "text_ghost(.5)",
+    "text_vsmear(6)"
+   ]
+  },
+  {
+   "frame": 495,
+   "time": 16.5,
+   "beat": 32.11,
+   "nearest_beat": 32,
+   "beat_offset_frames": 1.6,
+   "bar": 9,
+   "beat_in_bar": 1.11,
+   "type": "line_start",
+   "line": 8,
+   "part": 2,
+   "text": "Я НАБЛЮЮ НА",
+   "n_words": 3,
+   "n_chars": 11,
+   "case": "UPPER",
+   "red": false,
+   "end_frame": 546,
+   "dur_beats": 3.39
+  },
+  {
+   "frame": 495,
+   "time": 16.5,
+   "beat": 32.11,
+   "nearest_beat": 32,
+   "beat_offset_frames": 1.6,
+   "bar": 9,
+   "beat_in_bar": 1.11,
+   "type": "word_onset",
+   "word": "Я",
+   "line": 8,
+   "part": 2,
+   "reveal": "hard cut, cumulative; text shaken/smeared every frame",
+   "red": false
+  },
+  {
+   "frame": 496,
+   "time": 16.533,
+   "beat": 32.17,
+   "nearest_beat": 32,
+   "beat_offset_frames": 2.6,
+   "bar": 9,
+   "beat_in_bar": 1.17,
+   "type": "glitch_frame",
+   "cycle": 0,
+   "p": 1,
+   "cycle_beat": 0.07,
+   "loop90": 0,
+   "frame_ops": [
+    "overexpose(2.6)",
+    "bottom_white(225,1)",
+    "h_smear(30)"
+   ],
+   "text_ops": [
+    "text_hsmear(10)"
+   ]
+  },
+  {
+   "frame": 497,
+   "time": 16.567,
+   "beat": 32.24,
+   "nearest_beat": 32,
+   "beat_offset_frames": 3.6,
+   "bar": 9,
+   "beat_in_bar": 1.24,
+   "type": "glitch_frame",
+   "cycle": 0,
+   "p": 2,
+   "cycle_beat": 0.13,
+   "loop90": 0,
+   "frame_ops": [
+    "overexpose(3.4)",
+    "bottom_white(165,1)",
+    "h_smear(30)"
+   ],
+   "text_ops": [
+    "text_dim(.35)"
+   ]
+  },
+  {
+   "frame": 498,
+   "time": 16.6,
+   "beat": 32.3,
+   "nearest_beat": 32,
+   "beat_offset_frames": 4.6,
+   "bar": 9,
+   "beat_in_bar": 1.3,
+   "type": "glitch_frame",
+   "cycle": 0,
+   "p": 3,
+   "cycle_beat": 0.2,
+   "loop90": 0,
+   "frame_ops": [
+    "overexpose(2.3)",
+    "bottom_white(290,1)",
+    "h_smear(18)",
+    "v_smear(14,0,480)",
+    "tint(.8,.92,1.2)"
+   ],
+   "text_ops": [
+    "text_dim(.6)",
+    "text_vsmear(10)"
+   ]
+  },
+  {
+   "frame": 499,
+   "time": 16.633,
+   "beat": 32.37,
+   "nearest_beat": 32,
+   "beat_offset_frames": 5.6,
+   "bar": 9,
+   "beat_in_bar": 1.37,
+   "type": "glitch_frame",
+   "cycle": 0,
+   "p": 4,
+   "cycle_beat": 0.26,
+   "loop90": 0,
+   "frame_ops": [
+    "soft(4)",
+    "h_smear(10)"
+   ],
+   "text_ops": [
+    "text_vsmear(14)",
+    "text_ghost(.4)"
+   ]
+  },
+  {
+   "frame": 500,
+   "time": 16.667,
+   "beat": 32.43,
+   "nearest_beat": 32,
+   "beat_offset_frames": 6.6,
+   "bar": 9,
+   "beat_in_bar": 1.43,
+   "type": "glitch_frame",
+   "cycle": 0,
+   "p": 5,
+   "cycle_beat": 0.33,
+   "loop90": 0,
+   "frame_ops": [
+    "invert",
+    "h_smear(26)"
+   ],
+   "text_ops": [
+    "text_hsmear(12)"
+   ]
+  },
+  {
+   "frame": 501,
+   "time": 16.7,
+   "beat": 32.5,
+   "nearest_beat": 32,
+   "beat_offset_frames": 7.6,
+   "bar": 9,
+   "beat_in_bar": 1.5,
+   "type": "glitch_frame",
+   "cycle": 0,
+   "p": 6,
+   "cycle_beat": 0.39,
+   "loop90": 0,
+   "frame_ops": [
+    "specks(150,195,W,40)"
+   ],
+   "text_ops": [
+    "text_vsmear(10)"
+   ]
+  },
+  {
+   "frame": 502,
+   "time": 16.733,
+   "beat": 32.56,
+   "nearest_beat": 33,
+   "beat_offset_frames": -6.7,
+   "bar": 9,
+   "beat_in_bar": 1.56,
+   "type": "glitch_frame",
+   "cycle": 0,
+   "p": 7,
+   "cycle_beat": 0.46,
+   "loop90": 0,
+   "frame_ops": [
+    "invert",
+    "v_smear(42,0,480)",
+    "specks(35,70,K,90)",
+    "specks(160,185,K,60)"
+   ],
+   "text_ops": [
+    "text_vsmear(8)"
+   ]
+  },
+  {
+   "frame": 503,
+   "time": 16.767,
+   "beat": 32.63,
+   "nearest_beat": 33,
+   "beat_offset_frames": -5.7,
+   "bar": 9,
+   "beat_in_bar": 1.63,
+   "type": "glitch_frame",
+   "cycle": 0,
+   "p": 8,
+   "cycle_beat": 0.52,
+   "loop90": 0,
+   "frame_ops": [
+    "invert",
+    "halftone(0,190,W,stripes)",
+    "specks_row(425,K)"
+   ],
+   "text_ops": [
+    "text_vsmear(10)"
+   ]
+  },
+  {
+   "frame": 504,
+   "time": 16.8,
+   "beat": 32.69,
+   "nearest_beat": 33,
+   "beat_offset_frames": -4.7,
+   "bar": 9,
+   "beat_in_bar": 1.69,
+   "type": "glitch_frame",
+   "cycle": 0,
+   "p": 9,
+   "cycle_beat": 0.59,
+   "loop90": 0,
+   "frame_ops": [
+    "v_smear(46,0,210)",
+    "bar_thick(211,240,W)"
+   ],
+   "text_ops": [
+    "text_hsmear(6)"
+   ]
+  },
+  {
+   "frame": 505,
+   "time": 16.833,
+   "beat": 32.76,
+   "nearest_beat": 33,
+   "beat_offset_frames": -3.7,
+   "bar": 9,
+   "beat_in_bar": 1.76,
+   "type": "glitch_frame",
+   "cycle": 0,
+   "p": 10,
+   "cycle_beat": 0.65,
+   "loop90": 0,
+   "frame_ops": [
+    "invert",
+    "h_smear(20)",
+    "lines(K)"
+   ],
+   "text_ops": [
+    "text_hsmear(14)"
+   ]
+  },
+  {
+   "frame": 506,
+   "time": 16.867,
+   "beat": 32.82,
+   "nearest_beat": 33,
+   "beat_offset_frames": -2.7,
+   "bar": 9,
+   "beat_in_bar": 1.82,
+   "type": "glitch_frame",
+   "cycle": 0,
+   "p": 11,
+   "cycle_beat": 0.72,
+   "loop90": 0,
+   "frame_ops": [
+    "iridescent(1.0)"
+   ],
+   "text_ops": [
+    "text_ghost(.35)"
+   ]
+  },
+  {
+   "frame": 507,
+   "time": 16.9,
+   "beat": 32.89,
+   "nearest_beat": 33,
+   "beat_offset_frames": -1.7,
+   "bar": 9,
+   "beat_in_bar": 1.89,
+   "type": "glitch_frame",
+   "cycle": 0,
+   "p": 12,
+   "cycle_beat": 0.78,
+   "loop90": 0,
+   "frame_ops": [
+    "iridescent(.8)",
+    "invert",
+    "soft(4)",
+    "h_smear(14)"
+   ],
+   "text_ops": [
+    "text_diag_smear(14)"
+   ]
+  },
+  {
+   "frame": 508,
+   "time": 16.933,
+   "beat": 32.95,
+   "nearest_beat": 33,
+   "beat_offset_frames": -0.7,
+   "bar": 9,
+   "beat_in_bar": 1.95,
+   "type": "glitch_frame",
+   "cycle": 0,
+   "p": 13,
+   "cycle_beat": 0.85,
+   "loop90": 0,
+   "frame_ops": [
+    "iridescent(.8)"
+   ],
+   "text_ops": [
+    "text_vsmear(22)"
+   ]
+  },
+  {
+   "frame": 509,
+   "time": 16.967,
+   "beat": 33.02,
+   "nearest_beat": 33,
+   "beat_offset_frames": 0.3,
+   "bar": 9,
+   "beat_in_bar": 2.02,
+   "type": "glitch_frame",
+   "cycle": 0,
+   "p": 14,
+   "cycle_beat": 0.91,
+   "loop90": 0,
+   "frame_ops": [
+    "iridescent(1.0)",
+    "soft(3)"
+   ],
+   "text_ops": [
+    "text_vsmear(26)"
+   ]
+  },
+  {
+   "frame": 510,
+   "time": 17.0,
+   "beat": 33.09,
+   "nearest_beat": 33,
+   "beat_offset_frames": 1.3,
+   "bar": 9,
+   "beat_in_bar": 2.09,
+   "type": "glitch_frame",
+   "cycle": 0,
+   "p": 15,
+   "cycle_beat": 0.98,
+   "loop90": 0,
+   "frame_ops": [
+    "invert",
+    "datamosh(40,480,.85)",
+    "lines(160,K)"
+   ],
+   "text_ops": [
+    "text_hsmear(6)"
+   ]
+  },
+  {
+   "frame": 511,
+   "time": 17.033,
+   "beat": 33.15,
+   "nearest_beat": 33,
+   "beat_offset_frames": 2.3,
+   "bar": 9,
+   "beat_in_bar": 2.15,
+   "type": "glitch_frame",
+   "cycle": 0,
+   "p": 16,
+   "cycle_beat": 1.04,
+   "loop90": 0,
+   "frame_ops": [
+    "freeze_box"
+   ],
+   "text_ops": [
+    "text_ghost(.3)"
+   ]
+  },
+  {
+   "frame": 512,
+   "time": 17.067,
+   "beat": 33.22,
+   "nearest_beat": 33,
+   "beat_offset_frames": 3.3,
+   "bar": 9,
+   "beat_in_bar": 2.22,
+   "type": "glitch_frame",
+   "cycle": 0,
+   "p": 17,
+   "cycle_beat": 1.11,
+   "loop90": 0,
+   "frame_ops": [
+    "soft(4)",
+    "h_smear(12)"
+   ],
+   "text_ops": [
+    "text_vsmear(14)"
+   ]
+  },
+  {
+   "frame": 513,
+   "time": 17.1,
+   "beat": 33.28,
+   "nearest_beat": 33,
+   "beat_offset_frames": 4.3,
+   "bar": 9,
+   "beat_in_bar": 2.28,
+   "type": "audio_808_hit",
+   "sub_db": 45.8,
+   "p": 18
+  },
+  {
+   "frame": 513,
+   "time": 17.1,
+   "beat": 33.28,
+   "nearest_beat": 33,
+   "beat_offset_frames": 4.3,
+   "bar": 9,
+   "beat_in_bar": 2.28,
+   "type": "glitch_frame",
+   "cycle": 0,
+   "p": 18,
+   "cycle_beat": 1.17,
+   "loop90": 0,
+   "frame_ops": [
+    "datamosh(0,240,.18)",
+    "datamosh(245,480,.6)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 513,
+   "time": 17.1,
+   "beat": 33.28,
+   "nearest_beat": 33,
+   "beat_offset_frames": 4.3,
+   "bar": 9,
+   "beat_in_bar": 2.28,
+   "type": "word_onset",
+   "word": "НАБЛЮЮ",
+   "line": 8,
+   "part": 2,
+   "reveal": "hard cut, cumulative; text shaken/smeared every frame",
+   "red": false
+  },
+  {
+   "frame": 514,
+   "time": 17.133,
+   "beat": 33.35,
+   "nearest_beat": 33,
+   "beat_offset_frames": 5.3,
+   "bar": 9,
+   "beat_in_bar": 2.35,
+   "type": "glitch_frame",
+   "cycle": 0,
+   "p": 19,
+   "cycle_beat": 1.24,
+   "loop90": 0,
+   "frame_ops": [
+    "datamosh(0,480,.5)",
+    "flash(W,.9)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 515,
+   "time": 17.167,
+   "beat": 33.41,
+   "nearest_beat": 33,
+   "beat_offset_frames": 6.3,
+   "bar": 9,
+   "beat_in_bar": 2.41,
+   "type": "glitch_frame",
+   "cycle": 0,
+   "p": 20,
+   "cycle_beat": 1.31,
+   "loop90": 0,
+   "frame_ops": [
+    "flash_full(255,253,255)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 516,
+   "time": 17.2,
+   "beat": 33.48,
+   "nearest_beat": 33,
+   "beat_offset_frames": 7.3,
+   "bar": 9,
+   "beat_in_bar": 2.48,
+   "type": "glitch_frame",
+   "cycle": 0,
+   "p": 21,
+   "cycle_beat": 1.37,
+   "loop90": 0,
+   "frame_ops": [
+    "flash_full(255,253,255)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 517,
+   "time": 17.233,
+   "beat": 33.54,
+   "nearest_beat": 34,
+   "beat_offset_frames": -7.0,
+   "bar": 9,
+   "beat_in_bar": 2.54,
+   "type": "glitch_frame",
+   "cycle": 0,
+   "p": 22,
+   "cycle_beat": 1.44,
+   "loop90": 0,
+   "frame_ops": [
+    "gray_wash(.5,118)",
+    "v_smear(40,290,480)"
+   ],
+   "text_ops": [
+    "text_vsmear(20)",
+    "text_ghost(.5)"
+   ]
+  },
+  {
+   "frame": 518,
+   "time": 17.267,
+   "beat": 33.61,
+   "nearest_beat": 34,
+   "beat_offset_frames": -6.0,
+   "bar": 9,
+   "beat_in_bar": 2.61,
+   "type": "glitch_frame",
+   "cycle": 0,
+   "p": 23,
+   "cycle_beat": 1.5,
+   "loop90": 0,
+   "frame_ops": [],
+   "text_ops": [
+    "text_ghost(.25)"
+   ]
+  },
+  {
+   "frame": 519,
+   "time": 17.3,
+   "beat": 33.67,
+   "nearest_beat": 34,
+   "beat_offset_frames": -5.0,
+   "bar": 9,
+   "beat_in_bar": 2.67,
+   "type": "glitch_frame",
+   "cycle": 0,
+   "p": 24,
+   "cycle_beat": 1.57,
+   "loop90": 0,
+   "frame_ops": [],
+   "text_ops": [
+    "text_ghost(.25)"
+   ]
+  },
+  {
+   "frame": 520,
+   "time": 17.333,
+   "beat": 33.74,
+   "nearest_beat": 34,
+   "beat_offset_frames": -4.0,
+   "bar": 9,
+   "beat_in_bar": 2.74,
+   "type": "glitch_frame",
+   "cycle": 0,
+   "p": 25,
+   "cycle_beat": 1.63,
+   "loop90": 0,
+   "frame_ops": [
+    "low_blocks",
+    "specks_row(297,W)"
+   ],
+   "text_ops": [
+    "text_diag_smear(16)",
+    "text_ghost(.4)"
+   ]
+  },
+  {
+   "frame": 521,
+   "time": 17.367,
+   "beat": 33.8,
+   "nearest_beat": 34,
+   "beat_offset_frames": -3.0,
+   "bar": 9,
+   "beat_in_bar": 2.8,
+   "type": "glitch_frame",
+   "cycle": 0,
+   "p": 26,
+   "cycle_beat": 1.7,
+   "loop90": 0,
+   "frame_ops": [
+    "specks(290,480,W,grid)",
+    "low_blocks"
+   ],
+   "text_ops": [
+    "text_ghost(.3)"
+   ]
+  },
+  {
+   "frame": 522,
+   "time": 17.4,
+   "beat": 33.87,
+   "nearest_beat": 34,
+   "beat_offset_frames": -2.0,
+   "bar": 9,
+   "beat_in_bar": 2.87,
+   "type": "glitch_frame",
+   "cycle": 0,
+   "p": 27,
+   "cycle_beat": 1.76,
+   "loop90": 0,
+   "frame_ops": [
+    "halftone(290,480,W,holes)"
+   ],
+   "text_ops": [
+    "text_vsmear(10)"
+   ]
+  },
+  {
+   "frame": 523,
+   "time": 17.433,
+   "beat": 33.93,
+   "nearest_beat": 34,
+   "beat_offset_frames": -1.0,
+   "bar": 9,
+   "beat_in_bar": 2.93,
+   "type": "glitch_frame",
+   "cycle": 0,
+   "p": 28,
+   "cycle_beat": 1.83,
+   "loop90": 0,
+   "frame_ops": [
+    "bar_line_teeth(240,W)"
+   ],
+   "text_ops": [
+    "text_vsmear(8)"
+   ]
+  },
+  {
+   "frame": 524,
+   "time": 17.467,
+   "beat": 34.0,
+   "nearest_beat": 34,
+   "beat_offset_frames": -0.0,
+   "bar": 9,
+   "beat_in_bar": 3.0,
+   "type": "glitch_frame",
+   "cycle": 0,
+   "p": 29,
+   "cycle_beat": 1.89,
+   "loop90": 0,
+   "frame_ops": [
+    "lines(W)"
+   ],
+   "text_ops": [
+    "text_hsmear(8)"
+   ]
+  },
+  {
+   "frame": 525,
+   "time": 17.5,
+   "beat": 34.06,
+   "nearest_beat": 34,
+   "beat_offset_frames": 1.0,
+   "bar": 9,
+   "beat_in_bar": 3.06,
+   "type": "glitch_cycle_start",
+   "cycle": 1,
+   "loop90_slot": "B",
+   "inv_layer": "on",
+   "offset_vs_even_beat_frames": 1.0
+  },
+  {
+   "frame": 525,
+   "time": 17.5,
+   "beat": 34.06,
+   "nearest_beat": 34,
+   "beat_offset_frames": 1.0,
+   "bar": 9,
+   "beat_in_bar": 3.06,
+   "type": "glitch_frame",
+   "cycle": 1,
+   "p": 0,
+   "cycle_beat": 0.0,
+   "loop90": 1,
+   "frame_ops": [],
+   "text_ops": [
+    "text_slice",
+    "text_hsmear(14)"
+   ]
+  },
+  {
+   "frame": 526,
+   "time": 17.533,
+   "beat": 34.13,
+   "nearest_beat": 34,
+   "beat_offset_frames": 2.0,
+   "bar": 9,
+   "beat_in_bar": 3.13,
+   "type": "glitch_frame",
+   "cycle": 1,
+   "p": 1,
+   "cycle_beat": 0.07,
+   "loop90": 1,
+   "frame_ops": [],
+   "text_ops": [
+    "text_ghost(.2)"
+   ]
+  },
+  {
+   "frame": 527,
+   "time": 17.567,
+   "beat": 34.19,
+   "nearest_beat": 34,
+   "beat_offset_frames": 3.0,
+   "bar": 9,
+   "beat_in_bar": 3.19,
+   "type": "glitch_frame",
+   "cycle": 1,
+   "p": 2,
+   "cycle_beat": 0.13,
+   "loop90": 1,
+   "frame_ops": [
+    "gray_wash(.45,62)",
+    "soft(3)"
+   ],
+   "text_ops": [
+    "text_vsmear(8)"
+   ]
+  },
+  {
+   "frame": 528,
+   "time": 17.6,
+   "beat": 34.26,
+   "nearest_beat": 34,
+   "beat_offset_frames": 4.0,
+   "bar": 9,
+   "beat_in_bar": 3.26,
+   "type": "glitch_frame",
+   "cycle": 1,
+   "p": 3,
+   "cycle_beat": 0.2,
+   "loop90": 1,
+   "frame_ops": [
+    "gray_wash(.45,76)"
+   ],
+   "text_ops": [
+    "text_vsmear(22)",
+    "text_ghost(.5)"
+   ]
+  },
+  {
+   "frame": 529,
+   "time": 17.633,
+   "beat": 34.33,
+   "nearest_beat": 34,
+   "beat_offset_frames": 5.0,
+   "bar": 9,
+   "beat_in_bar": 3.33,
+   "type": "glitch_frame",
+   "cycle": 1,
+   "p": 4,
+   "cycle_beat": 0.26,
+   "loop90": 1,
+   "frame_ops": [
+    "invert"
+   ],
+   "text_ops": [
+    "text_vsmear(10)"
+   ]
+  },
+  {
+   "frame": 530,
+   "time": 17.667,
+   "beat": 34.39,
+   "nearest_beat": 34,
+   "beat_offset_frames": 6.0,
+   "bar": 9,
+   "beat_in_bar": 3.39,
+   "type": "glitch_frame",
+   "cycle": 1,
+   "p": 5,
+   "cycle_beat": 0.33,
+   "loop90": 1,
+   "frame_ops": [],
+   "text_ops": [
+    "text_diag_smear(14)",
+    "text_ghost(.5)"
+   ]
+  },
+  {
+   "frame": 531,
+   "time": 17.7,
+   "beat": 34.46,
+   "nearest_beat": 34,
+   "beat_offset_frames": 7.0,
+   "bar": 9,
+   "beat_in_bar": 3.46,
+   "type": "glitch_frame",
+   "cycle": 1,
+   "p": 6,
+   "cycle_beat": 0.39,
+   "loop90": 1,
+   "frame_ops": [
+    "invert",
+    "specks(25,70,K,30)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 532,
+   "time": 17.733,
+   "beat": 34.52,
+   "nearest_beat": 35,
+   "beat_offset_frames": -7.3,
+   "bar": 9,
+   "beat_in_bar": 3.52,
+   "type": "glitch_frame",
+   "cycle": 1,
+   "p": 7,
+   "cycle_beat": 0.46,
+   "loop90": 1,
+   "frame_ops": [
+    "specks(15,70,C,90)",
+    "specks(160,185,C,40)"
+   ],
+   "text_ops": [
+    "text_ghost(.3)"
+   ]
+  },
+  {
+   "frame": 533,
+   "time": 17.767,
+   "beat": 34.59,
+   "nearest_beat": 35,
+   "beat_offset_frames": -6.3,
+   "bar": 9,
+   "beat_in_bar": 3.59,
+   "type": "glitch_frame",
+   "cycle": 1,
+   "p": 8,
+   "cycle_beat": 0.52,
+   "loop90": 1,
+   "frame_ops": [
+    "halftone(0,188,C,stripes)",
+    "specks_row(425,C)"
+   ],
+   "text_ops": [
+    "text_diag_smear(14)"
+   ]
+  },
+  {
+   "frame": 533,
+   "time": 17.767,
+   "beat": 34.59,
+   "nearest_beat": 35,
+   "beat_offset_frames": -6.3,
+   "bar": 9,
+   "beat_in_bar": 3.59,
+   "type": "word_onset",
+   "word": "НА",
+   "line": 8,
+   "part": 2,
+   "reveal": "hard cut, cumulative; text shaken/smeared every frame",
+   "red": false
+  },
+  {
+   "frame": 534,
+   "time": 17.8,
+   "beat": 34.65,
+   "nearest_beat": 35,
+   "beat_offset_frames": -5.3,
+   "bar": 9,
+   "beat_in_bar": 3.65,
+   "type": "glitch_frame",
+   "cycle": 1,
+   "p": 9,
+   "cycle_beat": 0.59,
+   "loop90": 1,
+   "frame_ops": [
+    "invert",
+    "bar_thick(210,241,R)"
+   ],
+   "text_ops": [
+    "text_hsmear(12)"
+   ]
+  },
+  {
+   "frame": 535,
+   "time": 17.833,
+   "beat": 34.72,
+   "nearest_beat": 35,
+   "beat_offset_frames": -4.3,
+   "bar": 9,
+   "beat_in_bar": 3.72,
+   "type": "glitch_frame",
+   "cycle": 1,
+   "p": 10,
+   "cycle_beat": 0.65,
+   "loop90": 1,
+   "frame_ops": [
+    "lines(C)"
+   ],
+   "text_ops": [
+    "text_hsmear(16)"
+   ]
+  },
+  {
+   "frame": 536,
+   "time": 17.867,
+   "beat": 34.78,
+   "nearest_beat": 35,
+   "beat_offset_frames": -3.3,
+   "bar": 9,
+   "beat_in_bar": 3.78,
+   "type": "glitch_frame",
+   "cycle": 1,
+   "p": 11,
+   "cycle_beat": 0.72,
+   "loop90": 1,
+   "frame_ops": [
+    "invert",
+    "h_smear(24)"
+   ],
+   "text_ops": [
+    "text_hsmear(10)"
+   ]
+  },
+  {
+   "frame": 537,
+   "time": 17.9,
+   "beat": 34.85,
+   "nearest_beat": 35,
+   "beat_offset_frames": -2.3,
+   "bar": 9,
+   "beat_in_bar": 3.85,
+   "type": "glitch_frame",
+   "cycle": 1,
+   "p": 12,
+   "cycle_beat": 0.78,
+   "loop90": 1,
+   "frame_ops": [
+    "h_smear(14)"
+   ],
+   "text_ops": [
+    "text_diag_smear(10)"
+   ]
+  },
+  {
+   "frame": 538,
+   "time": 17.933,
+   "beat": 34.91,
+   "nearest_beat": 35,
+   "beat_offset_frames": -1.3,
+   "bar": 9,
+   "beat_in_bar": 3.91,
+   "type": "glitch_frame",
+   "cycle": 1,
+   "p": 13,
+   "cycle_beat": 0.85,
+   "loop90": 1,
+   "frame_ops": [
+    "invert",
+    "h_smear(30)"
+   ],
+   "text_ops": [
+    "text_hsmear(16)"
+   ]
+  },
+  {
+   "frame": 539,
+   "time": 17.967,
+   "beat": 34.98,
+   "nearest_beat": 35,
+   "beat_offset_frames": -0.3,
+   "bar": 9,
+   "beat_in_bar": 3.98,
+   "type": "glitch_frame",
+   "cycle": 1,
+   "p": 14,
+   "cycle_beat": 0.91,
+   "loop90": 1,
+   "frame_ops": [
+    "invert",
+    "h_smear(14)"
+   ],
+   "text_ops": [
+    "text_vsmear(10)"
+   ]
+  },
+  {
+   "frame": 540,
+   "time": 18.0,
+   "beat": 35.04,
+   "nearest_beat": 35,
+   "beat_offset_frames": 0.7,
+   "bar": 9,
+   "beat_in_bar": 4.04,
+   "type": "glitch_frame",
+   "cycle": 1,
+   "p": 15,
+   "cycle_beat": 0.98,
+   "loop90": 1,
+   "frame_ops": [
+    "cyan_invert",
+    "datamosh(200,480,.8)",
+    "lines(163,C)"
+   ],
+   "text_ops": [
+    "text_dim(.3)"
+   ]
+  },
+  {
+   "frame": 541,
+   "time": 18.033,
+   "beat": 35.11,
+   "nearest_beat": 35,
+   "beat_offset_frames": 1.7,
+   "bar": 9,
+   "beat_in_bar": 4.11,
+   "type": "glitch_frame",
+   "cycle": 1,
+   "p": 16,
+   "cycle_beat": 1.04,
+   "loop90": 1,
+   "frame_ops": [
+    "cyan_invert",
+    "freeze_box"
+   ],
+   "text_ops": [
+    "text_dim(.25)"
+   ]
+  },
+  {
+   "frame": 542,
+   "time": 18.067,
+   "beat": 35.17,
+   "nearest_beat": 35,
+   "beat_offset_frames": 2.7,
+   "bar": 9,
+   "beat_in_bar": 4.17,
+   "type": "glitch_frame",
+   "cycle": 1,
+   "p": 17,
+   "cycle_beat": 1.11,
+   "loop90": 1,
+   "frame_ops": [
+    "cyan_invert",
+    "overexpose(1.5)"
+   ],
+   "text_ops": [
+    "text_dim(.2)"
+   ]
+  },
+  {
+   "frame": 543,
+   "time": 18.1,
+   "beat": 35.24,
+   "nearest_beat": 35,
+   "beat_offset_frames": 3.7,
+   "bar": 9,
+   "beat_in_bar": 4.24,
+   "type": "glitch_frame",
+   "cycle": 1,
+   "p": 18,
+   "cycle_beat": 1.17,
+   "loop90": 1,
+   "frame_ops": [
+    "cyan_invert",
+    "datamosh(180,480,.7)"
+   ],
+   "text_ops": [
+    "text_dim(.3)"
+   ]
+  },
+  {
+   "frame": 544,
+   "time": 18.133,
+   "beat": 35.3,
+   "nearest_beat": 35,
+   "beat_offset_frames": 4.7,
+   "bar": 9,
+   "beat_in_bar": 4.3,
+   "type": "audio_808_hit",
+   "sub_db": 45.7,
+   "p": 19
+  },
+  {
+   "frame": 544,
+   "time": 18.133,
+   "beat": 35.3,
+   "nearest_beat": 35,
+   "beat_offset_frames": 4.7,
+   "bar": 9,
+   "beat_in_bar": 4.3,
+   "type": "glitch_frame",
+   "cycle": 1,
+   "p": 19,
+   "cycle_beat": 1.24,
+   "loop90": 1,
+   "frame_ops": [
+    "datamosh(0,480,.5)",
+    "flash(C,.9)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 545,
+   "time": 18.167,
+   "beat": 35.37,
+   "nearest_beat": 35,
+   "beat_offset_frames": 5.7,
+   "bar": 9,
+   "beat_in_bar": 4.37,
+   "type": "glitch_frame",
+   "cycle": 1,
+   "p": 20,
+   "cycle_beat": 1.31,
+   "loop90": 1,
+   "frame_ops": [
+    "flash_full(21,211,249)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 546,
+   "time": 18.2,
+   "beat": 35.43,
+   "nearest_beat": 35,
+   "beat_offset_frames": 6.7,
+   "bar": 9,
+   "beat_in_bar": 4.43,
+   "type": "audio_808_hit",
+   "sub_db": 43.1,
+   "p": 21
+  },
+  {
+   "frame": 546,
+   "time": 18.2,
+   "beat": 35.43,
+   "nearest_beat": 35,
+   "beat_offset_frames": 6.7,
+   "bar": 9,
+   "beat_in_bar": 4.43,
+   "type": "glitch_frame",
+   "cycle": 1,
+   "p": 21,
+   "cycle_beat": 1.37,
+   "loop90": 1,
+   "frame_ops": [
+    "flash_full(21,211,249)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 547,
+   "time": 18.233,
+   "beat": 35.5,
+   "nearest_beat": 35,
+   "beat_offset_frames": 7.7,
+   "bar": 9,
+   "beat_in_bar": 4.5,
+   "type": "glitch_frame",
+   "cycle": 1,
+   "p": 22,
+   "cycle_beat": 1.44,
+   "loop90": 1,
+   "frame_ops": [
+    "tone_teal"
+   ],
+   "text_ops": [
+    "text_hsmear(8)"
+   ]
+  },
+  {
+   "frame": 547,
+   "time": 18.233,
+   "beat": 35.5,
+   "nearest_beat": 35,
+   "beat_offset_frames": 7.7,
+   "bar": 9,
+   "beat_in_bar": 4.5,
+   "type": "line_start",
+   "line": 9,
+   "part": 2,
+   "text": "СВОЮ КУРТКУ",
+   "n_words": 2,
+   "n_chars": 11,
+   "case": "UPPER",
+   "red": false,
+   "end_frame": 579,
+   "dur_beats": 2.15
+  },
+  {
+   "frame": 547,
+   "time": 18.233,
+   "beat": 35.5,
+   "nearest_beat": 35,
+   "beat_offset_frames": 7.7,
+   "bar": 9,
+   "beat_in_bar": 4.5,
+   "type": "word_onset",
+   "word": "СВОЮ",
+   "line": 9,
+   "part": 2,
+   "reveal": "hard cut, cumulative; text shaken/smeared every frame",
+   "red": false
+  },
+  {
+   "frame": 548,
+   "time": 18.267,
+   "beat": 35.57,
+   "nearest_beat": 36,
+   "beat_offset_frames": -6.7,
+   "bar": 9,
+   "beat_in_bar": 4.57,
+   "type": "glitch_frame",
+   "cycle": 1,
+   "p": 23,
+   "cycle_beat": 1.5,
+   "loop90": 1,
+   "frame_ops": [],
+   "text_ops": [
+    "text_hsmear(14)",
+    "text_ghost(.5)"
+   ]
+  },
+  {
+   "frame": 549,
+   "time": 18.3,
+   "beat": 35.63,
+   "nearest_beat": 36,
+   "beat_offset_frames": -5.7,
+   "bar": 9,
+   "beat_in_bar": 4.63,
+   "type": "glitch_frame",
+   "cycle": 1,
+   "p": 24,
+   "cycle_beat": 1.57,
+   "loop90": 1,
+   "frame_ops": [],
+   "text_ops": [
+    "text_hsmear(18)",
+    "text_ghost(.5)"
+   ]
+  },
+  {
+   "frame": 550,
+   "time": 18.333,
+   "beat": 35.7,
+   "nearest_beat": 36,
+   "beat_offset_frames": -4.7,
+   "bar": 9,
+   "beat_in_bar": 4.7,
+   "type": "glitch_frame",
+   "cycle": 1,
+   "p": 25,
+   "cycle_beat": 1.63,
+   "loop90": 1,
+   "frame_ops": [
+    "low_blocks",
+    "specks_row(297,C)"
+   ],
+   "text_ops": [
+    "text_diag_smear(12)"
+   ]
+  },
+  {
+   "frame": 551,
+   "time": 18.367,
+   "beat": 35.76,
+   "nearest_beat": 36,
+   "beat_offset_frames": -3.7,
+   "bar": 9,
+   "beat_in_bar": 4.76,
+   "type": "glitch_frame",
+   "cycle": 1,
+   "p": 26,
+   "cycle_beat": 1.7,
+   "loop90": 1,
+   "frame_ops": [
+    "specks(290,480,C,grid)",
+    "low_blocks",
+    "iridescent(.6)"
+   ],
+   "text_ops": [
+    "text_ghost(.3)"
+   ]
+  },
+  {
+   "frame": 552,
+   "time": 18.4,
+   "beat": 35.83,
+   "nearest_beat": 36,
+   "beat_offset_frames": -2.7,
+   "bar": 9,
+   "beat_in_bar": 4.83,
+   "type": "glitch_frame",
+   "cycle": 1,
+   "p": 27,
+   "cycle_beat": 1.76,
+   "loop90": 1,
+   "frame_ops": [
+    "halftone(290,480,C,holes)",
+    "iridescent(.5)"
+   ],
+   "text_ops": [
+    "text_hsmear(8)"
+   ]
+  },
+  {
+   "frame": 553,
+   "time": 18.433,
+   "beat": 35.89,
+   "nearest_beat": 36,
+   "beat_offset_frames": -1.7,
+   "bar": 9,
+   "beat_in_bar": 4.89,
+   "type": "glitch_frame",
+   "cycle": 1,
+   "p": 28,
+   "cycle_beat": 1.83,
+   "loop90": 1,
+   "frame_ops": [
+    "bar_line_teeth(242,C)",
+    "iridescent(.4)"
+   ],
+   "text_ops": [
+    "text_vsmear(8)"
+   ]
+  },
+  {
+   "frame": 554,
+   "time": 18.467,
+   "beat": 35.96,
+   "nearest_beat": 36,
+   "beat_offset_frames": -0.7,
+   "bar": 9,
+   "beat_in_bar": 4.96,
+   "type": "glitch_frame",
+   "cycle": 1,
+   "p": 29,
+   "cycle_beat": 1.89,
+   "loop90": 1,
+   "frame_ops": [
+    "bottom_white(330,0)",
+    "lines(C)",
+    "iridescent(.6)"
+   ],
+   "text_ops": [
+    "text_vsmear(10)"
+   ]
+  },
+  {
+   "frame": 555,
+   "time": 18.5,
+   "beat": 36.02,
+   "nearest_beat": 36,
+   "beat_offset_frames": 0.3,
+   "bar": 10,
+   "beat_in_bar": 1.02,
+   "type": "glitch_cycle_start",
+   "cycle": 2,
+   "loop90_slot": "C",
+   "inv_layer": "on",
+   "offset_vs_even_beat_frames": 0.3
+  },
+  {
+   "frame": 555,
+   "time": 18.5,
+   "beat": 36.02,
+   "nearest_beat": 36,
+   "beat_offset_frames": 0.3,
+   "bar": 10,
+   "beat_in_bar": 1.02,
+   "type": "glitch_frame",
+   "cycle": 2,
+   "p": 0,
+   "cycle_beat": 0.0,
+   "loop90": 2,
+   "frame_ops": [
+    "bottom_white(320,0)"
+   ],
+   "text_ops": [
+    "text_vsmear(12)"
+   ]
+  },
+  {
+   "frame": 556,
+   "time": 18.533,
+   "beat": 36.09,
+   "nearest_beat": 36,
+   "beat_offset_frames": 1.3,
+   "bar": 10,
+   "beat_in_bar": 1.09,
+   "type": "glitch_frame",
+   "cycle": 2,
+   "p": 1,
+   "cycle_beat": 0.07,
+   "loop90": 2,
+   "frame_ops": [
+    "bottom_white(305,0)"
+   ],
+   "text_ops": [
+    "text_ghost(.3)"
+   ]
+  },
+  {
+   "frame": 557,
+   "time": 18.567,
+   "beat": 36.15,
+   "nearest_beat": 36,
+   "beat_offset_frames": 2.3,
+   "bar": 10,
+   "beat_in_bar": 1.15,
+   "type": "glitch_frame",
+   "cycle": 2,
+   "p": 2,
+   "cycle_beat": 0.13,
+   "loop90": 2,
+   "frame_ops": [
+    "tone_palecyan(115)",
+    "text_recolor(.55,150,185,225)"
+   ],
+   "text_ops": [
+    "text_dim(.5)",
+    "text_hsmear(20)"
+   ]
+  },
+  {
+   "frame": 557,
+   "time": 18.567,
+   "beat": 36.15,
+   "nearest_beat": 36,
+   "beat_offset_frames": 2.3,
+   "bar": 10,
+   "beat_in_bar": 1.15,
+   "type": "word_onset",
+   "word": "КУРТКУ",
+   "line": 9,
+   "part": 2,
+   "reveal": "hard cut, cumulative; text shaken/smeared every frame",
+   "red": false
+  },
+  {
+   "frame": 558,
+   "time": 18.6,
+   "beat": 36.22,
+   "nearest_beat": 36,
+   "beat_offset_frames": 3.3,
+   "bar": 10,
+   "beat_in_bar": 1.22,
+   "type": "glitch_frame",
+   "cycle": 2,
+   "p": 3,
+   "cycle_beat": 0.2,
+   "loop90": 2,
+   "frame_ops": [
+    "tone_palecyan(118)",
+    "text_recolor(.45,150,185,225)"
+   ],
+   "text_ops": [
+    "text_dim(.5)",
+    "text_hsmear(20)"
+   ]
+  },
+  {
+   "frame": 559,
+   "time": 18.633,
+   "beat": 36.28,
+   "nearest_beat": 36,
+   "beat_offset_frames": 4.3,
+   "bar": 10,
+   "beat_in_bar": 1.28,
+   "type": "glitch_frame",
+   "cycle": 2,
+   "p": 4,
+   "cycle_beat": 0.26,
+   "loop90": 2,
+   "frame_ops": [
+    "tone_white_below(150)",
+    "text_recolor(.6,175,180,240)"
+   ],
+   "text_ops": [
+    "text_dim(.6)",
+    "text_hsmear(14)"
+   ]
+  },
+  {
+   "frame": 560,
+   "time": 18.667,
+   "beat": 36.35,
+   "nearest_beat": 36,
+   "beat_offset_frames": 5.3,
+   "bar": 10,
+   "beat_in_bar": 1.35,
+   "type": "glitch_frame",
+   "cycle": 2,
+   "p": 5,
+   "cycle_beat": 0.33,
+   "loop90": 2,
+   "frame_ops": [
+    "tone_black",
+    "text_recolor(.5,85,75,8)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 561,
+   "time": 18.7,
+   "beat": 36.41,
+   "nearest_beat": 36,
+   "beat_offset_frames": 6.3,
+   "bar": 10,
+   "beat_in_bar": 1.41,
+   "type": "glitch_frame",
+   "cycle": 2,
+   "p": 6,
+   "cycle_beat": 0.39,
+   "loop90": 2,
+   "frame_ops": [
+    "soft(3)"
+   ],
+   "text_ops": [
+    "text_ghost(.3)"
+   ]
+  },
+  {
+   "frame": 562,
+   "time": 18.733,
+   "beat": 36.48,
+   "nearest_beat": 36,
+   "beat_offset_frames": 7.3,
+   "bar": 10,
+   "beat_in_bar": 1.48,
+   "type": "glitch_frame",
+   "cycle": 2,
+   "p": 7,
+   "cycle_beat": 0.46,
+   "loop90": 2,
+   "frame_ops": [
+    "invert",
+    "specks(40,95,K,90)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 563,
+   "time": 18.767,
+   "beat": 36.54,
+   "nearest_beat": 37,
+   "beat_offset_frames": -7.0,
+   "bar": 10,
+   "beat_in_bar": 1.54,
+   "type": "glitch_frame",
+   "cycle": 2,
+   "p": 8,
+   "cycle_beat": 0.52,
+   "loop90": 2,
+   "frame_ops": [
+    "invert",
+    "halftone(0,190,W,stripes)",
+    "specks_row(425,K)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 564,
+   "time": 18.8,
+   "beat": 36.61,
+   "nearest_beat": 37,
+   "beat_offset_frames": -6.0,
+   "bar": 10,
+   "beat_in_bar": 1.61,
+   "type": "glitch_frame",
+   "cycle": 2,
+   "p": 9,
+   "cycle_beat": 0.59,
+   "loop90": 2,
+   "frame_ops": [
+    "bar_thick(210,242,W)"
+   ],
+   "text_ops": [
+    "text_hsmear(8)"
+   ]
+  },
+  {
+   "frame": 565,
+   "time": 18.833,
+   "beat": 36.67,
+   "nearest_beat": 37,
+   "beat_offset_frames": -5.0,
+   "bar": 10,
+   "beat_in_bar": 1.67,
+   "type": "glitch_frame",
+   "cycle": 2,
+   "p": 10,
+   "cycle_beat": 0.65,
+   "loop90": 2,
+   "frame_ops": [
+    "invert",
+    "lines(K)"
+   ],
+   "text_ops": [
+    "text_hsmear(10)"
+   ]
+  },
+  {
+   "frame": 566,
+   "time": 18.867,
+   "beat": 36.74,
+   "nearest_beat": 37,
+   "beat_offset_frames": -4.0,
+   "bar": 10,
+   "beat_in_bar": 1.74,
+   "type": "glitch_frame",
+   "cycle": 2,
+   "p": 11,
+   "cycle_beat": 0.72,
+   "loop90": 2,
+   "frame_ops": [],
+   "text_ops": [
+    "text_ghost(.3)"
+   ]
+  },
+  {
+   "frame": 567,
+   "time": 18.9,
+   "beat": 36.81,
+   "nearest_beat": 37,
+   "beat_offset_frames": -3.0,
+   "bar": 10,
+   "beat_in_bar": 1.81,
+   "type": "glitch_frame",
+   "cycle": 2,
+   "p": 12,
+   "cycle_beat": 0.78,
+   "loop90": 2,
+   "frame_ops": [
+    "invert"
+   ],
+   "text_ops": [
+    "text_vsmear(8)"
+   ]
+  },
+  {
+   "frame": 568,
+   "time": 18.933,
+   "beat": 36.87,
+   "nearest_beat": 37,
+   "beat_offset_frames": -2.0,
+   "bar": 10,
+   "beat_in_bar": 1.87,
+   "type": "glitch_frame",
+   "cycle": 2,
+   "p": 13,
+   "cycle_beat": 0.85,
+   "loop90": 2,
+   "frame_ops": [],
+   "text_ops": [
+    "text_vsmear(10)",
+    "text_ghost(.3)"
+   ]
+  },
+  {
+   "frame": 569,
+   "time": 18.967,
+   "beat": 36.94,
+   "nearest_beat": 37,
+   "beat_offset_frames": -1.0,
+   "bar": 10,
+   "beat_in_bar": 1.94,
+   "type": "glitch_frame",
+   "cycle": 2,
+   "p": 14,
+   "cycle_beat": 0.91,
+   "loop90": 2,
+   "frame_ops": [],
+   "text_ops": [
+    "text_ghost(.2)"
+   ]
+  },
+  {
+   "frame": 570,
+   "time": 19.0,
+   "beat": 37.0,
+   "nearest_beat": 37,
+   "beat_offset_frames": 0.0,
+   "bar": 10,
+   "beat_in_bar": 2.0,
+   "type": "glitch_frame",
+   "cycle": 2,
+   "p": 15,
+   "cycle_beat": 0.98,
+   "loop90": 2,
+   "frame_ops": [
+    "invert",
+    "datamosh(40,480,.85)",
+    "lines(160,K)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 571,
+   "time": 19.033,
+   "beat": 37.07,
+   "nearest_beat": 37,
+   "beat_offset_frames": 1.0,
+   "bar": 10,
+   "beat_in_bar": 2.07,
+   "type": "glitch_frame",
+   "cycle": 2,
+   "p": 16,
+   "cycle_beat": 1.04,
+   "loop90": 2,
+   "frame_ops": [
+    "freeze_box"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 572,
+   "time": 19.067,
+   "beat": 37.13,
+   "nearest_beat": 37,
+   "beat_offset_frames": 2.0,
+   "bar": 10,
+   "beat_in_bar": 2.13,
+   "type": "glitch_frame",
+   "cycle": 2,
+   "p": 17,
+   "cycle_beat": 1.11,
+   "loop90": 2,
+   "frame_ops": [],
+   "text_ops": [
+    "text_vsmear(10)"
+   ]
+  },
+  {
+   "frame": 573,
+   "time": 19.1,
+   "beat": 37.2,
+   "nearest_beat": 37,
+   "beat_offset_frames": 3.0,
+   "bar": 10,
+   "beat_in_bar": 2.2,
+   "type": "glitch_frame",
+   "cycle": 2,
+   "p": 18,
+   "cycle_beat": 1.17,
+   "loop90": 2,
+   "frame_ops": [
+    "datamosh(0,240,.18)",
+    "datamosh(245,480,.6)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 574,
+   "time": 19.133,
+   "beat": 37.26,
+   "nearest_beat": 37,
+   "beat_offset_frames": 4.0,
+   "bar": 10,
+   "beat_in_bar": 2.26,
+   "type": "audio_808_hit",
+   "sub_db": 46.2,
+   "p": 19
+  },
+  {
+   "frame": 574,
+   "time": 19.133,
+   "beat": 37.26,
+   "nearest_beat": 37,
+   "beat_offset_frames": 4.0,
+   "bar": 10,
+   "beat_in_bar": 2.26,
+   "type": "glitch_frame",
+   "cycle": 2,
+   "p": 19,
+   "cycle_beat": 1.24,
+   "loop90": 2,
+   "frame_ops": [
+    "datamosh(0,480,.5)",
+    "flash(W,.9)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 575,
+   "time": 19.167,
+   "beat": 37.33,
+   "nearest_beat": 37,
+   "beat_offset_frames": 5.0,
+   "bar": 10,
+   "beat_in_bar": 2.33,
+   "type": "glitch_frame",
+   "cycle": 2,
+   "p": 20,
+   "cycle_beat": 1.31,
+   "loop90": 2,
+   "frame_ops": [
+    "flash_full(255,253,255)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 576,
+   "time": 19.2,
+   "beat": 37.39,
+   "nearest_beat": 37,
+   "beat_offset_frames": 6.0,
+   "bar": 10,
+   "beat_in_bar": 2.39,
+   "type": "glitch_frame",
+   "cycle": 2,
+   "p": 21,
+   "cycle_beat": 1.37,
+   "loop90": 2,
+   "frame_ops": [
+    "flash_full(255,253,255)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 577,
+   "time": 19.233,
+   "beat": 37.46,
+   "nearest_beat": 37,
+   "beat_offset_frames": 7.0,
+   "bar": 10,
+   "beat_in_bar": 2.46,
+   "type": "glitch_frame",
+   "cycle": 2,
+   "p": 22,
+   "cycle_beat": 1.44,
+   "loop90": 2,
+   "frame_ops": [
+    "gray_wash(.5,118)",
+    "v_smear(40,290,480)"
+   ],
+   "text_ops": [
+    "text_vsmear(18)",
+    "text_ghost(.5)"
+   ]
+  },
+  {
+   "frame": 578,
+   "time": 19.267,
+   "beat": 37.52,
+   "nearest_beat": 38,
+   "beat_offset_frames": -7.3,
+   "bar": 10,
+   "beat_in_bar": 2.52,
+   "type": "glitch_frame",
+   "cycle": 2,
+   "p": 23,
+   "cycle_beat": 1.5,
+   "loop90": 2,
+   "frame_ops": [],
+   "text_ops": [
+    "text_vsmear(12)",
+    "text_ghost(.5)"
+   ]
+  },
+  {
+   "frame": 579,
+   "time": 19.3,
+   "beat": 37.59,
+   "nearest_beat": 38,
+   "beat_offset_frames": -6.3,
+   "bar": 10,
+   "beat_in_bar": 2.59,
+   "type": "glitch_frame",
+   "cycle": 2,
+   "p": 24,
+   "cycle_beat": 1.57,
+   "loop90": 2,
+   "frame_ops": [],
+   "text_ops": [
+    "text_vsmear(24)",
+    "text_ghost(.5)"
+   ]
+  },
+  {
+   "frame": 580,
+   "time": 19.333,
+   "beat": 37.65,
+   "nearest_beat": 38,
+   "beat_offset_frames": -5.3,
+   "bar": 10,
+   "beat_in_bar": 2.65,
+   "type": "glitch_frame",
+   "cycle": 2,
+   "p": 25,
+   "cycle_beat": 1.63,
+   "loop90": 2,
+   "frame_ops": [
+    "low_blocks",
+    "specks_row(297,W)"
+   ],
+   "text_ops": [
+    "text_diag_smear(10)"
+   ]
+  },
+  {
+   "frame": 580,
+   "time": 19.333,
+   "beat": 37.65,
+   "nearest_beat": 38,
+   "beat_offset_frames": -5.3,
+   "bar": 10,
+   "beat_in_bar": 2.65,
+   "type": "line_start",
+   "line": 10,
+   "part": 2,
+   "text": "ЕСЛИ ПРЯМО СЕЙЧАС",
+   "n_words": 3,
+   "n_chars": 17,
+   "case": "UPPER",
+   "red": false,
+   "end_frame": 626,
+   "dur_beats": 3.07
+  },
+  {
+   "frame": 580,
+   "time": 19.333,
+   "beat": 37.65,
+   "nearest_beat": 38,
+   "beat_offset_frames": -5.3,
+   "bar": 10,
+   "beat_in_bar": 2.65,
+   "type": "word_onset",
+   "word": "ЕСЛИ",
+   "line": 10,
+   "part": 2,
+   "reveal": "hard cut, cumulative; text shaken/smeared every frame",
+   "red": false
+  },
+  {
+   "frame": 581,
+   "time": 19.367,
+   "beat": 37.72,
+   "nearest_beat": 38,
+   "beat_offset_frames": -4.3,
+   "bar": 10,
+   "beat_in_bar": 2.72,
+   "type": "glitch_frame",
+   "cycle": 2,
+   "p": 26,
+   "cycle_beat": 1.7,
+   "loop90": 2,
+   "frame_ops": [
+    "specks(290,480,W,grid)",
+    "low_blocks"
+   ],
+   "text_ops": [
+    "text_ghost(.3)"
+   ]
+  },
+  {
+   "frame": 582,
+   "time": 19.4,
+   "beat": 37.78,
+   "nearest_beat": 38,
+   "beat_offset_frames": -3.3,
+   "bar": 10,
+   "beat_in_bar": 2.78,
+   "type": "glitch_frame",
+   "cycle": 2,
+   "p": 27,
+   "cycle_beat": 1.76,
+   "loop90": 2,
+   "frame_ops": [
+    "halftone(290,480,W,holes)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 583,
+   "time": 19.433,
+   "beat": 37.85,
+   "nearest_beat": 38,
+   "beat_offset_frames": -2.3,
+   "bar": 10,
+   "beat_in_bar": 2.85,
+   "type": "glitch_frame",
+   "cycle": 2,
+   "p": 28,
+   "cycle_beat": 1.83,
+   "loop90": 2,
+   "frame_ops": [
+    "bar_line_teeth(241,W)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 584,
+   "time": 19.467,
+   "beat": 37.91,
+   "nearest_beat": 38,
+   "beat_offset_frames": -1.3,
+   "bar": 10,
+   "beat_in_bar": 2.91,
+   "type": "glitch_frame",
+   "cycle": 2,
+   "p": 29,
+   "cycle_beat": 1.89,
+   "loop90": 2,
+   "frame_ops": [
+    "lines(W)"
+   ],
+   "text_ops": [
+    "text_hsmear(14)",
+    "text_dim(.6)"
+   ]
+  },
+  {
+   "frame": 585,
+   "time": 19.5,
+   "beat": 37.98,
+   "nearest_beat": 38,
+   "beat_offset_frames": -0.3,
+   "bar": 10,
+   "beat_in_bar": 2.98,
+   "type": "glitch_cycle_start",
+   "cycle": 3,
+   "loop90_slot": "A",
+   "inv_layer": "off",
+   "offset_vs_even_beat_frames": -0.3
+  },
+  {
+   "frame": 585,
+   "time": 19.5,
+   "beat": 37.98,
+   "nearest_beat": 38,
+   "beat_offset_frames": -0.3,
+   "bar": 10,
+   "beat_in_bar": 2.98,
+   "type": "glitch_frame",
+   "cycle": 3,
+   "p": 0,
+   "cycle_beat": 0.0,
+   "loop90": 0,
+   "frame_ops": [
+    "overexpose(2.6)",
+    "bottom_white(230,1)",
+    "h_smear(30)"
+   ],
+   "text_ops": [
+    "text_dim(.5)"
+   ]
+  },
+  {
+   "frame": 586,
+   "time": 19.533,
+   "beat": 38.04,
+   "nearest_beat": 38,
+   "beat_offset_frames": 0.7,
+   "bar": 10,
+   "beat_in_bar": 3.04,
+   "type": "glitch_frame",
+   "cycle": 3,
+   "p": 1,
+   "cycle_beat": 0.07,
+   "loop90": 0,
+   "frame_ops": [
+    "overexpose(2.8)",
+    "bottom_white(220,1)",
+    "h_smear(30)"
+   ],
+   "text_ops": [
+    "text_dim(.4)"
+   ]
+  },
+  {
+   "frame": 587,
+   "time": 19.567,
+   "beat": 38.11,
+   "nearest_beat": 38,
+   "beat_offset_frames": 1.7,
+   "bar": 10,
+   "beat_in_bar": 3.11,
+   "type": "glitch_frame",
+   "cycle": 3,
+   "p": 2,
+   "cycle_beat": 0.13,
+   "loop90": 0,
+   "frame_ops": [
+    "overexpose(2.7)",
+    "bottom_white(220,1)",
+    "h_smear(30)"
+   ],
+   "text_ops": [
+    "text_dim(.4)"
+   ]
+  },
+  {
+   "frame": 588,
+   "time": 19.6,
+   "beat": 38.18,
+   "nearest_beat": 38,
+   "beat_offset_frames": 2.7,
+   "bar": 10,
+   "beat_in_bar": 3.18,
+   "type": "glitch_frame",
+   "cycle": 3,
+   "p": 3,
+   "cycle_beat": 0.2,
+   "loop90": 0,
+   "frame_ops": [
+    "overexpose(2.2)",
+    "bottom_white(260,1)",
+    "h_smear(18)",
+    "v_smear(14,0,480)",
+    "tint(.8,.92,1.2)"
+   ],
+   "text_ops": [
+    "text_dim(.5)"
+   ]
+  },
+  {
+   "frame": 589,
+   "time": 19.633,
+   "beat": 38.24,
+   "nearest_beat": 38,
+   "beat_offset_frames": 3.7,
+   "bar": 10,
+   "beat_in_bar": 3.24,
+   "type": "glitch_frame",
+   "cycle": 3,
+   "p": 4,
+   "cycle_beat": 0.26,
+   "loop90": 0,
+   "frame_ops": [
+    "soft(4)",
+    "h_smear(12)"
+   ],
+   "text_ops": [
+    "text_vsmear(16)"
+   ]
+  },
+  {
+   "frame": 590,
+   "time": 19.667,
+   "beat": 38.31,
+   "nearest_beat": 38,
+   "beat_offset_frames": 4.7,
+   "bar": 10,
+   "beat_in_bar": 3.31,
+   "type": "glitch_frame",
+   "cycle": 3,
+   "p": 5,
+   "cycle_beat": 0.33,
+   "loop90": 0,
+   "frame_ops": [],
+   "text_ops": [
+    "text_ghost(.3)"
+   ]
+  },
+  {
+   "frame": 591,
+   "time": 19.7,
+   "beat": 38.37,
+   "nearest_beat": 38,
+   "beat_offset_frames": 5.7,
+   "bar": 10,
+   "beat_in_bar": 3.37,
+   "type": "glitch_frame",
+   "cycle": 3,
+   "p": 6,
+   "cycle_beat": 0.39,
+   "loop90": 0,
+   "frame_ops": [],
+   "text_ops": [
+    "text_ghost(.2)"
+   ]
+  },
+  {
+   "frame": 592,
+   "time": 19.733,
+   "beat": 38.44,
+   "nearest_beat": 38,
+   "beat_offset_frames": 6.7,
+   "bar": 10,
+   "beat_in_bar": 3.44,
+   "type": "glitch_frame",
+   "cycle": 3,
+   "p": 7,
+   "cycle_beat": 0.46,
+   "loop90": 0,
+   "frame_ops": [
+    "specks(15,70,W,90)",
+    "specks(160,185,W,40)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 593,
+   "time": 19.767,
+   "beat": 38.5,
+   "nearest_beat": 39,
+   "beat_offset_frames": -7.6,
+   "bar": 10,
+   "beat_in_bar": 3.5,
+   "type": "glitch_frame",
+   "cycle": 3,
+   "p": 8,
+   "cycle_beat": 0.52,
+   "loop90": 0,
+   "frame_ops": [
+    "halftone(0,190,W,stripes)",
+    "specks_row(425,W)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 594,
+   "time": 19.8,
+   "beat": 38.57,
+   "nearest_beat": 39,
+   "beat_offset_frames": -6.6,
+   "bar": 10,
+   "beat_in_bar": 3.57,
+   "type": "glitch_frame",
+   "cycle": 3,
+   "p": 9,
+   "cycle_beat": 0.59,
+   "loop90": 0,
+   "frame_ops": [
+    "bar_thick(211,240,W)"
+   ],
+   "text_ops": [
+    "text_hsmear(10)"
+   ]
+  },
+  {
+   "frame": 595,
+   "time": 19.833,
+   "beat": 38.63,
+   "nearest_beat": 39,
+   "beat_offset_frames": -5.6,
+   "bar": 10,
+   "beat_in_bar": 3.63,
+   "type": "glitch_frame",
+   "cycle": 3,
+   "p": 10,
+   "cycle_beat": 0.65,
+   "loop90": 0,
+   "frame_ops": [
+    "lines(W)"
+   ],
+   "text_ops": [
+    "text_hsmear(14)"
+   ]
+  },
+  {
+   "frame": 595,
+   "time": 19.833,
+   "beat": 38.63,
+   "nearest_beat": 39,
+   "beat_offset_frames": -5.6,
+   "bar": 10,
+   "beat_in_bar": 3.63,
+   "type": "word_onset",
+   "word": "ПРЯМО",
+   "line": 10,
+   "part": 2,
+   "reveal": "hard cut, cumulative; text shaken/smeared every frame",
+   "red": false
+  },
+  {
+   "frame": 596,
+   "time": 19.867,
+   "beat": 38.7,
+   "nearest_beat": 39,
+   "beat_offset_frames": -4.6,
+   "bar": 10,
+   "beat_in_bar": 3.7,
+   "type": "glitch_frame",
+   "cycle": 3,
+   "p": 11,
+   "cycle_beat": 0.72,
+   "loop90": 0,
+   "frame_ops": [
+    "iridescent(.7)"
+   ],
+   "text_ops": [
+    "text_ghost(.4)"
+   ]
+  },
+  {
+   "frame": 597,
+   "time": 19.9,
+   "beat": 38.76,
+   "nearest_beat": 39,
+   "beat_offset_frames": -3.6,
+   "bar": 10,
+   "beat_in_bar": 3.76,
+   "type": "audio_808_hit",
+   "sub_db": 46.0,
+   "p": 12
+  },
+  {
+   "frame": 597,
+   "time": 19.9,
+   "beat": 38.76,
+   "nearest_beat": 39,
+   "beat_offset_frames": -3.6,
+   "bar": 10,
+   "beat_in_bar": 3.76,
+   "type": "glitch_frame",
+   "cycle": 3,
+   "p": 12,
+   "cycle_beat": 0.78,
+   "loop90": 0,
+   "frame_ops": [
+    "iridescent(.9)"
+   ],
+   "text_ops": [
+    "text_diag_smear(12)"
+   ]
+  },
+  {
+   "frame": 598,
+   "time": 19.933,
+   "beat": 38.83,
+   "nearest_beat": 39,
+   "beat_offset_frames": -2.6,
+   "bar": 10,
+   "beat_in_bar": 3.83,
+   "type": "glitch_frame",
+   "cycle": 3,
+   "p": 13,
+   "cycle_beat": 0.85,
+   "loop90": 0,
+   "frame_ops": [
+    "iridescent(.9)"
+   ],
+   "text_ops": [
+    "text_diag_smear(12)"
+   ]
+  },
+  {
+   "frame": 599,
+   "time": 19.967,
+   "beat": 38.89,
+   "nearest_beat": 39,
+   "beat_offset_frames": -1.6,
+   "bar": 10,
+   "beat_in_bar": 3.89,
+   "type": "glitch_frame",
+   "cycle": 3,
+   "p": 14,
+   "cycle_beat": 0.91,
+   "loop90": 0,
+   "frame_ops": [
+    "iridescent(1.2)"
+   ],
+   "text_ops": [
+    "text_ghost(.3)"
+   ]
+  },
+  {
+   "frame": 600,
+   "time": 20.0,
+   "beat": 38.96,
+   "nearest_beat": 39,
+   "beat_offset_frames": -0.6,
+   "bar": 10,
+   "beat_in_bar": 3.96,
+   "type": "glitch_frame",
+   "cycle": 3,
+   "p": 15,
+   "cycle_beat": 0.98,
+   "loop90": 0,
+   "frame_ops": [
+    "datamosh(40,480,.8)",
+    "iridescent(.8)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 601,
+   "time": 20.033,
+   "beat": 39.02,
+   "nearest_beat": 39,
+   "beat_offset_frames": 0.4,
+   "bar": 10,
+   "beat_in_bar": 4.02,
+   "type": "glitch_frame",
+   "cycle": 3,
+   "p": 16,
+   "cycle_beat": 1.04,
+   "loop90": 0,
+   "frame_ops": [
+    "freeze_box"
+   ],
+   "text_ops": [
+    "text_hsmear(10)"
+   ]
+  },
+  {
+   "frame": 602,
+   "time": 20.067,
+   "beat": 39.09,
+   "nearest_beat": 39,
+   "beat_offset_frames": 1.4,
+   "bar": 10,
+   "beat_in_bar": 4.09,
+   "type": "glitch_frame",
+   "cycle": 3,
+   "p": 17,
+   "cycle_beat": 1.11,
+   "loop90": 0,
+   "frame_ops": [],
+   "text_ops": [
+    "text_hsmear(12)"
+   ]
+  },
+  {
+   "frame": 603,
+   "time": 20.1,
+   "beat": 39.15,
+   "nearest_beat": 39,
+   "beat_offset_frames": 2.4,
+   "bar": 10,
+   "beat_in_bar": 4.15,
+   "type": "glitch_frame",
+   "cycle": 3,
+   "p": 18,
+   "cycle_beat": 1.17,
+   "loop90": 0,
+   "frame_ops": [
+    "datamosh(0,240,.18)",
+    "datamosh(245,480,.6)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 604,
+   "time": 20.133,
+   "beat": 39.22,
+   "nearest_beat": 39,
+   "beat_offset_frames": 3.4,
+   "bar": 10,
+   "beat_in_bar": 4.22,
+   "type": "glitch_frame",
+   "cycle": 3,
+   "p": 19,
+   "cycle_beat": 1.24,
+   "loop90": 0,
+   "frame_ops": [
+    "datamosh(0,480,.5)",
+    "flash(W,.9)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 605,
+   "time": 20.167,
+   "beat": 39.28,
+   "nearest_beat": 39,
+   "beat_offset_frames": 4.4,
+   "bar": 10,
+   "beat_in_bar": 4.28,
+   "type": "audio_808_hit",
+   "sub_db": 46.0,
+   "p": 20
+  },
+  {
+   "frame": 605,
+   "time": 20.167,
+   "beat": 39.28,
+   "nearest_beat": 39,
+   "beat_offset_frames": 4.4,
+   "bar": 10,
+   "beat_in_bar": 4.28,
+   "type": "glitch_frame",
+   "cycle": 3,
+   "p": 20,
+   "cycle_beat": 1.31,
+   "loop90": 0,
+   "frame_ops": [
+    "flash_full(255,252,254)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 606,
+   "time": 20.2,
+   "beat": 39.35,
+   "nearest_beat": 39,
+   "beat_offset_frames": 5.4,
+   "bar": 10,
+   "beat_in_bar": 4.35,
+   "type": "glitch_frame",
+   "cycle": 3,
+   "p": 21,
+   "cycle_beat": 1.37,
+   "loop90": 0,
+   "frame_ops": [
+    "flash_full(255,252,254)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 607,
+   "time": 20.233,
+   "beat": 39.42,
+   "nearest_beat": 39,
+   "beat_offset_frames": 6.4,
+   "bar": 10,
+   "beat_in_bar": 4.42,
+   "type": "audio_808_hit",
+   "sub_db": 43.6,
+   "p": 22
+  },
+  {
+   "frame": 607,
+   "time": 20.233,
+   "beat": 39.42,
+   "nearest_beat": 39,
+   "beat_offset_frames": 6.4,
+   "bar": 10,
+   "beat_in_bar": 4.42,
+   "type": "glitch_frame",
+   "cycle": 3,
+   "p": 22,
+   "cycle_beat": 1.44,
+   "loop90": 0,
+   "frame_ops": [
+    "gray_wash(.5,118)",
+    "v_smear(40,290,480)"
+   ],
+   "text_ops": [
+    "text_vsmear(16)",
+    "text_ghost(.5)"
+   ]
+  },
+  {
+   "frame": 608,
+   "time": 20.267,
+   "beat": 39.48,
+   "nearest_beat": 39,
+   "beat_offset_frames": 7.4,
+   "bar": 10,
+   "beat_in_bar": 4.48,
+   "type": "glitch_frame",
+   "cycle": 3,
+   "p": 23,
+   "cycle_beat": 1.5,
+   "loop90": 0,
+   "frame_ops": [],
+   "text_ops": [
+    "text_ghost(.3)"
+   ]
+  },
+  {
+   "frame": 609,
+   "time": 20.3,
+   "beat": 39.55,
+   "nearest_beat": 40,
+   "beat_offset_frames": -7.0,
+   "bar": 10,
+   "beat_in_bar": 4.55,
+   "type": "glitch_frame",
+   "cycle": 3,
+   "p": 24,
+   "cycle_beat": 1.57,
+   "loop90": 0,
+   "frame_ops": [],
+   "text_ops": [
+    "text_hsmear(16)",
+    "text_ghost(.5)"
+   ]
+  },
+  {
+   "frame": 609,
+   "time": 20.3,
+   "beat": 39.55,
+   "nearest_beat": 40,
+   "beat_offset_frames": -7.0,
+   "bar": 10,
+   "beat_in_bar": 4.55,
+   "type": "word_onset",
+   "word": "СЕЙЧАС",
+   "line": 10,
+   "part": 2,
+   "reveal": "hard cut, cumulative; text shaken/smeared every frame",
+   "red": false
+  },
+  {
+   "frame": 610,
+   "time": 20.333,
+   "beat": 39.61,
+   "nearest_beat": 40,
+   "beat_offset_frames": -6.0,
+   "bar": 10,
+   "beat_in_bar": 4.61,
+   "type": "glitch_frame",
+   "cycle": 3,
+   "p": 25,
+   "cycle_beat": 1.63,
+   "loop90": 0,
+   "frame_ops": [
+    "low_blocks",
+    "specks_row(297,W)"
+   ],
+   "text_ops": [
+    "text_ghost(.3)"
+   ]
+  },
+  {
+   "frame": 611,
+   "time": 20.367,
+   "beat": 39.68,
+   "nearest_beat": 40,
+   "beat_offset_frames": -5.0,
+   "bar": 10,
+   "beat_in_bar": 4.68,
+   "type": "glitch_frame",
+   "cycle": 3,
+   "p": 26,
+   "cycle_beat": 1.7,
+   "loop90": 0,
+   "frame_ops": [
+    "specks(290,480,W,grid)",
+    "low_blocks"
+   ],
+   "text_ops": [
+    "text_hsmear(12)"
+   ]
+  },
+  {
+   "frame": 612,
+   "time": 20.4,
+   "beat": 39.74,
+   "nearest_beat": 40,
+   "beat_offset_frames": -4.0,
+   "bar": 10,
+   "beat_in_bar": 4.74,
+   "type": "glitch_frame",
+   "cycle": 3,
+   "p": 27,
+   "cycle_beat": 1.76,
+   "loop90": 0,
+   "frame_ops": [
+    "halftone(290,480,W,holes)"
+   ],
+   "text_ops": [
+    "text_vsmear(8)"
+   ]
+  },
+  {
+   "frame": 613,
+   "time": 20.433,
+   "beat": 39.81,
+   "nearest_beat": 40,
+   "beat_offset_frames": -3.0,
+   "bar": 10,
+   "beat_in_bar": 4.81,
+   "type": "glitch_frame",
+   "cycle": 3,
+   "p": 28,
+   "cycle_beat": 1.83,
+   "loop90": 0,
+   "frame_ops": [
+    "bar_line_teeth(241,W)",
+    "lines(212,W)"
+   ],
+   "text_ops": [
+    "text_hsmear(8)"
+   ]
+  },
+  {
+   "frame": 614,
+   "time": 20.467,
+   "beat": 39.87,
+   "nearest_beat": 40,
+   "beat_offset_frames": -2.0,
+   "bar": 10,
+   "beat_in_bar": 4.87,
+   "type": "glitch_frame",
+   "cycle": 3,
+   "p": 29,
+   "cycle_beat": 1.89,
+   "loop90": 0,
+   "frame_ops": [
+    "lines(W)"
+   ],
+   "text_ops": [
+    "text_hsmear(14)",
+    "text_ghost(.5)"
+   ]
+  },
+  {
+   "frame": 615,
+   "time": 20.5,
+   "beat": 39.94,
+   "nearest_beat": 40,
+   "beat_offset_frames": -1.0,
+   "bar": 10,
+   "beat_in_bar": 4.94,
+   "type": "glitch_cycle_start",
+   "cycle": 4,
+   "loop90_slot": "B",
+   "inv_layer": "off",
+   "offset_vs_even_beat_frames": -1.0
+  },
+  {
+   "frame": 615,
+   "time": 20.5,
+   "beat": 39.94,
+   "nearest_beat": 40,
+   "beat_offset_frames": -1.0,
+   "bar": 10,
+   "beat_in_bar": 4.94,
+   "type": "glitch_frame",
+   "cycle": 4,
+   "p": 0,
+   "cycle_beat": 0.0,
+   "loop90": 1,
+   "frame_ops": [],
+   "text_ops": [
+    "text_vsmear(14)",
+    "text_ghost(.5)"
+   ]
+  },
+  {
+   "frame": 616,
+   "time": 20.533,
+   "beat": 40.0,
+   "nearest_beat": 40,
+   "beat_offset_frames": 0.0,
+   "bar": 11,
+   "beat_in_bar": 1.0,
+   "type": "audio_808_hit",
+   "sub_db": 44.9,
+   "p": 1
+  },
+  {
+   "frame": 616,
+   "time": 20.533,
+   "beat": 40.0,
+   "nearest_beat": 40,
+   "beat_offset_frames": 0.0,
+   "bar": 11,
+   "beat_in_bar": 1.0,
+   "type": "glitch_frame",
+   "cycle": 4,
+   "p": 1,
+   "cycle_beat": 0.07,
+   "loop90": 1,
+   "frame_ops": [],
+   "text_ops": [
+    "text_vsmear(14)",
+    "text_ghost(.5)"
+   ]
+  },
+  {
+   "frame": 617,
+   "time": 20.567,
+   "beat": 40.07,
+   "nearest_beat": 40,
+   "beat_offset_frames": 1.0,
+   "bar": 11,
+   "beat_in_bar": 1.07,
+   "type": "glitch_frame",
+   "cycle": 4,
+   "p": 2,
+   "cycle_beat": 0.13,
+   "loop90": 1,
+   "frame_ops": [
+    "gray_wash(.45,70)",
+    "soft(3)"
+   ],
+   "text_ops": [
+    "text_vsmear(16)",
+    "text_ghost(.4)"
+   ]
+  },
+  {
+   "frame": 618,
+   "time": 20.6,
+   "beat": 40.13,
+   "nearest_beat": 40,
+   "beat_offset_frames": 2.0,
+   "bar": 11,
+   "beat_in_bar": 1.13,
+   "type": "glitch_frame",
+   "cycle": 4,
+   "p": 3,
+   "cycle_beat": 0.2,
+   "loop90": 1,
+   "frame_ops": [
+    "gray_wash(.45,76)"
+   ],
+   "text_ops": [
+    "text_vsmear(22)"
+   ]
+  },
+  {
+   "frame": 619,
+   "time": 20.633,
+   "beat": 40.2,
+   "nearest_beat": 40,
+   "beat_offset_frames": 3.0,
+   "bar": 11,
+   "beat_in_bar": 1.2,
+   "type": "glitch_frame",
+   "cycle": 4,
+   "p": 4,
+   "cycle_beat": 0.26,
+   "loop90": 1,
+   "frame_ops": [],
+   "text_ops": [
+    "text_vsmear(20)"
+   ]
+  },
+  {
+   "frame": 620,
+   "time": 20.667,
+   "beat": 40.26,
+   "nearest_beat": 40,
+   "beat_offset_frames": 4.0,
+   "bar": 11,
+   "beat_in_bar": 1.26,
+   "type": "glitch_frame",
+   "cycle": 4,
+   "p": 5,
+   "cycle_beat": 0.33,
+   "loop90": 1,
+   "frame_ops": [],
+   "text_ops": []
+  },
+  {
+   "frame": 621,
+   "time": 20.7,
+   "beat": 40.33,
+   "nearest_beat": 40,
+   "beat_offset_frames": 5.0,
+   "bar": 11,
+   "beat_in_bar": 1.33,
+   "type": "glitch_frame",
+   "cycle": 4,
+   "p": 6,
+   "cycle_beat": 0.39,
+   "loop90": 1,
+   "frame_ops": [],
+   "text_ops": []
+  },
+  {
+   "frame": 622,
+   "time": 20.733,
+   "beat": 40.39,
+   "nearest_beat": 40,
+   "beat_offset_frames": 6.0,
+   "bar": 11,
+   "beat_in_bar": 1.39,
+   "type": "glitch_frame",
+   "cycle": 4,
+   "p": 7,
+   "cycle_beat": 0.46,
+   "loop90": 1,
+   "frame_ops": [
+    "specks(15,70,C,90)",
+    "specks(160,185,C,40)"
+   ],
+   "text_ops": [
+    "text_hsmear(14)"
+   ]
+  },
+  {
+   "frame": 623,
+   "time": 20.767,
+   "beat": 40.46,
+   "nearest_beat": 40,
+   "beat_offset_frames": 7.0,
+   "bar": 11,
+   "beat_in_bar": 1.46,
+   "type": "glitch_frame",
+   "cycle": 4,
+   "p": 8,
+   "cycle_beat": 0.52,
+   "loop90": 1,
+   "frame_ops": [
+    "halftone(0,188,C,stripes)",
+    "specks_row(425,C)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 624,
+   "time": 20.8,
+   "beat": 40.52,
+   "nearest_beat": 41,
+   "beat_offset_frames": -7.3,
+   "bar": 11,
+   "beat_in_bar": 1.52,
+   "type": "glitch_frame",
+   "cycle": 4,
+   "p": 9,
+   "cycle_beat": 0.59,
+   "loop90": 1,
+   "frame_ops": [
+    "bar_thick(210,241,C)"
+   ],
+   "text_ops": [
+    "text_hsmear(10)"
+   ]
+  },
+  {
+   "frame": 625,
+   "time": 20.833,
+   "beat": 40.59,
+   "nearest_beat": 41,
+   "beat_offset_frames": -6.3,
+   "bar": 11,
+   "beat_in_bar": 1.59,
+   "type": "glitch_frame",
+   "cycle": 4,
+   "p": 10,
+   "cycle_beat": 0.65,
+   "loop90": 1,
+   "frame_ops": [
+    "lines(C)"
+   ],
+   "text_ops": [
+    "text_hsmear(12)"
+   ]
+  },
+  {
+   "frame": 626,
+   "time": 20.867,
+   "beat": 40.66,
+   "nearest_beat": 41,
+   "beat_offset_frames": -5.3,
+   "bar": 11,
+   "beat_in_bar": 1.66,
+   "type": "glitch_frame",
+   "cycle": 4,
+   "p": 11,
+   "cycle_beat": 0.72,
+   "loop90": 1,
+   "frame_ops": [],
+   "text_ops": [
+    "text_ghost(.3)"
+   ]
+  },
+  {
+   "frame": 627,
+   "time": 20.9,
+   "beat": 40.72,
+   "nearest_beat": 41,
+   "beat_offset_frames": -4.3,
+   "bar": 11,
+   "beat_in_bar": 1.72,
+   "type": "glitch_frame",
+   "cycle": 4,
+   "p": 12,
+   "cycle_beat": 0.78,
+   "loop90": 1,
+   "frame_ops": [],
+   "text_ops": []
+  },
+  {
+   "frame": 627,
+   "time": 20.9,
+   "beat": 40.72,
+   "nearest_beat": 41,
+   "beat_offset_frames": -4.3,
+   "bar": 11,
+   "beat_in_bar": 1.72,
+   "type": "line_start",
+   "line": 11,
+   "part": 2,
+   "text": "НЕ ОСТАНОВИТЬСЯ",
+   "n_words": 2,
+   "n_chars": 15,
+   "case": "UPPER",
+   "red": false,
+   "end_frame": 671,
+   "dur_beats": 2.94
+  },
+  {
+   "frame": 627,
+   "time": 20.9,
+   "beat": 40.72,
+   "nearest_beat": 41,
+   "beat_offset_frames": -4.3,
+   "bar": 11,
+   "beat_in_bar": 1.72,
+   "type": "word_onset",
+   "word": "НЕ",
+   "line": 11,
+   "part": 2,
+   "reveal": "hard cut, cumulative; text shaken/smeared every frame",
+   "red": false
+  },
+  {
+   "frame": 628,
+   "time": 20.933,
+   "beat": 40.79,
+   "nearest_beat": 41,
+   "beat_offset_frames": -3.3,
+   "bar": 11,
+   "beat_in_bar": 1.79,
+   "type": "glitch_frame",
+   "cycle": 4,
+   "p": 13,
+   "cycle_beat": 0.85,
+   "loop90": 1,
+   "frame_ops": [],
+   "text_ops": []
+  },
+  {
+   "frame": 629,
+   "time": 20.967,
+   "beat": 40.85,
+   "nearest_beat": 41,
+   "beat_offset_frames": -2.3,
+   "bar": 11,
+   "beat_in_bar": 1.85,
+   "type": "glitch_frame",
+   "cycle": 4,
+   "p": 14,
+   "cycle_beat": 0.91,
+   "loop90": 1,
+   "frame_ops": [],
+   "text_ops": [
+    "text_vsmear(10)"
+   ]
+  },
+  {
+   "frame": 630,
+   "time": 21.0,
+   "beat": 40.92,
+   "nearest_beat": 41,
+   "beat_offset_frames": -1.3,
+   "bar": 11,
+   "beat_in_bar": 1.92,
+   "type": "glitch_frame",
+   "cycle": 4,
+   "p": 15,
+   "cycle_beat": 0.98,
+   "loop90": 1,
+   "frame_ops": [
+    "cyan_invert",
+    "datamosh(200,480,.8)",
+    "lines(163,C)"
+   ],
+   "text_ops": [
+    "text_dim(.3)"
+   ]
+  },
+  {
+   "frame": 631,
+   "time": 21.033,
+   "beat": 40.98,
+   "nearest_beat": 41,
+   "beat_offset_frames": -0.3,
+   "bar": 11,
+   "beat_in_bar": 1.98,
+   "type": "glitch_frame",
+   "cycle": 4,
+   "p": 16,
+   "cycle_beat": 1.04,
+   "loop90": 1,
+   "frame_ops": [
+    "cyan_invert",
+    "freeze_box"
+   ],
+   "text_ops": [
+    "text_dim(.25)"
+   ]
+  },
+  {
+   "frame": 632,
+   "time": 21.067,
+   "beat": 41.05,
+   "nearest_beat": 41,
+   "beat_offset_frames": 0.7,
+   "bar": 11,
+   "beat_in_bar": 2.05,
+   "type": "glitch_frame",
+   "cycle": 4,
+   "p": 17,
+   "cycle_beat": 1.11,
+   "loop90": 1,
+   "frame_ops": [
+    "cyan_invert",
+    "overexpose(1.5)"
+   ],
+   "text_ops": [
+    "text_dim(.2)"
+   ]
+  },
+  {
+   "frame": 633,
+   "time": 21.1,
+   "beat": 41.11,
+   "nearest_beat": 41,
+   "beat_offset_frames": 1.7,
+   "bar": 11,
+   "beat_in_bar": 2.11,
+   "type": "glitch_frame",
+   "cycle": 4,
+   "p": 18,
+   "cycle_beat": 1.17,
+   "loop90": 1,
+   "frame_ops": [
+    "cyan_invert",
+    "datamosh(180,480,.7)"
+   ],
+   "text_ops": [
+    "text_dim(.3)"
+   ]
+  },
+  {
+   "frame": 634,
+   "time": 21.133,
+   "beat": 41.18,
+   "nearest_beat": 41,
+   "beat_offset_frames": 2.7,
+   "bar": 11,
+   "beat_in_bar": 2.18,
+   "type": "glitch_frame",
+   "cycle": 4,
+   "p": 19,
+   "cycle_beat": 1.24,
+   "loop90": 1,
+   "frame_ops": [
+    "datamosh(0,480,.5)",
+    "flash(C,.9)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 635,
+   "time": 21.167,
+   "beat": 41.24,
+   "nearest_beat": 41,
+   "beat_offset_frames": 3.7,
+   "bar": 11,
+   "beat_in_bar": 2.24,
+   "type": "audio_808_hit",
+   "sub_db": 43.2,
+   "p": 20
+  },
+  {
+   "frame": 635,
+   "time": 21.167,
+   "beat": 41.24,
+   "nearest_beat": 41,
+   "beat_offset_frames": 3.7,
+   "bar": 11,
+   "beat_in_bar": 2.24,
+   "type": "glitch_frame",
+   "cycle": 4,
+   "p": 20,
+   "cycle_beat": 1.31,
+   "loop90": 1,
+   "frame_ops": [
+    "flash_full(19,212,249)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 636,
+   "time": 21.2,
+   "beat": 41.31,
+   "nearest_beat": 41,
+   "beat_offset_frames": 4.7,
+   "bar": 11,
+   "beat_in_bar": 2.31,
+   "type": "glitch_frame",
+   "cycle": 4,
+   "p": 21,
+   "cycle_beat": 1.37,
+   "loop90": 1,
+   "frame_ops": [
+    "flash_full(19,212,249)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 637,
+   "time": 21.233,
+   "beat": 41.37,
+   "nearest_beat": 41,
+   "beat_offset_frames": 5.7,
+   "bar": 11,
+   "beat_in_bar": 2.37,
+   "type": "glitch_frame",
+   "cycle": 4,
+   "p": 22,
+   "cycle_beat": 1.44,
+   "loop90": 1,
+   "frame_ops": [
+    "tone_teal"
+   ],
+   "text_ops": [
+    "text_hsmear(8)"
+   ]
+  },
+  {
+   "frame": 638,
+   "time": 21.267,
+   "beat": 41.44,
+   "nearest_beat": 41,
+   "beat_offset_frames": 6.7,
+   "bar": 11,
+   "beat_in_bar": 2.44,
+   "type": "glitch_frame",
+   "cycle": 4,
+   "p": 23,
+   "cycle_beat": 1.5,
+   "loop90": 1,
+   "frame_ops": [],
+   "text_ops": [
+    "text_hsmear(10)",
+    "text_ghost(.3)"
+   ]
+  },
+  {
+   "frame": 638,
+   "time": 21.267,
+   "beat": 41.44,
+   "nearest_beat": 41,
+   "beat_offset_frames": 6.7,
+   "bar": 11,
+   "beat_in_bar": 2.44,
+   "type": "word_onset",
+   "word": "ОСТАНОВИТЬСЯ",
+   "line": 11,
+   "part": 2,
+   "reveal": "hard cut, cumulative; text shaken/smeared every frame",
+   "red": false
+  },
+  {
+   "frame": 639,
+   "time": 21.3,
+   "beat": 41.5,
+   "nearest_beat": 42,
+   "beat_offset_frames": -7.6,
+   "bar": 11,
+   "beat_in_bar": 2.5,
+   "type": "glitch_frame",
+   "cycle": 4,
+   "p": 24,
+   "cycle_beat": 1.57,
+   "loop90": 1,
+   "frame_ops": [],
+   "text_ops": [
+    "text_ghost(.3)"
+   ]
+  },
+  {
+   "frame": 640,
+   "time": 21.333,
+   "beat": 41.57,
+   "nearest_beat": 42,
+   "beat_offset_frames": -6.6,
+   "bar": 11,
+   "beat_in_bar": 2.57,
+   "type": "glitch_frame",
+   "cycle": 4,
+   "p": 25,
+   "cycle_beat": 1.63,
+   "loop90": 1,
+   "frame_ops": [
+    "tone_teal",
+    "low_blocks",
+    "specks_row(297,C)"
+   ],
+   "text_ops": [
+    "text_hsmear(10)"
+   ]
+  },
+  {
+   "frame": 641,
+   "time": 21.367,
+   "beat": 41.63,
+   "nearest_beat": 42,
+   "beat_offset_frames": -5.6,
+   "bar": 11,
+   "beat_in_bar": 2.63,
+   "type": "glitch_frame",
+   "cycle": 4,
+   "p": 26,
+   "cycle_beat": 1.7,
+   "loop90": 1,
+   "frame_ops": [
+    "specks(290,480,C,grid)",
+    "low_blocks"
+   ],
+   "text_ops": [
+    "text_ghost(.3)"
+   ]
+  },
+  {
+   "frame": 642,
+   "time": 21.4,
+   "beat": 41.7,
+   "nearest_beat": 42,
+   "beat_offset_frames": -4.6,
+   "bar": 11,
+   "beat_in_bar": 2.7,
+   "type": "glitch_frame",
+   "cycle": 4,
+   "p": 27,
+   "cycle_beat": 1.76,
+   "loop90": 1,
+   "frame_ops": [
+    "halftone(290,480,C,holes)",
+    "iridescent(.4)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 643,
+   "time": 21.433,
+   "beat": 41.76,
+   "nearest_beat": 42,
+   "beat_offset_frames": -3.6,
+   "bar": 11,
+   "beat_in_bar": 2.76,
+   "type": "glitch_frame",
+   "cycle": 4,
+   "p": 28,
+   "cycle_beat": 1.83,
+   "loop90": 1,
+   "frame_ops": [
+    "bar_line_teeth(242,C)"
+   ],
+   "text_ops": [
+    "text_hsmear(10)"
+   ]
+  },
+  {
+   "frame": 644,
+   "time": 21.467,
+   "beat": 41.83,
+   "nearest_beat": 42,
+   "beat_offset_frames": -2.6,
+   "bar": 11,
+   "beat_in_bar": 2.83,
+   "type": "glitch_frame",
+   "cycle": 4,
+   "p": 29,
+   "cycle_beat": 1.89,
+   "loop90": 1,
+   "frame_ops": [
+    "bottom_white(330,0)",
+    "lines(C)",
+    "iridescent(.5)"
+   ],
+   "text_ops": [
+    "text_vsmear(10)"
+   ]
+  },
+  {
+   "frame": 645,
+   "time": 21.5,
+   "beat": 41.9,
+   "nearest_beat": 42,
+   "beat_offset_frames": -1.6,
+   "bar": 11,
+   "beat_in_bar": 2.9,
+   "type": "glitch_cycle_start",
+   "cycle": 5,
+   "loop90_slot": "C",
+   "inv_layer": "off",
+   "offset_vs_even_beat_frames": -1.6
+  },
+  {
+   "frame": 645,
+   "time": 21.5,
+   "beat": 41.9,
+   "nearest_beat": 42,
+   "beat_offset_frames": -1.6,
+   "bar": 11,
+   "beat_in_bar": 2.9,
+   "type": "glitch_frame",
+   "cycle": 5,
+   "p": 0,
+   "cycle_beat": 0.0,
+   "loop90": 2,
+   "frame_ops": [
+    "bottom_white(320,0)",
+    "iridescent(.5)"
+   ],
+   "text_ops": [
+    "text_vsmear(12)"
+   ]
+  },
+  {
+   "frame": 646,
+   "time": 21.533,
+   "beat": 41.96,
+   "nearest_beat": 42,
+   "beat_offset_frames": -0.6,
+   "bar": 11,
+   "beat_in_bar": 2.96,
+   "type": "glitch_frame",
+   "cycle": 5,
+   "p": 1,
+   "cycle_beat": 0.07,
+   "loop90": 2,
+   "frame_ops": [
+    "bottom_white(300,0)"
+   ],
+   "text_ops": [
+    "text_hsmear(10)"
+   ]
+  },
+  {
+   "frame": 647,
+   "time": 21.567,
+   "beat": 42.03,
+   "nearest_beat": 42,
+   "beat_offset_frames": 0.4,
+   "bar": 11,
+   "beat_in_bar": 3.03,
+   "type": "audio_808_hit",
+   "sub_db": 45.3,
+   "p": 2
+  },
+  {
+   "frame": 647,
+   "time": 21.567,
+   "beat": 42.03,
+   "nearest_beat": 42,
+   "beat_offset_frames": 0.4,
+   "bar": 11,
+   "beat_in_bar": 3.03,
+   "type": "glitch_frame",
+   "cycle": 5,
+   "p": 2,
+   "cycle_beat": 0.13,
+   "loop90": 2,
+   "frame_ops": [
+    "tone_palecyan(115)",
+    "text_recolor(.55,150,185,225)"
+   ],
+   "text_ops": [
+    "text_dim(.5)",
+    "text_hsmear(20)"
+   ]
+  },
+  {
+   "frame": 648,
+   "time": 21.6,
+   "beat": 42.09,
+   "nearest_beat": 42,
+   "beat_offset_frames": 1.4,
+   "bar": 11,
+   "beat_in_bar": 3.09,
+   "type": "glitch_frame",
+   "cycle": 5,
+   "p": 3,
+   "cycle_beat": 0.2,
+   "loop90": 2,
+   "frame_ops": [
+    "tone_palecyan(118)",
+    "text_recolor(.45,150,185,225)"
+   ],
+   "text_ops": [
+    "text_dim(.5)",
+    "text_hsmear(20)"
+   ]
+  },
+  {
+   "frame": 649,
+   "time": 21.633,
+   "beat": 42.16,
+   "nearest_beat": 42,
+   "beat_offset_frames": 2.4,
+   "bar": 11,
+   "beat_in_bar": 3.16,
+   "type": "glitch_frame",
+   "cycle": 5,
+   "p": 4,
+   "cycle_beat": 0.26,
+   "loop90": 2,
+   "frame_ops": [
+    "tone_white_below(150)",
+    "text_recolor(.6,175,180,240)"
+   ],
+   "text_ops": [
+    "text_dim(.6)",
+    "text_hsmear(14)"
+   ]
+  },
+  {
+   "frame": 650,
+   "time": 21.667,
+   "beat": 42.22,
+   "nearest_beat": 42,
+   "beat_offset_frames": 3.4,
+   "bar": 11,
+   "beat_in_bar": 3.22,
+   "type": "glitch_frame",
+   "cycle": 5,
+   "p": 5,
+   "cycle_beat": 0.33,
+   "loop90": 2,
+   "frame_ops": [
+    "flash(W,.97)",
+    "text_recolor(.5,170,180,240)"
+   ],
+   "text_ops": [
+    "text_dim(.8)",
+    "text_hsmear(16)"
+   ]
+  },
+  {
+   "frame": 651,
+   "time": 21.7,
+   "beat": 42.29,
+   "nearest_beat": 42,
+   "beat_offset_frames": 4.4,
+   "bar": 11,
+   "beat_in_bar": 3.29,
+   "type": "glitch_frame",
+   "cycle": 5,
+   "p": 6,
+   "cycle_beat": 0.39,
+   "loop90": 2,
+   "frame_ops": [],
+   "text_ops": [
+    "text_hsmear(10)"
+   ]
+  },
+  {
+   "frame": 652,
+   "time": 21.733,
+   "beat": 42.35,
+   "nearest_beat": 42,
+   "beat_offset_frames": 5.4,
+   "bar": 11,
+   "beat_in_bar": 3.35,
+   "type": "glitch_frame",
+   "cycle": 5,
+   "p": 7,
+   "cycle_beat": 0.46,
+   "loop90": 2,
+   "frame_ops": [
+    "specks(15,70,W,90)",
+    "specks(160,185,W,40)"
+   ],
+   "text_ops": [
+    "text_vsmear(10)"
+   ]
+  },
+  {
+   "frame": 653,
+   "time": 21.767,
+   "beat": 42.42,
+   "nearest_beat": 42,
+   "beat_offset_frames": 6.4,
+   "bar": 11,
+   "beat_in_bar": 3.42,
+   "type": "glitch_frame",
+   "cycle": 5,
+   "p": 8,
+   "cycle_beat": 0.52,
+   "loop90": 2,
+   "frame_ops": [
+    "halftone(0,190,W,stripes)",
+    "specks_row(425,W)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 654,
+   "time": 21.8,
+   "beat": 42.48,
+   "nearest_beat": 42,
+   "beat_offset_frames": 7.4,
+   "bar": 11,
+   "beat_in_bar": 3.48,
+   "type": "glitch_frame",
+   "cycle": 5,
+   "p": 9,
+   "cycle_beat": 0.59,
+   "loop90": 2,
+   "frame_ops": [
+    "bar_thick(191,245,W)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 655,
+   "time": 21.833,
+   "beat": 42.55,
+   "nearest_beat": 43,
+   "beat_offset_frames": -6.9,
+   "bar": 11,
+   "beat_in_bar": 3.55,
+   "type": "glitch_frame",
+   "cycle": 5,
+   "p": 10,
+   "cycle_beat": 0.65,
+   "loop90": 2,
+   "frame_ops": [
+    "lines(W)"
+   ],
+   "text_ops": [
+    "text_hsmear(12)"
+   ]
+  },
+  {
+   "frame": 656,
+   "time": 21.867,
+   "beat": 42.61,
+   "nearest_beat": 43,
+   "beat_offset_frames": -5.9,
+   "bar": 11,
+   "beat_in_bar": 3.61,
+   "type": "glitch_frame",
+   "cycle": 5,
+   "p": 11,
+   "cycle_beat": 0.72,
+   "loop90": 2,
+   "frame_ops": [],
+   "text_ops": [
+    "text_vsmear(14)",
+    "text_ghost(.4)"
+   ]
+  },
+  {
+   "frame": 657,
+   "time": 21.9,
+   "beat": 42.68,
+   "nearest_beat": 43,
+   "beat_offset_frames": -4.9,
+   "bar": 11,
+   "beat_in_bar": 3.68,
+   "type": "glitch_frame",
+   "cycle": 5,
+   "p": 12,
+   "cycle_beat": 0.78,
+   "loop90": 2,
+   "frame_ops": [],
+   "text_ops": [
+    "text_vsmear(12)",
+    "text_ghost(.4)"
+   ]
+  },
+  {
+   "frame": 658,
+   "time": 21.933,
+   "beat": 42.74,
+   "nearest_beat": 43,
+   "beat_offset_frames": -3.9,
+   "bar": 11,
+   "beat_in_bar": 3.74,
+   "type": "glitch_frame",
+   "cycle": 5,
+   "p": 13,
+   "cycle_beat": 0.85,
+   "loop90": 2,
+   "frame_ops": [],
+   "text_ops": [
+    "text_vsmear(10)"
+   ]
+  },
+  {
+   "frame": 659,
+   "time": 21.967,
+   "beat": 42.81,
+   "nearest_beat": 43,
+   "beat_offset_frames": -2.9,
+   "bar": 11,
+   "beat_in_bar": 3.81,
+   "type": "glitch_frame",
+   "cycle": 5,
+   "p": 14,
+   "cycle_beat": 0.91,
+   "loop90": 2,
+   "frame_ops": [],
+   "text_ops": [
+    "text_ghost(.3)"
+   ]
+  },
+  {
+   "frame": 660,
+   "time": 22.0,
+   "beat": 42.87,
+   "nearest_beat": 43,
+   "beat_offset_frames": -1.9,
+   "bar": 11,
+   "beat_in_bar": 3.87,
+   "type": "glitch_frame",
+   "cycle": 5,
+   "p": 15,
+   "cycle_beat": 0.98,
+   "loop90": 2,
+   "frame_ops": [
+    "datamosh(40,480,.8)",
+    "lines(160,W)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 661,
+   "time": 22.033,
+   "beat": 42.94,
+   "nearest_beat": 43,
+   "beat_offset_frames": -0.9,
+   "bar": 11,
+   "beat_in_bar": 3.94,
+   "type": "glitch_frame",
+   "cycle": 5,
+   "p": 16,
+   "cycle_beat": 1.04,
+   "loop90": 2,
+   "frame_ops": [
+    "freeze_box"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 662,
+   "time": 22.067,
+   "beat": 43.0,
+   "nearest_beat": 43,
+   "beat_offset_frames": 0.1,
+   "bar": 11,
+   "beat_in_bar": 4.0,
+   "type": "glitch_frame",
+   "cycle": 5,
+   "p": 17,
+   "cycle_beat": 1.11,
+   "loop90": 2,
+   "frame_ops": [],
+   "text_ops": [
+    "text_vsmear(14)"
+   ]
+  },
+  {
+   "frame": 663,
+   "time": 22.1,
+   "beat": 43.07,
+   "nearest_beat": 43,
+   "beat_offset_frames": 1.1,
+   "bar": 11,
+   "beat_in_bar": 4.07,
+   "type": "glitch_frame",
+   "cycle": 5,
+   "p": 18,
+   "cycle_beat": 1.17,
+   "loop90": 2,
+   "frame_ops": [
+    "datamosh(0,240,.18)",
+    "datamosh(245,480,.6)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 664,
+   "time": 22.133,
+   "beat": 43.13,
+   "nearest_beat": 43,
+   "beat_offset_frames": 2.1,
+   "bar": 11,
+   "beat_in_bar": 4.13,
+   "type": "glitch_frame",
+   "cycle": 5,
+   "p": 19,
+   "cycle_beat": 1.24,
+   "loop90": 2,
+   "frame_ops": [
+    "datamosh(0,480,.5)",
+    "flash(W,.9)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 665,
+   "time": 22.167,
+   "beat": 43.2,
+   "nearest_beat": 43,
+   "beat_offset_frames": 3.1,
+   "bar": 11,
+   "beat_in_bar": 4.2,
+   "type": "glitch_frame",
+   "cycle": 5,
+   "p": 20,
+   "cycle_beat": 1.31,
+   "loop90": 2,
+   "frame_ops": [
+    "flash_full(254,252,253)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 666,
+   "time": 22.2,
+   "beat": 43.27,
+   "nearest_beat": 43,
+   "beat_offset_frames": 4.1,
+   "bar": 11,
+   "beat_in_bar": 4.27,
+   "type": "glitch_frame",
+   "cycle": 5,
+   "p": 21,
+   "cycle_beat": 1.37,
+   "loop90": 2,
+   "frame_ops": [
+    "flash_full(254,252,253)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 667,
+   "time": 22.233,
+   "beat": 43.33,
+   "nearest_beat": 43,
+   "beat_offset_frames": 5.1,
+   "bar": 11,
+   "beat_in_bar": 4.33,
+   "type": "audio_808_hit",
+   "sub_db": 45.6,
+   "p": 22
+  },
+  {
+   "frame": 667,
+   "time": 22.233,
+   "beat": 43.33,
+   "nearest_beat": 43,
+   "beat_offset_frames": 5.1,
+   "bar": 11,
+   "beat_in_bar": 4.33,
+   "type": "glitch_frame",
+   "cycle": 5,
+   "p": 22,
+   "cycle_beat": 1.44,
+   "loop90": 2,
+   "frame_ops": [
+    "gray_wash(.5,118)",
+    "v_smear(40,290,480)"
+   ],
+   "text_ops": [
+    "text_vsmear(18)",
+    "text_ghost(.5)"
+   ]
+  },
+  {
+   "frame": 668,
+   "time": 22.267,
+   "beat": 43.4,
+   "nearest_beat": 43,
+   "beat_offset_frames": 6.1,
+   "bar": 11,
+   "beat_in_bar": 4.4,
+   "type": "glitch_frame",
+   "cycle": 5,
+   "p": 23,
+   "cycle_beat": 1.5,
+   "loop90": 2,
+   "frame_ops": [],
+   "text_ops": [
+    "text_vsmear(14)",
+    "text_ghost(.4)"
+   ]
+  },
+  {
+   "frame": 669,
+   "time": 22.3,
+   "beat": 43.46,
+   "nearest_beat": 43,
+   "beat_offset_frames": 7.1,
+   "bar": 11,
+   "beat_in_bar": 4.46,
+   "type": "glitch_frame",
+   "cycle": 5,
+   "p": 24,
+   "cycle_beat": 1.57,
+   "loop90": 2,
+   "frame_ops": [],
+   "text_ops": [
+    "text_vsmear(12)"
+   ]
+  },
+  {
+   "frame": 670,
+   "time": 22.333,
+   "beat": 43.53,
+   "nearest_beat": 44,
+   "beat_offset_frames": -7.3,
+   "bar": 11,
+   "beat_in_bar": 4.53,
+   "type": "glitch_frame",
+   "cycle": 5,
+   "p": 25,
+   "cycle_beat": 1.63,
+   "loop90": 2,
+   "frame_ops": [
+    "low_blocks",
+    "specks_row(297,W)"
+   ],
+   "text_ops": [
+    "text_ghost(.3)"
+   ]
+  },
+  {
+   "frame": 671,
+   "time": 22.367,
+   "beat": 43.59,
+   "nearest_beat": 44,
+   "beat_offset_frames": -6.3,
+   "bar": 11,
+   "beat_in_bar": 4.59,
+   "type": "glitch_frame",
+   "cycle": 5,
+   "p": 26,
+   "cycle_beat": 1.7,
+   "loop90": 2,
+   "frame_ops": [
+    "specks(290,480,W,grid)",
+    "low_blocks"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 672,
+   "time": 22.4,
+   "beat": 43.66,
+   "nearest_beat": 44,
+   "beat_offset_frames": -5.3,
+   "bar": 11,
+   "beat_in_bar": 4.66,
+   "type": "glitch_frame",
+   "cycle": 5,
+   "p": 27,
+   "cycle_beat": 1.76,
+   "loop90": 2,
+   "frame_ops": [
+    "halftone(290,480,W,holes)"
+   ],
+   "text_ops": [
+    "text_vsmear(8)"
+   ]
+  },
+  {
+   "frame": 672,
+   "time": 22.4,
+   "beat": 43.66,
+   "nearest_beat": 44,
+   "beat_offset_frames": -5.3,
+   "bar": 11,
+   "beat_in_bar": 4.66,
+   "type": "line_start",
+   "line": 12,
+   "part": 2,
+   "text": "МАРШРУТКА",
+   "n_words": 1,
+   "n_chars": 9,
+   "case": "UPPER",
+   "red": true,
+   "end_frame": 699,
+   "dur_beats": 1.83
+  },
+  {
+   "frame": 672,
+   "time": 22.4,
+   "beat": 43.66,
+   "nearest_beat": 44,
+   "beat_offset_frames": -5.3,
+   "bar": 11,
+   "beat_in_bar": 4.66,
+   "type": "red_word_on",
+   "word": "МАРШРУТКА",
+   "params": "crimson ~(150,35,65), wght 700, cap 85px@480 (1.55x white caps), single-word line, held to last frame; pink in over-exposed 675-678, green-on-dark in INV 679"
+  },
+  {
+   "frame": 672,
+   "time": 22.4,
+   "beat": 43.66,
+   "nearest_beat": 44,
+   "beat_offset_frames": -5.3,
+   "bar": 11,
+   "beat_in_bar": 4.66,
+   "type": "word_onset",
+   "word": "МАРШРУТКА",
+   "line": 12,
+   "part": 2,
+   "reveal": "hard cut, cumulative; text shaken/smeared every frame",
+   "red": true
+  },
+  {
+   "frame": 673,
+   "time": 22.433,
+   "beat": 43.72,
+   "nearest_beat": 44,
+   "beat_offset_frames": -4.3,
+   "bar": 11,
+   "beat_in_bar": 4.72,
+   "type": "glitch_frame",
+   "cycle": 5,
+   "p": 28,
+   "cycle_beat": 1.83,
+   "loop90": 2,
+   "frame_ops": [
+    "bar_line_teeth(240,W)"
+   ],
+   "text_ops": [
+    "text_vsmear(8)"
+   ]
+  },
+  {
+   "frame": 674,
+   "time": 22.467,
+   "beat": 43.79,
+   "nearest_beat": 44,
+   "beat_offset_frames": -3.3,
+   "bar": 11,
+   "beat_in_bar": 4.79,
+   "type": "glitch_frame",
+   "cycle": 5,
+   "p": 29,
+   "cycle_beat": 1.89,
+   "loop90": 2,
+   "frame_ops": [
+    "lines(W)"
+   ],
+   "text_ops": [
+    "text_vsmear(12)",
+    "text_ghost(.4)"
+   ]
+  },
+  {
+   "frame": 675,
+   "time": 22.5,
+   "beat": 43.85,
+   "nearest_beat": 44,
+   "beat_offset_frames": -2.3,
+   "bar": 11,
+   "beat_in_bar": 4.85,
+   "type": "glitch_cycle_start",
+   "cycle": 6,
+   "loop90_slot": "A",
+   "inv_layer": "on",
+   "offset_vs_even_beat_frames": -2.3
+  },
+  {
+   "frame": 675,
+   "time": 22.5,
+   "beat": 43.85,
+   "nearest_beat": 44,
+   "beat_offset_frames": -2.3,
+   "bar": 11,
+   "beat_in_bar": 4.85,
+   "type": "glitch_frame",
+   "cycle": 6,
+   "p": 0,
+   "cycle_beat": 0.0,
+   "loop90": 0,
+   "frame_ops": [
+    "overexpose(2.6)",
+    "bottom_white(240,1)",
+    "h_smear(26)",
+    "text_recolor(.75,215,70,150)"
+   ],
+   "text_ops": [
+    "text_vsmear(12)"
+   ]
+  },
+  {
+   "frame": 675,
+   "time": 22.5,
+   "beat": 43.85,
+   "nearest_beat": 44,
+   "beat_offset_frames": -2.3,
+   "bar": 11,
+   "beat_in_bar": 4.85,
+   "type": "inv_layer_returns",
+   "note": "INV strobe off during cycles 3-5 (585-674), back for the red-word cycle"
+  },
+  {
+   "frame": 676,
+   "time": 22.533,
+   "beat": 43.92,
+   "nearest_beat": 44,
+   "beat_offset_frames": -1.3,
+   "bar": 11,
+   "beat_in_bar": 4.92,
+   "type": "glitch_frame",
+   "cycle": 6,
+   "p": 1,
+   "cycle_beat": 0.07,
+   "loop90": 0,
+   "frame_ops": [
+    "overexpose(2.8)",
+    "bottom_white(230,1)",
+    "h_smear(26)",
+    "text_recolor(.75,215,70,150)"
+   ],
+   "text_ops": [
+    "text_vsmear(10)"
+   ]
+  },
+  {
+   "frame": 677,
+   "time": 22.567,
+   "beat": 43.98,
+   "nearest_beat": 44,
+   "beat_offset_frames": -0.3,
+   "bar": 11,
+   "beat_in_bar": 4.98,
+   "type": "audio_808_hit",
+   "sub_db": 45.3,
+   "p": 2
+  },
+  {
+   "frame": 677,
+   "time": 22.567,
+   "beat": 43.98,
+   "nearest_beat": 44,
+   "beat_offset_frames": -0.3,
+   "bar": 11,
+   "beat_in_bar": 4.98,
+   "type": "glitch_frame",
+   "cycle": 6,
+   "p": 2,
+   "cycle_beat": 0.13,
+   "loop90": 0,
+   "frame_ops": [
+    "overexpose(2.6)",
+    "bottom_white(240,1)",
+    "h_smear(26)",
+    "text_recolor(.75,215,70,150)"
+   ],
+   "text_ops": [
+    "text_vsmear(12)"
+   ]
+  },
+  {
+   "frame": 678,
+   "time": 22.6,
+   "beat": 44.05,
+   "nearest_beat": 44,
+   "beat_offset_frames": 0.7,
+   "bar": 12,
+   "beat_in_bar": 1.05,
+   "type": "glitch_frame",
+   "cycle": 6,
+   "p": 3,
+   "cycle_beat": 0.2,
+   "loop90": 0,
+   "frame_ops": [
+    "overexpose(2.9)",
+    "bottom_white(220,1)",
+    "h_smear(26)",
+    "text_recolor(.75,215,70,150)"
+   ],
+   "text_ops": [
+    "text_vsmear(16)",
+    "text_dim(.7)"
+   ]
+  },
+  {
+   "frame": 679,
+   "time": 22.633,
+   "beat": 44.11,
+   "nearest_beat": 44,
+   "beat_offset_frames": 1.7,
+   "bar": 12,
+   "beat_in_bar": 1.11,
+   "type": "glitch_frame",
+   "cycle": 6,
+   "p": 4,
+   "cycle_beat": 0.26,
+   "loop90": 0,
+   "frame_ops": [
+    "overexpose(2.6)",
+    "bottom_white(240,1)",
+    "invert"
+   ],
+   "text_ops": [
+    "text_vsmear(10)"
+   ]
+  },
+  {
+   "frame": 680,
+   "time": 22.667,
+   "beat": 44.18,
+   "nearest_beat": 44,
+   "beat_offset_frames": 2.7,
+   "bar": 12,
+   "beat_in_bar": 1.18,
+   "type": "glitch_frame",
+   "cycle": 6,
+   "p": 5,
+   "cycle_beat": 0.33,
+   "loop90": 0,
+   "frame_ops": [],
+   "text_ops": [
+    "text_vsmear(12)"
+   ]
+  },
+  {
+   "frame": 681,
+   "time": 22.7,
+   "beat": 44.24,
+   "nearest_beat": 44,
+   "beat_offset_frames": 3.7,
+   "bar": 12,
+   "beat_in_bar": 1.24,
+   "type": "glitch_frame",
+   "cycle": 6,
+   "p": 6,
+   "cycle_beat": 0.39,
+   "loop90": 0,
+   "frame_ops": [
+    "invert",
+    "specks(20,70,K,60)"
+   ],
+   "text_ops": [
+    "text_vsmear(8)"
+   ]
+  },
+  {
+   "frame": 682,
+   "time": 22.733,
+   "beat": 44.31,
+   "nearest_beat": 44,
+   "beat_offset_frames": 4.7,
+   "bar": 12,
+   "beat_in_bar": 1.31,
+   "type": "glitch_frame",
+   "cycle": 6,
+   "p": 7,
+   "cycle_beat": 0.46,
+   "loop90": 0,
+   "frame_ops": [
+    "specks(15,70,W,90)",
+    "specks(160,185,W,40)"
+   ],
+   "text_ops": [
+    "text_vsmear(12)"
+   ]
+  },
+  {
+   "frame": 683,
+   "time": 22.767,
+   "beat": 44.37,
+   "nearest_beat": 44,
+   "beat_offset_frames": 5.7,
+   "bar": 12,
+   "beat_in_bar": 1.37,
+   "type": "glitch_frame",
+   "cycle": 6,
+   "p": 8,
+   "cycle_beat": 0.52,
+   "loop90": 0,
+   "frame_ops": [
+    "halftone(0,190,W,stripes)",
+    "specks_row(425,W)"
+   ],
+   "text_ops": [
+    "text_vsmear(10)"
+   ]
+  },
+  {
+   "frame": 684,
+   "time": 22.8,
+   "beat": 44.44,
+   "nearest_beat": 44,
+   "beat_offset_frames": 6.7,
+   "bar": 12,
+   "beat_in_bar": 1.44,
+   "type": "glitch_frame",
+   "cycle": 6,
+   "p": 9,
+   "cycle_beat": 0.59,
+   "loop90": 0,
+   "frame_ops": [
+    "invert",
+    "bar_thick(210,241,K)"
+   ],
+   "text_ops": [
+    "text_hsmear(12)"
+   ]
+  },
+  {
+   "frame": 685,
+   "time": 22.833,
+   "beat": 44.51,
+   "nearest_beat": 45,
+   "beat_offset_frames": -7.6,
+   "bar": 12,
+   "beat_in_bar": 1.51,
+   "type": "glitch_frame",
+   "cycle": 6,
+   "p": 10,
+   "cycle_beat": 0.65,
+   "loop90": 0,
+   "frame_ops": [
+    "lines(W)"
+   ],
+   "text_ops": [
+    "text_hsmear(12)"
+   ]
+  },
+  {
+   "frame": 686,
+   "time": 22.867,
+   "beat": 44.57,
+   "nearest_beat": 45,
+   "beat_offset_frames": -6.6,
+   "bar": 12,
+   "beat_in_bar": 1.57,
+   "type": "glitch_frame",
+   "cycle": 6,
+   "p": 11,
+   "cycle_beat": 0.72,
+   "loop90": 0,
+   "frame_ops": [
+    "invert"
+   ],
+   "text_ops": [
+    "text_vsmear(10)"
+   ]
+  },
+  {
+   "frame": 687,
+   "time": 22.9,
+   "beat": 44.64,
+   "nearest_beat": 45,
+   "beat_offset_frames": -5.6,
+   "bar": 12,
+   "beat_in_bar": 1.64,
+   "type": "glitch_frame",
+   "cycle": 6,
+   "p": 12,
+   "cycle_beat": 0.78,
+   "loop90": 0,
+   "frame_ops": [
+    "iridescent(1.0)"
+   ],
+   "text_ops": [
+    "text_vsmear(12)"
+   ]
+  },
+  {
+   "frame": 688,
+   "time": 22.933,
+   "beat": 44.7,
+   "nearest_beat": 45,
+   "beat_offset_frames": -4.6,
+   "bar": 12,
+   "beat_in_bar": 1.7,
+   "type": "glitch_frame",
+   "cycle": 6,
+   "p": 13,
+   "cycle_beat": 0.85,
+   "loop90": 0,
+   "frame_ops": [
+    "iridescent(1.0)"
+   ],
+   "text_ops": [
+    "text_vsmear(12)"
+   ]
+  },
+  {
+   "frame": 689,
+   "time": 22.967,
+   "beat": 44.77,
+   "nearest_beat": 45,
+   "beat_offset_frames": -3.6,
+   "bar": 12,
+   "beat_in_bar": 1.77,
+   "type": "glitch_frame",
+   "cycle": 6,
+   "p": 14,
+   "cycle_beat": 0.91,
+   "loop90": 0,
+   "frame_ops": [
+    "iridescent(1.0)",
+    "invert"
+   ],
+   "text_ops": [
+    "text_vsmear(12)"
+   ]
+  },
+  {
+   "frame": 690,
+   "time": 23.0,
+   "beat": 44.83,
+   "nearest_beat": 45,
+   "beat_offset_frames": -2.6,
+   "bar": 12,
+   "beat_in_bar": 1.83,
+   "type": "glitch_frame",
+   "cycle": 6,
+   "p": 15,
+   "cycle_beat": 0.98,
+   "loop90": 0,
+   "frame_ops": [
+    "datamosh(40,480,.8)",
+    "iridescent(.8)"
+   ],
+   "text_ops": [
+    "text_vsmear(10)"
+   ]
+  },
+  {
+   "frame": 691,
+   "time": 23.033,
+   "beat": 44.9,
+   "nearest_beat": 45,
+   "beat_offset_frames": -1.6,
+   "bar": 12,
+   "beat_in_bar": 1.9,
+   "type": "glitch_frame",
+   "cycle": 6,
+   "p": 16,
+   "cycle_beat": 1.04,
+   "loop90": 0,
+   "frame_ops": [
+    "freeze_box"
+   ],
+   "text_ops": [
+    "text_hsmear(12)"
+   ]
+  },
+  {
+   "frame": 692,
+   "time": 23.067,
+   "beat": 44.96,
+   "nearest_beat": 45,
+   "beat_offset_frames": -0.6,
+   "bar": 12,
+   "beat_in_bar": 1.96,
+   "type": "glitch_frame",
+   "cycle": 6,
+   "p": 17,
+   "cycle_beat": 1.11,
+   "loop90": 0,
+   "frame_ops": [],
+   "text_ops": [
+    "text_vsmear(10)"
+   ]
+  },
+  {
+   "frame": 693,
+   "time": 23.1,
+   "beat": 45.03,
+   "nearest_beat": 45,
+   "beat_offset_frames": 0.4,
+   "bar": 12,
+   "beat_in_bar": 2.03,
+   "type": "glitch_frame",
+   "cycle": 6,
+   "p": 18,
+   "cycle_beat": 1.17,
+   "loop90": 0,
+   "frame_ops": [
+    "datamosh(0,240,.18)",
+    "datamosh(245,480,.6)"
+   ],
+   "text_ops": [
+    "text_vsmear(10)"
+   ]
+  },
+  {
+   "frame": 694,
+   "time": 23.133,
+   "beat": 45.09,
+   "nearest_beat": 45,
+   "beat_offset_frames": 1.4,
+   "bar": 12,
+   "beat_in_bar": 2.09,
+   "type": "glitch_frame",
+   "cycle": 6,
+   "p": 19,
+   "cycle_beat": 1.24,
+   "loop90": 0,
+   "frame_ops": [
+    "datamosh(0,480,.5)",
+    "flash(W,.9)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 695,
+   "time": 23.167,
+   "beat": 45.16,
+   "nearest_beat": 45,
+   "beat_offset_frames": 2.4,
+   "bar": 12,
+   "beat_in_bar": 2.16,
+   "type": "glitch_frame",
+   "cycle": 6,
+   "p": 20,
+   "cycle_beat": 1.31,
+   "loop90": 0,
+   "frame_ops": [
+    "flash_full(254,253,254)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 696,
+   "time": 23.2,
+   "beat": 45.22,
+   "nearest_beat": 45,
+   "beat_offset_frames": 3.4,
+   "bar": 12,
+   "beat_in_bar": 2.22,
+   "type": "glitch_frame",
+   "cycle": 6,
+   "p": 21,
+   "cycle_beat": 1.37,
+   "loop90": 0,
+   "frame_ops": [
+    "flash_full(254,253,254)"
+   ],
+   "text_ops": []
+  },
+  {
+   "frame": 697,
+   "time": 23.233,
+   "beat": 45.29,
+   "nearest_beat": 45,
+   "beat_offset_frames": 4.4,
+   "bar": 12,
+   "beat_in_bar": 2.29,
+   "type": "audio_808_hit",
+   "sub_db": 43.9,
+   "p": 22
+  },
+  {
+   "frame": 697,
+   "time": 23.233,
+   "beat": 45.29,
+   "nearest_beat": 45,
+   "beat_offset_frames": 4.4,
+   "bar": 12,
+   "beat_in_bar": 2.29,
+   "type": "glitch_frame",
+   "cycle": 6,
+   "p": 22,
+   "cycle_beat": 1.44,
+   "loop90": 0,
+   "frame_ops": [
+    "gray_wash(.5,118)",
+    "v_smear(40,290,480)"
+   ],
+   "text_ops": [
+    "text_vsmear(16)",
+    "text_ghost(.5)"
+   ]
+  },
+  {
+   "frame": 698,
+   "time": 23.267,
+   "beat": 45.35,
+   "nearest_beat": 45,
+   "beat_offset_frames": 5.4,
+   "bar": 12,
+   "beat_in_bar": 2.35,
+   "type": "final_clean_frames",
+   "frames": [
+    698,
+    699
+   ],
+   "note": "edit ends on p23-24 (clean, text crisp-ish) with red word, 1 frame after audio end"
+  },
+  {
+   "frame": 698,
+   "time": 23.267,
+   "beat": 45.35,
+   "nearest_beat": 45,
+   "beat_offset_frames": 5.4,
+   "bar": 12,
+   "beat_in_bar": 2.35,
+   "type": "glitch_frame",
+   "cycle": 6,
+   "p": 23,
+   "cycle_beat": 1.5,
+   "loop90": 0,
+   "frame_ops": [],
+   "text_ops": [
+    "text_vsmear(14)",
+    "text_ghost(.4)"
+   ]
+  },
+  {
+   "time": 23.29,
+   "frame": 699,
+   "beat": 45.4,
+   "nearest_beat": 45,
+   "beat_offset_frames": 6.1,
+   "bar": 12,
+   "beat_in_bar": 2.4,
+   "type": "audio_end",
+   "name": "song excerpt hard-cut 60 ms after an 808 hit (697); no fade"
+  },
+  {
+   "frame": 699,
+   "time": 23.3,
+   "beat": 45.42,
+   "nearest_beat": 45,
+   "beat_offset_frames": 6.4,
+   "bar": 12,
+   "beat_in_bar": 2.42,
+   "type": "glitch_frame",
+   "cycle": 6,
+   "p": 24,
+   "cycle_beat": 1.57,
+   "loop90": 0,
+   "frame_ops": [],
+   "text_ops": [
+    "text_vsmear(14)",
+    "text_ghost(.4)"
+   ]
+  }
+ ]
+}
