@@ -1,0 +1,114 @@
+{
+  "title": "Тупая тварь — VHS lyrics",
+  "fps": 30, "width": 1440, "height": 1080, "frames": 888,
+  "audio": {"src": "../../../projects/tupaya-tvar-remake/assets/video/reference.mp4", "offset": 0, "fade_out": 0.5},
+  "effects": {"lens": true, "frame_holds": true, "vhs_wave": true, "veil": true, "dirt": true,
+              "scanlines": 0.05, "vignette": 0.45},
+  "scenes": [
+    {"start": 0, "end": 114,
+     "bg": {"src": "C:/Users/m/Documents/snippet-generator/.local-out/snippet-api/vibe/av00_14da617f.mp4", "offset": 1.0,
+            "grade": "eq=brightness=0.06:saturation=0.6:contrast=1.1:gamma=1.35,colorbalance=bs=0.10,colorchannelmixer=rr=0.2:gg=0.2:bb=0.2"},
+     "dim": {"from": 85, "opacity": 0.35},
+     "items": [
+       {"text": "ТЫ", "at": 0, "until": 85, "style": "hand", "box": [2, 19, 43, 55], "track": 0.19},
+       {"text": "НАНЕСЕШЬ", "at": 18, "until": 85, "style": "hand", "box": [34, 101, 42, 55], "track": 0.10},
+       {"text": "17", "at": 43, "until": 85, "style": "grunge", "box": [0, 28, 21, 69], "color": "red"},
+       {"text": "НОЖЕВЫХ", "at": 57, "until": 85, "style": "grunge", "box": [34, 101, 39, 58], "color": "red"},
+       {"text": "ТУПАЯ", "at": 86, "style": "grunge", "box": [9, 94, 4, 46], "color": "red", "shadow": "big"},
+       {"text": "ТВАРЬ", "at": 102, "style": "grunge", "box": [3, 96, 48, 96], "color": "red", "shadow": "big"}
+     ]},
+    {"start": 114, "end": 246,
+     "bg": {"src": "C:/Users/m/Documents/snippet-generator/.local-out/snippet-api/vibe/av07_6fbc45dc.mp4", "offset": 0.5,
+            "grade": "eq=brightness=-0.05:saturation=0.8:contrast=1.15,curves=all='0/0 0.2/0.01 0.5/0.35 1/0.9'"},
+     "items": [
+       {"grow": [["И", 114], ["И БУДЕШЬ", 117], ["И БУДЕШЬ ПЛАКАТЬ", 129]], "style": "condb", "box": [32, 68, 56, 65.6], "color": "blue"},
+       {"grow": [["ПОКА", 150], ["ПОКА Я", 159], ["ПОКА Я В", 171], ["ПОКА Я В ОБЛАКАХ", 174], ["ПОКА Я В ОБЛАКАХ С", 189],
+                 ["ПОКА Я В ОБЛАКАХ С УЛЫБКОЮ", 192], ["ПОКА Я В ОБЛАКАХ С УЛЫБКОЮ БУДУ", 207], ["ПОКА Я В ОБЛАКАХ С УЛЫБКОЮ БУДУ ТАМ", 216]],
+        "style": "condb", "box": [11, 89, 67, 79]},
+       {"text": "ПЛАВАТЬ", "at": 232, "until": 247, "style": "robotom", "box": [13, 87, 17, 41], "fx": "glitch"}
+     ]},
+    {"start": 246, "end": 354,
+     "bg": {"src": "C:/Users/m/Documents/snippet-generator/.local-out/snippet-api/vibe/av13_0aa39d8c.mp4", "offset": 1.0,
+            "grade": "eq=brightness=-0.06:saturation=0.5:contrast=1.1,colorbalance=bs=0.25:bm=0.12:rs=-0.05,colorchannelmixer=rr=1.03:gg=1.03:bb=1.03"},
+     "items": [
+       {"grow": [["И", 246], ["И ВИТАТЬ", 264], ["И ВИТАААТЬ", 273], ["И ВИТААААТЬ", 279], ["И ВИТААААААТЬ", 285], ["И ВИТААААААААТЬ", 291]],
+        "until": 296, "style": "cond", "box": [37.5, 62, 47, 51]},
+       {"text": "Я", "at": 296, "until": 353, "style": "torn", "box": [-2, 33, -2, 99], "color": "tornred"},
+       {"text": "БУДУ", "at": 301, "until": 353, "style": "grunge", "box": [36, 68, -2, 22.5]},
+       {"text": "ПЛАВАТЬ", "at": 314, "until": 353, "style": "grunge", "box": [34, 99, 22.5, 47.5], "color": "red"},
+       {"text": "И", "at": 331, "until": 353, "style": "grunge", "box": [37, 53, 52, 90]},
+       {"text": "ВИТАТЬ", "at": 336, "until": 353, "style": "grunge", "box": [58, 96, 55, 72], "color": "red", "skew": -3}
+     ]},
+    {"start": 354, "end": 430,
+     "bg": {"src": "C:/Users/m/Documents/snippet-generator/.local-out/snippet-api/vibe/av02_b22fa1c0.mp4", "offset": 3.0,
+            "grade": "eq=brightness=0.02:saturation=0.8:contrast=1.05:gamma=1.15"},
+     "items": [
+       {"text": "ТЫ", "at": 354, "until": 429, "style": "rough", "box": [0, 40, 13, 90], "color": "dblue"},
+       {"text": "БУДЕШЬ", "at": 362, "until": 429, "style": "cond", "box": [43, 83, 14.5, 37.5]},
+       {"text": "ПЛАКАТЬ", "at": 372, "until": 429, "style": "cond", "box": [43, 88, 41, 64], "color": "lblue", "skew": -3},
+       {"text": "И", "at": 387, "until": 429, "style": "cond", "box": [43, 50, 68, 90]},
+       {"text": "РЫДАТЬ", "at": 393, "until": 429, "style": "cond", "box": [55, 89, 66, 90], "color": "lblue", "skew": -6},
+       {"text": "ТУПАЯ", "at": 404, "until": 429, "style": "grunge", "box": [8, 93, 0, 42], "color": "red", "shadow": "big"},
+       {"text": "ТВАРЬ", "at": 413, "until": 429, "style": "grunge", "box": [4, 96, 44, 93], "color": "red", "shadow": "big"}
+     ]},
+    {"start": 430, "end": 515,
+     "bg": {"src": "C:/Users/m/Documents/snippet-generator/.local-out/snippet-api/vibe/av06_a283279e.mp4", "offset": 2.5,
+            "grade": "eq=brightness=-0.04:saturation=0.5:contrast=1.1,colorchannelmixer=rr=0.3:gg=0.3:bb=0.3"},
+     "items": [
+       {"text": "ЛЕТИТ", "at": 431, "style": "hand", "box": [11, 88, 23, 46], "track": 0.40},
+       {"text": "ПОСУДА", "at": 444, "style": "hand", "box": [12, 88, 52, 74], "track": 0.22},
+       {"text": "ТЫ", "at": 459, "style": "cond", "box": [0, 14, 37.5, 61], "color": "red"},
+       {"text": "НАПАДАЕШЬ", "at": 477, "style": "cond", "box": [16, 72, 37.5, 61], "color": "red"},
+       {"text": "СЗАДИ", "at": 489, "style": "cond", "box": [72, 101, 37.5, 61], "color": "pink"}
+     ]},
+    {"start": 515, "end": 671,
+     "bg": {"src": "C:/Users/m/Documents/snippet-generator/.local-out/snippet-api/vibe/av01_a26cf8af.mp4", "offset": 5.1,
+            "grade": "eq=brightness=-0.14:saturation=0.7:contrast=1.2,colorchannelmixer=rr=0.95:gg=0.95:bb=0.95"},
+     "items": [
+       {"text": "Я", "at": 516, "style": "grunge", "box": [4.2, 21.4, 25.3, 66.3], "dil": 5},
+       {"text": "ЗАЩИЩАЛСЯ", "at": 525, "style": "grunge", "box": [29.5, 104.5, 25.0, 45.6], "amp": 4.5},
+       {"text": "КАСТРЮЛЕЙ", "at": 538, "style": "grunge", "box": [30.4, 98, 47.3, 68], "amp": 4.5},
+       {"text": "ЧТО", "at": 563, "style": "grunge", "box": [0, 26, 0, 21], "color": "red"},
+       {"text": "НАМ", "at": 579, "style": "grunge", "box": [33, 62, 1, 17], "color": "red"},
+       {"text": "ПОДАРИЛ", "at": 586, "style": "grunge", "box": [2, 65.5, 20.4, 46], "color": "red"},
+       {"text": "ТВОЙ", "at": 600, "style": "grunge", "box": [1, 37, 42, 72.5], "color": "red"},
+       {"text": "ДЯ", "at": 609, "style": "grunge", "box": [71, 97, 2, 30], "color": "red"},
+       {"text": "ДЬ", "at": 609, "style": "grunge", "box": [72, 97, 37, 62], "color": "red"},
+       {"text": "КА", "at": 609, "style": "grunge", "box": [69, 93, 72, 98], "color": "red"},
+       {"text": "В", "at": 618, "style": "grunge", "box": [52, 62, 52, 70], "color": "red"},
+       {"text": "ПРАЗДНИЧНЫЙ", "at": 624, "style": "grunge", "box": [1, 41, 74, 83], "color": "red"},
+       {"text": "ДЕНЬ", "at": 633, "style": "grunge", "box": [46, 62, 87, 97], "color": "red"},
+       {"text": "ДЕСАНТУРЫ", "at": 650, "style": "clean", "box": [-2, 100, 28, 74], "color": "green", "fx": "camo"}
+     ]},
+    {"start": 671, "end": 718,
+     "bg": {"src": "C:/Users/m/Documents/snippet-generator/.local-out/snippet-api/vibe/av08_aee6c74d.mp4", "offset": 2.0,
+            "grade": "eq=brightness=0.02:saturation=0.4:contrast=1.15:gamma=1.3,colorchannelmixer=rr=1.4:gg=1.4:bb=1.4"},
+     "items": [
+       {"grow": [["ТЫ", 671], ["ТЫ БЕРЕШЬ", 683]], "style": "cond", "box": [27, 72, 40, 57], "shadow": "mid"},
+       {"text": "СТОЛОВЫЙ", "at": 694, "until": 717, "style": "grunge", "box": [5, 94, 18, 48], "color": "red", "shadow": "mid"},
+       {"text": "НОЖ", "at": 706, "style": "grunge", "box": [21, 82, 46, 98], "color": "red", "shadow": "mid"}
+     ]},
+    {"start": 718, "end": 772,
+     "bg": {"src": "C:/Users/m/Documents/snippet-generator/.local-out/snippet-api/vibe/av10_873eafb6.mp4", "offset": 1.0,
+            "grade": "eq=brightness=-0.05:saturation=0.6:contrast=1.1,colorbalance=gs=0.08:bs=0.04,colorchannelmixer=rr=0.9:gg=0.9:bb=0.9"},
+     "items": [
+       {"grow": [["ТЫ", 718], ["ТЫ БЕРЕШЬ", 729]], "style": "cond", "box": [27, 72, 40, 57], "shadow": "mid"},
+       {"text": "СТОЛОВЫЙ", "at": 743, "style": "grunge", "box": [5, 94, 18, 48], "color": "red", "shadow": "mid"},
+       {"text": "НОЖ", "at": 760, "style": "grunge", "box": [21, 82, 46, 98], "color": "red", "shadow": "mid"}
+     ]},
+    {"start": 772, "end": 821,
+     "bg": {"src": "C:/Users/m/Documents/snippet-generator/.local-out/snippet-api/vibe/av12_5de0e0f3.mp4", "offset": 1.0,
+            "grade": "eq=brightness=-0.03:saturation=0.6:contrast=1.15:gamma=1.35,curves=all='0/0 0.12/0.08 0.28/0.4 1/1'"},
+     "items": [
+       {"grow": [["со", 772], ["со словами", 783]], "style": "roboto", "box": [28, 72, 44, 57]},
+       {"text": "ТЫ УМРЕШЬ!", "at": 801, "style": "brush", "box": [8, 95, 28, 65], "color": "darkred", "shadow": "mid"}
+     ]},
+    {"start": 821, "end": 888,
+     "bg": {"src": "C:/Users/m/Documents/snippet-generator/.local-out/snippet-api/vibe/av11_307d85c8.mp4", "offset": 2.0,
+            "grade": "eq=brightness=-0.22:saturation=0.3:contrast=1.1,curves=all='0/0 0.25/0.035 0.5/0.17 1/0.9'"},
+     "items": [
+       {"text": "ТЫ НАНЕСЕШЬ", "at": 821, "until": 848, "style": "thin", "box": [26, 73, 41, 57], "color": "hotred", "shadow": "mid"},
+       {"text": "ТЫ НАНЕСЕШЬ", "at": 848, "style": "cond", "box": [5, 96, 31, 64], "color": "red", "shadow": "mid"}
+     ]}
+  ]
+}
