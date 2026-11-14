@@ -1,0 +1,54 @@
+<!doctype html><meta charset="utf-8"><title>ui-lyrics dev</title>
+<!-- Instant preview of the scene code, no render. Serve the PROJECT ROOT statically, then:
+       /dev/index.html?edit=chorus&play                 click to play with sound
+       /dev/index.html?edit=chorus&f=300&scale=0.6      one frame
+       /dev/index.html?edit=chorus&sheet=230,236,250&cols=3&cell=360   contact sheet -->
+<link rel="stylesheet" href="/node_modules/@fontsource-variable/inter/index.css">
+<link rel="stylesheet" href="/node_modules/@fontsource-variable/jetbrains-mono/index.css">
+<style>html,body{margin:0;background:#111;color:#ccc;font:14px system-ui}
+.root{position:relative;width:1080px;height:1080px;transform-origin:0 0;--f-ui:"Inter Variable";--f-bold:"Inter Variable";--f-black:"Inter Variable";--f-mono:"JetBrains Mono Variable"}
+#ui{position:fixed;left:8px;bottom:8px;z-index:9;background:#000a;padding:6px 10px;border-radius:8px}</style>
+<div id="root" class="root"></div><div id="ui"></div>
+<script src="/packages/ui-lyrics/client/engine.js"></script>
+<script>
+(async () => {
+  const q = new URLSearchParams(location.search), C = '/packages/ui-lyrics/client/';
+  const text = async u => (await fetch(u)).text();
+  // scene sets: every .js/.css in client/scenes/ (read from the static server's directory listing)
+  const listing = await text(C + 'scenes/'), files = [...listing.matchAll(/href="([^"?/]+\.(?:js|css))"/g)].map(m => m[1]).sort();
+  let css = await text(C + 'engine.css');
+  for (const f of files.filter(f => f.endsWith('.css'))) css += '\n' + await text(C + 'scenes/' + f);
+  const st = document.createElement('style'); st.textContent = `@scope (.root) {${css}}`; document.head.appendChild(st);
+  for (const f of files.filter(f => f.endsWith('.js'))) await new Promise((ok, no) => { const s = document.createElement('script'); s.src = C + 'scenes/' + f; s.onload = ok; s.onerror = no; document.head.appendChild(s); });
+
+  const W = await (await fetch('/productions/words.final.json')).json(), FPS = W.fps ?? 60, LEAD = W.lead ?? 1;
+  const edit = q.get('edit') || Object.keys(W.edits)[0], E = W.edits[edit];
+  const words = W.words.filter(w => w.edit === edit).map(w => ({ t: w.text, f: Math.max(0, Math.round((w.start - E.start) * FPS) - LEAD) }));
+  for (let i = 1; i < words.length; i++) if (words[i].f <= words[i - 1].f) words[i].f = words[i - 1].f + 1;
+  await document.fonts.load('900 60px "Inter Variable"', 'Яя'); await document.fonts.load('700 20px "JetBrains Mono Variable"', 'Aa'); await document.fonts.ready;
+  const mk = () => ({ fps: FPS, total: E.frames, variant: edit, tc0: E.start, label: W.label ?? 'EDIT', words });
+  const root = document.getElementById('root'), ui = document.getElementById('ui');
+
+  if (q.has('sheet')) {
+    const fs = q.get('sheet').split(',').map(Number), cols = +(q.get('cols') || 4), cell = +(q.get('cell') || 270);
+    root.remove(); ui.remove();
+    const g = document.createElement('div'); g.style.cssText = `display:grid;grid-template-columns:repeat(${cols},${cell}px);gap:4px`; document.body.appendChild(g);
+    fs.forEach((f, i) => {
+      const c = document.createElement('div'); c.style.cssText = `position:relative;width:${cell}px;height:${cell + 16}px;overflow:hidden`;
+      const r = document.createElement('div'); r.className = 'root'; r.id = 'root' + i; r.style.transform = `scale(${cell / 1080})`; r.style.position = 'absolute';
+      const l = document.createElement('div'); l.textContent = 'f' + f; l.style.cssText = 'position:absolute;left:2px;bottom:0;font:11px monospace;color:#9f9';
+      c.append(r, l); g.appendChild(c); setupEdit(r, mk())(f);
+    });
+    return;
+  }
+  root.style.transform = `scale(${+(q.get('scale') || 1)})`;
+  const render = setupEdit(root, mk());
+  window.go = f => { render(f); ui.textContent = `${edit} f=${f}`; };
+  go(+(q.get('f') || 0));
+  if (q.has('play')) {
+    const a = new Audio(`/assets/audio/${edit}.wav`); document.body.addEventListener('click', () => a.paused ? a.play() : a.pause());
+    const loop = () => { if (!a.paused) go(Math.min(E.frames - 1, Math.round(a.currentTime * FPS))); requestAnimationFrame(loop); }; loop();
+    ui.textContent = 'click to play';
+  }
+})();
+</script>

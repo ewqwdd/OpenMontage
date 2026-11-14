@@ -116,6 +116,7 @@ Key capability families to look for in the output:
 | Image Provider Usage | `creative/image-provider-usage.md` | Provider selection (FLUX/Grok/OpenAI/Recraft/stock), cost-quality tradeoffs | `flux-best-practices`, `bfl-api`, `grok-media` |
 | 3D World Generation | `creative/3d-world-generation.md` | Semantic world planning, asset sourcing/generation, Blender assembly, and fidelity review | `3d-asset-generation`, `threejs-world-generation` |
 | Ref → 3D Character | `creative/ref-to-3d-character.md` | Drawing → agent decomposition → 2D check → adapted low-poly comic-ink Blender model (smoothing, volumes, ribbon ink) | — |
+| UI-Lyric Edit | `creative/ui-lyric-edit.md` | Square 60 fps lyric edit with no footage: each line acted out by a fake interface, words on their sung frames, flash + focus-pull cuts. Kit `lib/ui_lyrics` (Hypit project template), local and free | `ui-lyrics-edit` |
 | B-Roll Planning | `creative/broll-planning.md` | Stock vs. generated decision, query construction, footage evaluation | — |
 | Stock Sourcing Usage | `creative/stock-sourcing-usage.md` | Pexels/Pixabay usage, parameters, licensing, integration | — |
 | Scene Detect Usage | `creative/scene-detect-usage.md` | Threshold tuning, algorithm selection, content presets | â€" |

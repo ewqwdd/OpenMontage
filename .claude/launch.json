@@ -12,6 +12,12 @@
       "runtimeExecutable": "python",
       "runtimeArgs": ["-m", "http.server", "4788", "--bind", "127.0.0.1"],
       "port": 4788
+    },
+    {
+      "name": "mef-dev",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "4791", "--bind", "127.0.0.1", "--directory", "projects/mefedron-snippets"],
+      "port": 4791
     }
   ]
 }
