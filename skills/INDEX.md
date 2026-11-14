@@ -115,6 +115,7 @@ Key capability families to look for in the output:
 | Image Gen Usage | `creative/image-gen-usage.md` | Prompt consistency, hero reference, batch strategy | `flux-best-practices`, `bfl-api` |
 | Image Provider Usage | `creative/image-provider-usage.md` | Provider selection (FLUX/Grok/OpenAI/Recraft/stock), cost-quality tradeoffs | `flux-best-practices`, `bfl-api`, `grok-media` |
 | 3D World Generation | `creative/3d-world-generation.md` | Semantic world planning, asset sourcing/generation, Blender assembly, and fidelity review | `3d-asset-generation`, `threejs-world-generation` |
+| Ref → 3D Character | `creative/ref-to-3d-character.md` | Drawing → agent decomposition → 2D check → adapted low-poly comic-ink Blender model (smoothing, volumes, ribbon ink) | — |
 | B-Roll Planning | `creative/broll-planning.md` | Stock vs. generated decision, query construction, footage evaluation | — |
 | Stock Sourcing Usage | `creative/stock-sourcing-usage.md` | Pexels/Pixabay usage, parameters, licensing, integration | — |
 | Scene Detect Usage | `creative/scene-detect-usage.md` | Threshold tuning, algorithm selection, content presets | â€" |
