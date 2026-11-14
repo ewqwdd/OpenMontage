@@ -1,0 +1,437 @@
+{
+"about": "Curated Поднебесный suit moments (top 24 of /Users/sdknm/Downloads/podnebesny-edits-v3/_analysis/CURATED.json): planner --moments input; square_crop = 1080 square in source px.",
+"picks": [
+{
+"rank": 1,
+"key": "cof_halo",
+"src": "/Users/sdknm/Downloads/podnebesny-edits-v3/_inputs/src_EKnfo_RTPtA.mp4",
+"t_in": 23.2,
+"t_out": 25.5,
+"best_t": 23.5,
+"kind": "hero_portrait",
+"style": 5,
+"energy": 3,
+"square_crop": {
+"x": 408,
+"y": 0,
+"size": 1080
+},
+"desc": "3/4 face looking off right, giant grey-blue hair, mermaid-logo circle as a halo, blazer + lapel pin",
+"lyric_fit": "да я идол / Я люблю (chorus hero)"
+},
+{
+"rank": 2,
+"key": "col_chug1",
+"src": "/Users/sdknm/Downloads/podnebesny-edits-v2/_inputs/src_orange_cola.mp4",
+"t_in": 160.6,
+"t_out": 163.2,
+"best_t": 161.83,
+"kind": "sip",
+"style": 5,
+"energy": 5,
+"square_crop": {
+"x": 100,
+"y": 0,
+"size": 1080
+},
+"desc": "chugs SPAR Cola in suit and tie, bottle horizontal, chin up",
+"lyric_fit": "много лишнего схавал / Я люблю"
+},
+{
+"rank": 3,
+"key": "cof_profile_turn",
+"src": "/Users/sdknm/Downloads/podnebesny-edits-v3/_inputs/src_EKnfo_RTPtA.mp4",
+"t_in": 15.4,
+"t_out": 17.15,
+"best_t": 15.4,
+"kind": "hero_portrait",
+"style": 5,
+"energy": 4,
+"square_crop": {
+"x": 420,
+"y": 0,
+"size": 1080
+},
+"desc": "pure profile against the logo wall, turns into the lens at 16.5",
+"lyric_fit": "Я люблю мефедрон (turn on the downbeat)"
+},
+{
+"rank": 4,
+"key": "col_dutch",
+"src": "/Users/sdknm/Downloads/podnebesny-edits-v2/_inputs/src_orange_cola.mp4",
+"t_in": 109.3,
+"t_out": 111.8,
+"best_t": 110.5,
+"kind": "hero_portrait",
+"style": 5,
+"energy": 3,
+"square_crop": {
+"x": 176,
+"y": 0,
+"size": 1080
+},
+"desc": "Dutch-angle low shot, looks down into the lens over the brick wall",
+"lyric_fit": "залипаю в потолок / идол"
+},
+{
+"rank": 5,
+"key": "cof_stare",
+"src": "/Users/sdknm/Downloads/podnebesny-edits-v3/_inputs/src_EKnfo_RTPtA.mp4",
+"t_in": 41.0,
+"t_out": 48.13,
+"best_t": 41.5,
+"kind": "hero_portrait",
+"style": 5,
+"energy": 3,
+"square_crop": {
+"x": 663,
+"y": 0,
+"size": 1080
+},
+"desc": "tight frontal stare into the lens with a smirk, logo star above the head",
+"lyric_fit": "ты чё, обкурился? / залипаю"
+},
+{
+"rank": 6,
+"key": "col_portrait",
+"src": "/Users/sdknm/Downloads/podnebesny-edits-v2/_inputs/src_orange_cola.mp4",
+"t_in": 2.4,
+"t_out": 5.8,
+"best_t": 4.0,
+"kind": "hero_portrait",
+"style": 5,
+"energy": 2,
+"square_crop": {
+"x": 139,
+"y": 0,
+"size": 1080
+},
+"desc": "tight selfie portrait: purple hair, round glasses, suit and black tie",
+"lyric_fit": "да я идол"
+},
+{
+"rank": 7,
+"key": "cof_walk_in",
+"src": "/Users/sdknm/Downloads/podnebesny-edits-v3/_inputs/src_EKnfo_RTPtA.mp4",
+"t_in": 21.0,
+"t_out": 23.2,
+"best_t": 21.65,
+"kind": "walk",
+"style": 5,
+"energy": 4,
+"square_crop": {
+"x": 456,
+"y": 0,
+"size": 1080
+},
+"desc": "walk-and-talk toward the lens, turns to profile against the white window at 22.4-23.0",
+"lyric_fit": "слишком много шмоток / Эй (entry)"
+},
+{
+"rank": 8,
+"key": "col_label",
+"src": "/Users/sdknm/Downloads/podnebesny-edits-v2/_inputs/src_orange_cola.mp4",
+"t_in": 103.4,
+"t_out": 107.4,
+"best_t": 105.0,
+"kind": "product",
+"style": 5,
+"energy": 3,
+"square_crop": {
+"x": 170,
+"y": 0,
+"size": 1080
+},
+"desc": "SPAR cola label held next to his face, red CHICKEN letters",
+"lyric_fit": "Запрети мне Макдональдс / жирным"
+},
+{
+"rank": 9,
+"key": "cof_crown",
+"src": "/Users/sdknm/Downloads/podnebesny-edits-v3/_inputs/src_EKnfo_RTPtA.mp4",
+"t_in": 25.5,
+"t_out": 31.67,
+"best_t": 27.5,
+"kind": "hero_portrait",
+"style": 5,
+"energy": 3,
+"square_crop": {
+"x": 840,
+"y": 0,
+"size": 1080
+},
+"desc": "frontal close-up, logo star sits over the hair like a crown",
+"lyric_fit": "да я идол"
+},
+{
+"rank": 10,
+"key": "cof_fullbody",
+"src": "/Users/sdknm/Downloads/podnebesny-edits-v3/_inputs/src_EKnfo_RTPtA.mp4",
+"t_in": 19.93,
+"t_out": 21.0,
+"best_t": 20.4,
+"kind": "suit_full",
+"style": 5,
+"energy": 3,
+"square_crop": {
+"x": 500,
+"y": 0,
+"size": 1080
+},
+"desc": "standing at the pastry counter: full blazer, white shirt, pin, logo behind",
+"lyric_fit": "слишком много шмоток"
+},
+{
+"rank": 11,
+"key": "col_chug2",
+"src": "/Users/sdknm/Downloads/podnebesny-edits-v2/_inputs/src_orange_cola.mp4",
+"t_in": 202.0,
+"t_out": 204.67,
+"best_t": 203.9,
+"kind": "sip",
+"style": 5,
+"energy": 5,
+"square_crop": {
+"x": 200,
+"y": 0,
+"size": 1080
+},
+"desc": "profile chug, bottle horizontal, red CHICKEN letters behind",
+"lyric_fit": "Продолжаю лишь тратить"
+},
+{
+"rank": 12,
+"key": "toi_mirror_face",
+"src": "/Users/sdknm/Downloads/podnebesny-edits-v2/_inputs/src_toilet_rzd.mp4",
+"t_in": 2.45,
+"t_out": 4.2,
+"best_t": 3.5,
+"kind": "hero_portrait",
+"style": 4,
+"energy": 3,
+"square_crop": {
+"x": 0,
+"y": 0,
+"size": 1080
+},
+"desc": "mirror selfie in blazer + white shirt + pin, face out from behind the phone",
+"lyric_fit": "Эй / звонит (phone in hand)"
+},
+{
+"rank": 13,
+"key": "cof_sip_front",
+"src": "/Users/sdknm/Downloads/podnebesny-edits-v3/_inputs/src_EKnfo_RTPtA.mp4",
+"t_in": 220.1,
+"t_out": 223.75,
+"best_t": 221.5,
+"kind": "sip",
+"style": 4,
+"energy": 3,
+"square_crop": {
+"x": 383,
+"y": 0,
+"size": 1080
+},
+"desc": "big frontal sip from the turquoise Stars cup, eyes over the rim",
+"lyric_fit": "много лишнего схавал / Продолжаю лишь тратить"
+},
+{
+"rank": 14,
+"key": "cof_chinup",
+"src": "/Users/sdknm/Downloads/podnebesny-edits-v3/_inputs/src_EKnfo_RTPtA.mp4",
+"t_in": 19.2,
+"t_out": 19.93,
+"best_t": 19.5,
+"kind": "hero_portrait",
+"style": 4,
+"energy": 3,
+"square_crop": {
+"x": 500,
+"y": 0,
+"size": 1080
+},
+"desc": "chin-up profile looking right, logo star and window light",
+"lyric_fit": "залипаю в потолок"
+},
+{
+"rank": 15,
+"key": "col_open_chug",
+"src": "/Users/sdknm/Downloads/podnebesny-edits-v2/_inputs/src_orange_cola.mp4",
+"t_in": 0.0,
+"t_out": 2.4,
+"best_t": 1.33,
+"kind": "sip",
+"style": 4,
+"energy": 5,
+"square_crop": {
+"x": 64,
+"y": 0,
+"size": 1080
+},
+"desc": "cold-open chug of Orange, bottle pointed at the lens",
+"lyric_fit": "Я люблю (first downbeat)"
+},
+{
+"rank": 16,
+"key": "cof_walk_away",
+"src": "/Users/sdknm/Downloads/podnebesny-edits-v3/_inputs/src_EKnfo_RTPtA.mp4",
+"t_in": 62.9,
+"t_out": 65.5,
+"best_t": 64.5,
+"kind": "walk",
+"style": 4,
+"energy": 3,
+"square_crop": {
+"x": 560,
+"y": 0,
+"size": 1080
+},
+"desc": "walks away to the counter: back view, dark blazer under the mop of hair",
+"lyric_fit": "Пошла нахуй (he leaves) / outro"
+},
+{
+"rank": 17,
+"key": "tru_hairhand",
+"src": "/Users/sdknm/Downloads/podnebesny-edits-v3/_inputs/src_ffmZ12IRf-k.mp4",
+"t_in": 128.78,
+"t_out": 129.0,
+"best_t": 128.8,
+"kind": "gesture",
+"style": 4,
+"energy": 5,
+"square_crop": {
+"x": 640,
+"y": 0,
+"size": 760
+},
+"desc": "runs his hand back through purple hair, chin up",
+"lyric_fit": "да я идол / Я люблю"
+},
+{
+"rank": 18,
+"key": "col_eyesclosed",
+"src": "/Users/sdknm/Downloads/podnebesny-edits-v2/_inputs/src_orange_cola.mp4",
+"t_in": 198.0,
+"t_out": 202.0,
+"best_t": 199.5,
+"kind": "reaction",
+"style": 4,
+"energy": 2,
+"square_crop": {
+"x": 10,
+"y": 0,
+"size": 1080
+},
+"desc": "eyes closed mid-word, savouring",
+"lyric_fit": "пидорасит / залипаю в потолок"
+},
+{
+"rank": 19,
+"key": "col_chug_orange",
+"src": "/Users/sdknm/Downloads/podnebesny-edits-v2/_inputs/src_orange_cola.mp4",
+"t_in": 262.6,
+"t_out": 265.85,
+"best_t": 264.6,
+"kind": "sip",
+"style": 4,
+"energy": 5,
+"square_crop": {
+"x": 0,
+"y": 0,
+"size": 1080
+},
+"desc": "chugs the Orange, bottle horizontal 264.3-265.0, mall corridor behind",
+"lyric_fit": "пидорасит слишком сильно"
+},
+{
+"rank": 20,
+"key": "cof_palm",
+"src": "/Users/sdknm/Downloads/podnebesny-edits-v3/_inputs/src_EKnfo_RTPtA.mp4",
+"t_in": 91.27,
+"t_out": 95.0,
+"best_t": 92.0,
+"kind": "gesture",
+"style": 4,
+"energy": 5,
+"square_crop": {
+"x": 741,
+"y": 0,
+"size": 1080
+},
+"desc": "seated, palm thrown at the camera (91.8-92.5, again 93.0-93.5)",
+"lyric_fit": "Пошла нахуй, бля"
+},
+{
+"rank": 21,
+"key": "col_grin",
+"src": "/Users/sdknm/Downloads/podnebesny-edits-v2/_inputs/src_orange_cola.mp4",
+"t_in": 145.43,
+"t_out": 149.3,
+"best_t": 146.5,
+"kind": "hero_portrait",
+"style": 4,
+"energy": 3,
+"square_crop": {
+"x": 98,
+"y": 0,
+"size": 1080
+},
+"desc": "grins into the lens, tie, cola at the edge",
+"lyric_fit": "не спорю"
+},
+{
+"rank": 22,
+"key": "cof_sip_profile",
+"src": "/Users/sdknm/Downloads/podnebesny-edits-v3/_inputs/src_EKnfo_RTPtA.mp4",
+"t_in": 170.2,
+"t_out": 174.2,
+"best_t": 172.0,
+"kind": "sip",
+"style": 4,
+"energy": 3,
+"square_crop": {
+"x": 600,
+"y": 0,
+"size": 1080
+},
+"desc": "profile sip from the turquoise cup, hair silhouette",
+"lyric_fit": "много лишнего схавал"
+},
+{
+"rank": 23,
+"key": "ikr_pig",
+"src": "/Users/sdknm/Downloads/podnebesny-edits-v3/_inputs/src_ikra.mp4",
+"t_in": 0.0,
+"t_out": 4.08,
+"best_t": 1.5,
+"kind": "cutaway",
+"style": 4,
+"energy": 3,
+"square_crop": {
+"x": 300,
+"y": 0,
+"size": 1080
+},
+"desc": "cartoon intro: a pig-capitalist in tailcoat, top hat and cigar struts",
+"lyric_fit": "дохуя бабла / скупил"
+},
+{
+"rank": 24,
+"key": "col_wide",
+"src": "/Users/sdknm/Downloads/podnebesny-edits-v2/_inputs/src_orange_cola.mp4",
+"t_in": 255.5,
+"t_out": 260.0,
+"best_t": 257.0,
+"kind": "suit_full",
+"style": 4,
+"energy": 2,
+"square_crop": {
+"x": 0,
+"y": 0,
+"size": 1080
+},
+"desc": "wider: suit, tie and both bottles, mall corridor perspective",
+"lyric_fit": "слишком много шмоток"
+}
+]
+}

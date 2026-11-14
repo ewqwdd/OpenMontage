@@ -1,0 +1,82 @@
+{
+ "about": "FUSED example 2 (approved v2): «mefedron master 4» verse 28.65-43.65 s, «Эй, звонит долбоёбка…». Serif narrator over every clip, VHS open, 4 punch cards (DOLBO-/YOBKA, NAHUY, DOHUYA/BABLA, KONYUNK-/TIVIT) with captions, 808 camera kicks, hue-safe inverts, drum-stop maximum f394-437 (white, burst with reference_drop glitch steps, red cell over the crimson card).",
+ "fps": 30,
+ "size": [1080, 1920],
+ "square": {"size": 1080, "y": 420, "margin": 65},
+ "frames": 450,
+ "audio": {"path": "/Users/sdknm/Downloads/podnebesny-edits-v3/_inputs/track.mp3", "start": 28.65, "duration": 15.0, "fade_in": 0.01, "fade_out": 0.01},
+ "palettes": {"nightamber": [[[0, [0, 0, 0]], [0.5, [34, 20, 10]], [0.85, [120, 80, 44]], [1, [210, 160, 110]]], 1.5], "gold": [[[0, [0, 0, 0]], [0.35, [60, 36, 4]], [0.65, [170, 118, 30]], [0.88, [240, 196, 90]], [1, [255, 240, 190]]], 1.0]},
+ "clips": {
+  "PUD1": {"src": "/Users/sdknm/Downloads/podnebesny-edits-v2/_inputs/src_orange_cola.mp4", "t0": 140.4, "dur": 0.7, "ax": 0.3572},
+  "TFACE": {"src": "/Users/sdknm/Downloads/podnebesny-edits-v2/_inputs/src_toilet_rzd.mp4", "t0": 3.0, "dur": 0.6, "ax": 0.0},
+  "PORT": {"src": "/Users/sdknm/Downloads/podnebesny-edits-v2/_inputs/src_orange_cola.mp4", "t0": 3.6, "dur": 1.05, "ax": 0.1655},
+  "CHG1": {"src": "/Users/sdknm/Downloads/podnebesny-edits-v2/_inputs/src_orange_cola.mp4", "t0": 160.95, "dur": 1.6, "ax": 0.1191},
+  "CHG2": {"src": "/Users/sdknm/Downloads/podnebesny-edits-v2/_inputs/src_orange_cola.mp4", "t0": 203.5, "dur": 0.6, "ax": 0.2381},
+  "CROWN": {"src": "/Users/sdknm/Downloads/podnebesny-edits-v3/_inputs/src_EKnfo_RTPtA.mp4", "t0": 26.8, "dur": 1.3, "ax": 1.0},
+  "SQNT": {"src": "/Users/sdknm/Downloads/podnebesny-edits-v2/_inputs/src_toilet_rzd.mp4", "t0": 112.9, "dur": 0.5, "ax": 0.0357},
+  "PALM": {"src": "/Users/sdknm/Downloads/podnebesny-edits-v3/_inputs/src_EKnfo_RTPtA.mp4", "t0": 91.45, "dur": 1.4, "ax": 0.6668},
+  "WALK": {"src": "/Users/sdknm/Downloads/podnebesny-edits-v3/_inputs/src_EKnfo_RTPtA.mp4", "t0": 21.0, "dur": 1.95, "ax": 0.543},
+  "PIG": {"src": "/Users/sdknm/Downloads/podnebesny-edits-v3/_inputs/src_ikra.mp4", "t0": 1.38, "dur": 0.25, "ax": 0.3572},
+  "LABL": {"src": "/Users/sdknm/Downloads/podnebesny-edits-v2/_inputs/src_orange_cola.mp4", "t0": 104.6, "dur": 0.5, "ax": 0.2024},
+  "FULL": {"src": "/Users/sdknm/Downloads/podnebesny-edits-v3/_inputs/src_EKnfo_RTPtA.mp4", "t0": 20.0, "dur": 1.3, "ax": 0.5953},
+  "WIDE": {"src": "/Users/sdknm/Downloads/podnebesny-edits-v2/_inputs/src_orange_cola.mp4", "t0": 256.2, "dur": 1.1, "ax": 0.0},
+  "PRIC": {"src": "/Users/sdknm/Downloads/podnebesny-edits-v3/_inputs/src_ikra.mp4", "t0": 4.6, "dur": 0.95, "ax": 0.4525},
+  "LEAN": {"src": "/Users/sdknm/Downloads/podnebesny-edits-v2/_inputs/src_orange_cola.mp4", "t0": 174.55, "dur": 1.45, "ax": 0.1869},
+  "STAR": {"src": "/Users/sdknm/Downloads/podnebesny-edits-v3/_inputs/src_EKnfo_RTPtA.mp4", "t0": 41.5, "dur": 1.05, "ax": 0.7894},
+  "DUTC": {"src": "/Users/sdknm/Downloads/podnebesny-edits-v2/_inputs/src_orange_cola.mp4", "t0": 110.35, "dur": 0.25, "ax": 0.2096},
+  "HALO": {"src": "/Users/sdknm/Downloads/podnebesny-edits-v3/_inputs/src_EKnfo_RTPtA.mp4", "t0": 23.2, "dur": 1.1, "ax": 0.4858}
+ },
+ "shots": [
+  {"kind": "clip", "f": [0, 17], "clip": "PUD1", "t": 140.4, "grade": "nightamber", "gain_frames": {"17": 1.12}},
+  {"kind": "clip", "f": [18, 29], "clip": "TFACE", "t": 3.1, "grade": "orange", "gain": 0.82, "conform": 20, "camera": {"zoom": 1.0, "kick": {"frames": [28], "amp": 0.15, "tau": 4.0}}},
+  {"kind": "card", "f": [30, 56], "fg": 254, "bg": 0, "swap": [30, 31, 32, 37, 38, 44, 45, 51, 52], "states": [{"from": 30, "lines": [{"text": "DOL", "fit": [516, 400], "at": [298.2, 540]}]}, {"from": 37, "lines": [{"text": "DOLBO-", "fit": [1000, 400], "at": [540.0, 540]}]}, {"from": 44, "lines": [{"text": "DOLBO-", "fit": [1000, 400], "at": [540.0, 300]}, {"text": "YOB", "fit": [551, 400], "at": [315.6, 760]}]}, {"from": 51, "lines": [{"text": "DOLBO-", "fit": [1000, 400], "at": [540.0, 300]}, {"text": "YOBKA", "fit": [916, 400], "at": [498.0, 760]}]}]},
+  {"kind": "clip", "f": [57, 71], "clip": "PORT", "t": 3.7, "grade": "magenta", "gain": 1.35, "camera": {"zoom": 1.0, "kick": {"frames": [59], "amp": 0.15, "tau": 4.0}}, "fx": {"entry": {"frames": 4}}},
+  {"kind": "clip", "f": [72, 84], "clip": "SQNT", "t": 112.9, "grade": "red", "gain": 1.2, "camera": {"push": {"to": 1.15, "frames": 13}, "about": [560, 470]}, "fx": {"pulses": {"frames": [76, 83], "amp": 70}}},
+  {"kind": "clip", "f": [85, 98], "clip": "PALM", "t": 91.45, "from": 85, "grade": "bw", "gain": 1.0, "camera": {"zoom": 0.893, "kick": {"frames": [93], "amp": 0.15, "tau": 4.0}}},
+  {"kind": "card", "f": [99, 110], "fg": 254, "bg": 0, "states": [{"from": 99, "lines": [{"text": "NAHUY", "fit": [865, 823], "at": [540, 540]}]}]},
+  {"kind": "clip", "f": [111, 126], "clip": "PALM", "t": 91.45, "from": 85, "grade": "bw", "gain": 1.0, "camera": {"zoom": 0.893, "kick": {"frames": [117, 121], "amp": 0.15, "tau": 4.0}}},
+  {"kind": "clip", "f": [127, 146], "clip": "WALK", "t": 21.0, "from": 127, "grade": "gold", "camera": {"push": {"to": 1.06, "frames": 40}, "about": [605, 65], "kick": {"frames": [127, 137], "amp": 0.15, "tau": 4.0}}},
+  {"kind": "clip", "f": [147, 150], "clip": "PIG", "t": 1.4, "grade": "bw"},
+  {"kind": "clip", "f": [151, 166], "clip": "WALK", "t": 21.0, "from": 127, "grade": "gold", "camera": {"push": {"to": 1.06, "frames": 40}, "about": [605, 65], "kick": {"frames": [161], "amp": 0.15, "tau": 4.0}}},
+  {"kind": "clip", "f": [167, 179], "clip": "LABL", "t": 104.6, "grade": "red", "gain": 1.2, "fx": {"pulses": {"frames": [168, 174], "amp": 70}}},
+  {"kind": "card", "f": [180, 221], "fg": 254, "bg": 0, "swap": [180, 181, 191, 192, 201, 202, 203, 215, 216], "states": [{"from": 180, "lines": [{"text": "DOHUYA", "fit": [1000, 400], "at": [540.0, 540]}]}, {"from": 201, "lines": [{"text": "DOHUYA", "fit": [1000, 400], "at": [540.0, 300]}, {"text": "BABLA", "fit": [821, 400], "at": [450.6, 760]}]}], "show": [180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 215, 216], "under": {"clip": "CHG1", "t": 161.07, "grade": "lilac", "camera": {"zoom": 1.0, "kick": {"frames": [193, 213, 217], "amp": 0.15, "tau": 4.0}}}},
+  {"kind": "clip", "f": [222, 258], "clip": "FULL", "t": 20.0, "grade": "orange", "gain": 1.0, "camera": {"zoom_steps": [[222, 1.0], [232, 1.1], [244, 1.3]], "about": [660, 400], "kick": {"frames": [226, 230, 236, 246, 257], "amp": 0.15, "tau": 4.0}}, "fx": {"pulses": {"frames": [226, 230, 236, 246, 257], "amp": 45, "lift": 60}}},
+  {"kind": "clip", "f": [259, 288], "clip": "WIDE", "t": 256.2, "grade": "magenta", "gain": 1.35, "camera": {"zoom": 0.893, "kick": {"frames": [261, 270, 277, 284], "amp": 0.15, "tau": 4.0}}, "fx": {"entry": {"frames": 4}, "pulses": {"frames": [261, 270, 277, 284], "amp": 45, "blue": 1.0, "lift": 60}}},
+  {"kind": "clip", "f": [289, 302], "clip": "PRIC", "t": 4.6, "grade": "red", "gain": 1.2, "camera": {"zoom_steps": [[289, 1.0], [296, 1.12]], "about": [420, 640]}, "fx": {"pulses": {"frames": [290, 300], "amp": 70}}},
+  {"kind": "clip", "f": [303, 315], "clip": "CHG2", "t": 203.6, "grade": "orange", "gain": 0.82, "camera": {"zoom": 1.0, "kick": {"frames": [311], "amp": 0.15, "tau": 4.0}}},
+  {"kind": "clip", "f": [316, 343], "clip": "HALO", "t": 23.3, "grade": "bw", "camera": {"zoom": 1.0, "about": [605, 430], "kick": {"frames": [317, 324, 331, 335, 338], "amp": 0.15, "tau": 4.0}}},
+  {"kind": "clip", "f": [344, 384], "clip": "LEAN", "t": 174.6, "grade": "magenta", "gain": 1.35, "camera": {"zoom_steps": [[344, 1.0], [350, 1.08], [358, 1.16]], "about": [605, 470], "kick": {"frames": [345, 349, 355, 365, 370, 379], "amp": 0.15, "tau": 4.0}}, "fx": {"entry": {"frames": 4}, "pulses": {"frames": [349, 355, 365, 370, 379], "amp": 45, "blue": 1.0, "lift": 60}}},
+  {"kind": "clip", "f": [385, 393], "clip": "STAR", "t": 41.5, "grade": "red", "gain": 1.2, "camera": {"zoom": 1.38, "about": [605, 470]}, "fx": {"pulses": {"frames": [386, 391], "amp": 70}}},
+  {"kind": "flat", "f": [394, 394], "value": 254},
+  {"kind": "clip", "f": [395, 395], "clip": "STAR", "t": 41.8, "grade": "khakih", "camera": {"zoom": 1.75, "about": [605, 470]}, "fx": {"wash": {"first": 90, "rest": 90, "gamma": 0.55}}},
+  {"kind": "clip", "f": [396, 398], "clip": "CROWN", "t": 27.45, "grade": "khakih", "camera": {"zoom": 1.5, "about": [550, 450], "crash": 0.06}},
+  {"kind": "clip", "f": [399, 400], "clip": "DUTC", "t": 110.4, "grade": "khakih", "camera": {"zoom": 1.0}, "fx": {"wash": {"first": 90, "rest": 90, "gamma": 0.55}}},
+  {"kind": "clip", "f": [401, 401], "clip": "HALO", "t": 23.6, "grade": "khakih", "camera": {"zoom": 1.3, "about": [640, 470]}},
+  {"kind": "clip", "f": [402, 404], "clip": "STAR", "t": 41.9, "grade": "khakih", "camera": {"zoom": 2.1, "about": [605, 470], "crash": 0.05}, "fx": {"wash": {"first": 90, "rest": 90, "gamma": 0.55}}},
+  {"kind": "clip", "f": [405, 405], "clip": "PORT", "t": 4.5, "grade": "khakih", "camera": {"zoom": 1.6, "about": [659, 465]}},
+  {"kind": "card", "f": [406, 437], "fg": [205, 30, 62], "bg": 0, "states": [{"from": 406, "lines": [{"text": "KON-", "fit": [479, 380], "at": [279.6, 300]}]}, {"from": 414, "lines": [{"text": "KONYUNK-", "fit": [1000, 380], "at": [540.0, 300]}]}, {"from": 420, "lines": [{"text": "KONYUNK-", "fit": [1000, 380], "at": [540.0, 300]}, {"text": "TI", "fit": [196, 380], "at": [138.0, 760]}]}, {"from": 427, "lines": [{"text": "KONYUNK-", "fit": [1000, 380], "at": [540.0, 300]}, {"text": "TIVIT", "fit": [525, 380], "at": [302.4, 760]}]}], "show": [406, 407, 408, 409, 410, 414, 415, 416, 419, 420, 421, 422, 425, 426, 427, 428, 429, 432, 433, 434, 437], "under": {"clip": "CROWN", "t": 26.9, "grade": "redmono", "camera": {"push": {"to": 1.4, "frames": 31}, "about": [550, 450]}}},
+  {"kind": "card", "f": [438, 444], "fg": [205, 30, 62], "bg": 0, "states": [{"from": 427, "lines": [{"text": "KONYUNK-", "fit": [1000, 380], "at": [540.0, 300]}, {"text": "TIVIT", "fit": [525, 380], "at": [302.4, 760]}]}]},
+  {"kind": "clip", "f": [445, 449], "clip": "CROWN", "t": 26.9, "from": 406, "grade": "redmono", "gain": 0.3, "camera": {"zoom": 1.4, "about": [550, 450]}}
+ ],
+ "text": [
+  {"kind": "clones", "f": [259, 273], "text": "ШМОТОК,", "cap": 65, "positions": [[365, 630], [735, 700], [365, 770], [735, 840], [365, 910], [735, 980]], "every": 1.5},
+  {"kind": "word", "f": [358, 384], "text": "обкурился?", "font": "script", "size": 147, "at": [500, 230], "rot": 6, "shadow": [12, 0.7, 6, 8], "dim_at": 384, "alt": {"frames": [372, 373, 376, 377, 380, 381], "text": "?", "font": "card", "cap": 520, "at": [540, 520], "rot": 0, "shadow": false}},
+  {"kind": "word", "f": [445, 449], "text": "KONYUNK-", "font": "card", "fit": [1000, 380], "at": [540.0, 300], "color": [205, 30, 62]},
+  {"kind": "word", "f": [445, 449], "text": "TIVIT", "font": "card", "fit": [525, 380], "at": [302.4, 760], "color": [205, 30, 62]}
+ ],
+ "subtitles": [
+  {"f": [395, 405], "style": "band", "words": []}
+ ],
+ "motion": [
+  {"f": [259, 262], "dx": {"259": -31, "260": 15, "261": -7, "262": 0}},
+  {"f": [12, 17], "dx": {"12": 4, "13": 4, "14": -4, "15": -4, "16": 4, "17": 4}},
+  {"f": [445, 449], "dx": {"445": -60, "446": -135, "447": -225, "448": -325, "449": -425}}
+ ],
+ "events": {"inverts": [113, 222, 304, 409, 410, 419, 420], "bar_flash": [18], "invert_modes": {"222": "hue", "304": "hue"}},
+ "look": {
+  "band": {"y": [505, 580], "k": 0.35}
+ },
+ "words": {"24": ["Эй,", 1.5, 1], "25": ["звонит", 13.62, 13], "26": ["долбоёбка,", 30.27, 30], "27": ["не", 57.93, 57], "28": ["в", 64.83, 64], "29": ["ресурсе", 66.45, 66], "30": ["Пошла", 85.74, 85], "31": ["нахуй,", 99.45, 99], "32": ["бля,", 111.57, 111], "33": ["я", 124.8, 124], "34": ["скупил", 131.85, 131], "35": ["весь", 146.88, 146], "36": ["тему", 153.54, 153], "37": ["типо", 167.85, 167], "38": ["дохуя", 180.96, 180], "39": ["бабла", 201.93, 201], "40": ["Эй,", 222.9, 222], "41": ["слишком", 232.05, 232], "42": ["много", 244.47, 244], "43": ["шмоток,", 259.68, 259], "44": ["нету", 274.8, 274], "45": ["денег", 289.59, 289], "46": ["больше", 303.96, 303], "47": ["на", 316.95, 316], "48": ["спиды", 320.91, 320], "49": ["ты", 344.88, 344], "50": ["чё,", 350.64, 350], "51": ["обкурился?", 358.11, 358], "52": ["Да", 385.65, 385], "53": ["не,", 393.42, 393], "54": ["бля,", 398.31, 398], "55": ["конъюнктивит,", 406.62, 406], "56": ["эй", 440.4, 440]},
+ "fused": {"serif": {"x": 540, "y": 800, "scale": 0.8, "sway": [[0, 1.0], [18, 0.4]], "tear_scale": 1.32, "shade": 0.7, "shade_r": 16, "lines": [{"f": [0, 29], "words": [[1, "Эй,"], [13, "звонит"]]}, {"f": [57, 84], "words": [[57, "не"], [64, "в"], [66, "ресурсе"]]}, {"f": [85, 123], "words": [[85, "Пошла"], [99, "нахуй,"], [111, "бля,"]]}, {"f": [124, 166], "words": [[124, "я"], [131, "скупил"], [146, "весь"], [153, "тему"]]}, {"f": [167, 179], "words": [[167, "типо"]]}, {"f": [180, 221], "words": [[167, "типо"], [180, "дохуя"], [201, "бабла"]]}, {"f": [222, 258], "words": [[222, "Эй,"], [232, "слишком"], [244, "много"]], "scale": 0.72}, {"f": [274, 288], "words": [[274, "нету"], [289, "денег"]]}, {"f": [289, 302], "words": [[274, "нету"], [289, "денег"]], "y": 300}, {"f": [303, 315], "words": [[274, "нету"], [289, "денег"], [303, "больше"]]}, {"f": [316, 343], "words": [[316, "на"], [320, "спиды"]]}, {"f": [344, 384], "words": [[344, "ты"], [350, "чё,"], [358, "обкурился?"]]}, {"f": [385, 393], "words": [[385, "Да"], [393, "не,"]]}, {"f": [395, 405], "words": [[395, "Да"], [395, "не,"], [398, "бля,"]], "scale": 0.6, "y": 542}, {"f": [440, 449], "words": [[440, "эй"]], "x": 715, "y": 830, "scale": 1.3, "on_cards": true}]}, "vhs": [{"f": [0, 17], "soften": 2.2, "vignette": 0.28, "grain": 2.3, "flicker": 1.0}], "captions": [{"f": [30, 56], "words": [[30, "долбоёбка,"]]}, {"f": [99, 110], "words": [[99, "нахуй,"]]}, {"f": [180, 221], "words": [[180, "дохуя"], [201, "дохуя бабла"]]}, {"f": [406, 437], "words": [[406, "конъюнктивит,"]]}], "glitch": {"jpeg": 38, "tone": 0.0, "steps": {"395": {"step": "soft=4 hs=10 | |"}, "396": {"step": "inv hs=26 | |", "over": true}, "397": {"step": "dust=150,195,W,40 | |"}, "398": {"step": "inv vs=42,0,480 dust=35,70,K,90 dust=160,185,K,60 | |", "over": true}, "399": {"step": "mosh=0,480,0.5 flash=C,0.88 | |", "over": true}, "400": {"step": "inv ht=0,190,W,stripes row=425,K | |"}, "401": {"step": "vs=46,0,210 barA=211,240,W | |", "over": true}, "402": {"step": "inv hs=20 hl=K | |", "over": true}, "403": {"step": "ht=290,480,W,holes | |"}, "404": {"step": "inv soft=4 hs=14 | |", "over": true}, "405": {"step": "inv mosh=40,480,0.85 line=160,K | |", "over": true}, "409": {"step": "dust=20,70,K,60 | |", "jpeg": 0}, "410": {"step": "hl=K | |", "jpeg": 0}, "412": {"step": "lowblk2 | |"}, "416": {"step": "barB=240,R | |", "jpeg": 0}, "418": {"step": "row=297,W | |"}, "420": {"step": "dust=15,70,K,90 | |", "jpeg": 0}, "424": {"step": "ht=290,480,R,holes | |"}, "427": {"step": "expo=1.9 botw=300,1 hs=26 | |", "jpeg": 0}, "430": {"step": "mosh=40,480,0.5 | |"}, "435": {"step": "hl=W | |"}}}},
+ "render": {"edges": [0, 112, 224, 336, 450]}
+}

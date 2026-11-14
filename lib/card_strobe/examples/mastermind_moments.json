@@ -1,0 +1,10 @@
+[
+ {"src": "/Users/sdknm/Downloads/podnebesny-edits-v2/_inputs/src_toilet_rzd.mp4", "t_in": 0.3, "t_out": 0.9, "subject_x": 0.52, "subject_y": 0.3, "kind": "face", "energy": 2, "desc": "mirror selfie, phone over his face (intro)"},
+ {"src": "/Users/sdknm/Downloads/podnebesny-edits-v2/_inputs/src_toilet_rzd.mp4", "t_in": 91.95, "t_out": 93.45, "subject_x": 0.52, "subject_y": 0.55, "kind": "hands", "energy": 3, "desc": "open palm, tiny soap drop"},
+ {"src": "/Users/sdknm/Downloads/podnebesny-edits-v2/_inputs/src_toilet_rzd.mp4", "t_in": 8.36, "t_out": 10.18, "subject_x": 0.46, "subject_y": 0.5, "kind": "product", "energy": 2, "desc": "hand reaches in, SEAT SLAM at 10.03"},
+ {"src": "/Users/sdknm/Downloads/podnebesny-edits-v2/_inputs/src_toilet_rzd.mp4", "t_in": 31.0, "t_out": 33.0, "subject_x": 0.48, "subject_y": 0.6, "kind": "action", "energy": 4, "desc": "flush: water churning in the steel bowl"},
+ {"src": "/Users/sdknm/Downloads/podnebesny-edits-v2/_inputs/src_toilet_rzd.mp4", "t_in": 112.2, "t_out": 113.86, "subject_x": 0.22, "subject_y": 0.4, "kind": "face", "energy": 3, "desc": "final mirror squint, 'вот так вот'"},
+ {"src": "/Users/sdknm/Downloads/podnebesny-edits-v2/_inputs/src_toilet_rzd.mp4", "t_in": 76.22, "t_out": 77.74, "subject_x": 0.32, "subject_y": 0.65, "kind": "hands", "energy": 2, "desc": "paper shoved into the bin slot, fist at 77.25"},
+ {"src": "/Users/sdknm/Downloads/podnebesny-edits-v2/_inputs/src_toilet_rzd.mp4", "t_in": 109.47, "t_out": 111.37, "subject_x": 0.5, "subject_y": 0.5, "kind": "action", "energy": 4, "desc": "camera rises past the shelf to the torso and green belt"},
+ {"src": "/Users/sdknm/Downloads/podnebesny-edits-v2/_inputs/src_toilet_rzd.mp4", "t_in": 114.4, "t_out": 116.1, "subject_x": 0.5, "subject_y": 0.5, "kind": "action", "energy": 4, "desc": "red NOTICE sign / whip off the mirror"}
+]
