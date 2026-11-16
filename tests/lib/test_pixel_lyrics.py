@@ -114,3 +114,45 @@ def test_init_copies_template_and_example(tmp_path):
     assert "c1_room.jpg" in manifest and "it_meph.png" in manifest
     with pytest.raises(SystemExit):
         init(proj, None, install=False)
+
+
+# ---------- cut-out puppet ----------
+PUPPET = KIT / "characters" / "hollow" / "puppet" / "front"
+
+
+def test_puppet_rig_is_complete():
+    rig = json.loads((PUPPET / "rig.json").read_text(encoding="utf-8"))
+    parts = rig["parts"]
+    assert len({p["z"] for p in parts.values()}) == len(parts)
+    for name, p in parts.items():
+        assert (PUPPET / p["file"]).is_file(), name
+        assert p["parent"] is None or p["parent"] in parts, name
+    for pose in rig["poses"].values():
+        assert set(pose) <= set(parts)
+
+
+def test_puppet_rest_pose_is_the_parts_pasted_in_place():
+    np = pytest.importorskip("numpy")
+    from PIL import Image
+
+    from lib.pixel_lyrics.puppet import Puppet
+
+    p = Puppet(PUPPET)
+    ref = Image.new("RGBA", p.size, (0, 0, 0, 0))
+    for name in p.order:
+        ref.alpha_composite(p.images[name], tuple(p.parts[name]["origin"]))
+    assert np.array_equal(np.array(p.render("apose")), np.array(ref))
+
+
+def test_puppet_child_turns_with_its_parent():
+    np = pytest.importorskip("numpy")
+    from lib.pixel_lyrics.puppet import Puppet
+
+    p = Puppet(PUPPET)
+    m = p.matrices({"arm_l_upper": 90})
+    elbow = np.array([*p.parts["arm_l_lower"]["pivot"], 1.0])
+    shoulder = np.array(p.parts["arm_l_upper"]["pivot"])
+    moved = (m["arm_l_lower"] @ elbow)[:2]
+    dx, dy = elbow[:2] - shoulder
+    assert np.allclose(moved, shoulder + np.array([-dy, dx]))        # a quarter turn clockwise on screen
+    assert np.allclose(m["torso"], np.eye(3))

@@ -1,0 +1,10 @@
+[
+ {
+  "name": "char/p1_apose",
+  "aspect": "1:1",
+  "refs": [
+   "assets/gen/char/v16.png"
+  ],
+  "prompt": "Image 1 is the approved pixel-art reference sheet of one character: a full-body front view, a full-body side view and a close-up. Draw ONE new full-body figure of the SAME character seen exactly from the front, in exactly the same pixel-art style, the same pixel size, the same muted palette and the same plain flat dark violet background, exactly as tall as the front figure of image 1 (hair near the top edge, sneakers near the bottom edge), in the centre of the picture. This figure is a model sheet for cut-out puppet animation, so he stands in a symmetric A-POSE: the body is upright and straight, not slouched; BOTH ARMS are straight and held away from the body at about 45 degrees, pointing down and out, so that there is a wide wedge of empty background between each arm and the torso from the armpit down, and the arms do not touch or overlap the torso anywhere below the shoulder; the hands are open with the fingers together. BOTH LEGS are straight and spread apart, so that there is a clear gap of empty background between the legs from the crotch down to the shoes; the feet point forward and slightly out and do not touch each other. The hoodie hem ends at the hips and does not cover the legs below the hips. Nothing overlaps anything: every limb is fully visible. Same character: the same head, hair and face as the front figure of image 1 (dark ash-brown wavy hair with a centre parting, pale face with two big dark empty eye sockets, no eyes, no eyebrows, no mouth, the nose only a faint shadow); an oversized black zip hoodie with the hood down, a ribbed hem and ribbed cuffs, the white skull print on the chest (on the right side of the picture) and the same white skull on the outer side of his right sleeve (on the left side of the picture) at elbow level; the silver chain with the pink orb pendant; a kangaroo pocket; dark flared jeans with light washed creases; black-and-white low sneakers with thick white soles. Only one figure. No text, no labels, no frames, no ground line, no cast shadow."
+ }
+]

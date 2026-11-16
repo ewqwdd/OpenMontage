@@ -1,0 +1,10 @@
+[
+ {
+  "name": "char/v16_profile",
+  "aspect": "1:1",
+  "refs": [
+   "assets/gen/char/v11_b_face.png"
+  ],
+  "prompt": "This image is the approved pixel-art close-up of a character, seen from the front. Draw the SAME character's head and shoulders seen in strict profile, facing right (a 90-degree side view), in exactly the same pixel-art style, the same pixel size, the same muted palette and the same plain dark violet background. Same hair: dark ash-brown, parted in the centre on top, soft waves falling down the side of the head and curling outward at jaw level, the same length and the same volume; the ear is hidden under the hair. Same face, in profile: pale skin, ONE big dark empty eye socket (a solid dark pit with soft shading inside, no eyeball, no pupil, no white, no eyebrow) with a soft smeared grey shadow under it, a small simple nose, NO mouth at all (blank skin between the nose and the chin), a short lower face with a small chin, a pale neck. The same black hoodie seen from the side with the hood lying on the back, a thin silver chain at the neck. The whole head with all of its hair must fit inside the frame, with empty background above it, in front of it and behind it. No text, no labels."
+ }
+]

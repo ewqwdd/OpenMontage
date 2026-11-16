@@ -1,0 +1,11 @@
+[
+ {
+  "name": "char/t4_angles",
+  "aspect": "1:1",
+  "refs": [
+   "assets/gen/char/turn/turnaround.png",
+   "assets/gen/char/ref_closeup.png"
+  ],
+  "prompt": "Image 1 is the approved pixel-art turnaround of one character: five full-body views. Image 2 is the approved close-up of his face. Draw a NEW sheet of the SAME character in exactly the same pixel-art style, the same pixel size, the same muted palette and the same plain flat dark violet background. The new sheet shows two full-body standing figures side by side, not overlapping, each filling the height of the picture. LEFT FIGURE - HIGH-ANGLE view (bird's-eye): the camera is high above him and looks down at him at a steep angle. He stands still with his arms hanging and tilts his head back to look straight up into the camera. Strong perspective: the head is the biggest part, at the top of the picture, the shoulders are wide, the body gets narrower toward the small sneakers at the bottom. We see the centre parting and the top of the hair, the whole face, the chest with the white skull print and the chain with the pink orb pendant. RIGHT FIGURE - LOW-ANGLE view (worm's-eye): the camera lies on the ground in front of him and looks up. Strong perspective: the big sneakers with thick white soles and the wide flared jeans are at the bottom and are the biggest part, the body gets narrower toward the small head at the top. He looks down into the camera: we see the underside of the chin and the face from below, framed by the hanging wavy hair. The face in BOTH figures follows image 2: pale skin, NO eyes and NO eyebrows - two big dark empty eye sockets (solid dark pits) with a soft smeared grey shadow under each, the nose is only a faint shadow, NO mouth at all - blank skin under the nose, a short lower face with a narrow chin. Same hair: dark ash-brown, centre parting, soft waves curling outward at jaw level, no hat. Same clothes: an oversized black zip hoodie with the hood down and a ribbed hem, a white skull print on the chest and on one sleeve, dark flared jeans with light washed creases, black-and-white low sneakers. No text, no labels, no frames, no ground line, no cast shadow."
+ }
+]

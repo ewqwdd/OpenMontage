@@ -1,0 +1,227 @@
+{
+ "name": "hollow/front",
+ "canvas": [
+  1024,
+  1024
+ ],
+ "pixel": 2,
+ "note": "Sides are the character's (arm_r is on the left of the picture). Angles in degrees, clockwise on screen, around the part's pivot; a child turns with its parent. origin and pivot are in canvas pixels of the rest pose.",
+ "parts": {
+  "pelvis": {
+   "file": "parts/pelvis.png",
+   "origin": [
+    430,
+    518
+   ],
+   "size": [
+    149,
+    60
+   ],
+   "pivot": [
+    504.0,
+    560.0
+   ],
+   "parent": null,
+   "z": 0
+  },
+  "leg_r_lower": {
+   "file": "parts/leg_r_lower.png",
+   "origin": [
+    372,
+    668
+   ],
+   "size": [
+    101,
+    334
+   ],
+   "pivot": [
+    440.0,
+    705.0
+   ],
+   "parent": "leg_r_upper",
+   "z": 1
+  },
+  "leg_l_lower": {
+   "file": "parts/leg_l_lower.png",
+   "origin": [
+    536,
+    668
+   ],
+   "size": [
+    102,
+    334
+   ],
+   "pivot": [
+    569.0,
+    705.0
+   ],
+   "parent": "leg_l_upper",
+   "z": 2
+  },
+  "leg_r_upper": {
+   "file": "parts/leg_r_upper.png",
+   "origin": [
+    408,
+    500
+   ],
+   "size": [
+    97,
+    242
+   ],
+   "pivot": [
+    456.0,
+    566.0
+   ],
+   "parent": "pelvis",
+   "z": 3
+  },
+  "leg_l_upper": {
+   "file": "parts/leg_l_upper.png",
+   "origin": [
+    504,
+    500
+   ],
+   "size": [
+    97,
+    242
+   ],
+   "pivot": [
+    553.0,
+    566.0
+   ],
+   "parent": "pelvis",
+   "z": 4
+  },
+  "arm_r_upper": {
+   "file": "parts/arm_r_upper.png",
+   "origin": [
+    262,
+    224
+   ],
+   "size": [
+    210,
+    185
+   ],
+   "pivot": [
+    413.0,
+    282.0
+   ],
+   "parent": "torso",
+   "z": 5
+  },
+  "arm_l_upper": {
+   "file": "parts/arm_l_upper.png",
+   "origin": [
+    538,
+    224
+   ],
+   "size": [
+    210,
+    185
+   ],
+   "pivot": [
+    596.0,
+    282.0
+   ],
+   "parent": "torso",
+   "z": 6
+  },
+  "torso": {
+   "file": "parts/torso.png",
+   "origin": [
+    396,
+    162
+   ],
+   "size": [
+    218,
+    388
+   ],
+   "pivot": [
+    504.0,
+    548.0
+   ],
+   "parent": "pelvis",
+   "z": 7
+  },
+  "head": {
+   "file": "parts/head.png",
+   "origin": [
+    412,
+    26
+   ],
+   "size": [
+    183,
+    153
+   ],
+   "pivot": [
+    504.0,
+    170.0
+   ],
+   "parent": "torso",
+   "z": 8
+  },
+  "arm_r_lower": {
+   "file": "parts/arm_r_lower.png",
+   "origin": [
+    160,
+    320
+   ],
+   "size": [
+    191,
+    162
+   ],
+   "pivot": [
+    306.0,
+    364.0
+   ],
+   "parent": "arm_r_upper",
+   "z": 9
+  },
+  "arm_l_lower": {
+   "file": "parts/arm_l_lower.png",
+   "origin": [
+    658,
+    320
+   ],
+   "size": [
+    194,
+    161
+   ],
+   "pivot": [
+    703.0,
+    364.0
+   ],
+   "parent": "arm_l_upper",
+   "z": 10
+  }
+ },
+ "poses": {
+  "apose": {},
+  "stand": {
+   "arm_r_upper": -44,
+   "arm_l_upper": 44,
+   "arm_r_lower": -4,
+   "arm_l_lower": 4,
+   "leg_r_upper": -3,
+   "leg_l_upper": 3
+  },
+  "wave": {
+   "arm_r_upper": -44,
+   "arm_r_lower": -4,
+   "arm_l_upper": -70,
+   "arm_l_lower": -55,
+   "leg_r_upper": -3,
+   "leg_l_upper": 3,
+   "head": 5
+  },
+  "shrug": {
+   "arm_r_upper": -20,
+   "arm_r_lower": -70,
+   "arm_l_upper": 20,
+   "arm_l_lower": 70,
+   "leg_r_upper": -3,
+   "leg_l_upper": 3,
+   "head": -6
+  }
+ }
+}

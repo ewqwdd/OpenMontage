@@ -17,6 +17,8 @@ The kit is a Hypit project template, not a Python renderer:
     template/dev/index.html         instant preview without rendering
     style/                          the approved look as reference pictures for new generations
     characters/<name>/              approved reusable heroes: sheet, crops, character.md (rules + prompt block)
+                                    + views/ (angles) + puppet/<view>/ (cut-out parts and rig.json)
+    puppet.py                       poses a cut-out puppet: Puppet(dir).render({part: angle}) -> PIL image; demo GIF
     examples/mefedron               the approved edits (chorus + verse of "mefedron master 4"): scenes, pictures,
                                     prompts, words
 

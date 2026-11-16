@@ -1,0 +1,10 @@
+[
+ {
+  "name": "char/t2_back34",
+  "aspect": "1:1",
+  "refs": [
+   "assets/gen/char/t1_bodies.png"
+  ],
+  "prompt": "Image 1 is a pixel-art reference sheet of one character with three full-body figures: a three-quarter front view, a side view (centre) and a straight back view (right). Draw ONE new full-body standing figure of the SAME character in exactly the same pixel-art style, the same pixel size, the same muted palette, the same plain flat dark violet background and exactly the same height as the figures in image 1 (head near the top edge, sneakers near the bottom edge), placed in the centre of the picture. The new figure is a three-quarter BACK view (a rear three-quarter view): the viewer stands BEHIND the character and a little to his right side. It is exactly halfway between the centre figure and the right figure of image 1. He walks away from us toward the upper right. We see MOSTLY HIS BACK: the wide back of the hoodie with the hood hanging on the upper back, and a narrow part of his right side with the right arm hanging down along the body. His chest, the zipper, the pocket and the chain are NOT visible. His face is NOT visible: we see the back of the head covered with dark wavy hair, and at most the edge of one ear and a thin line of the pale cheek - no eye socket, no nose, no mouth. The flared jeans are seen from behind and slightly from the side, the sneakers show their heels and point away to the upper right. Same clothes as in image 1: an oversized black zip hoodie with a ribbed hem, dark flared jeans with light washed creases, black-and-white low sneakers with thick white soles. No print on the back. Only one figure. No text, no labels, no frames, no ground line."
+ }
+]

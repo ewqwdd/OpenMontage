@@ -102,7 +102,11 @@ Every prompt ends with the same style block and every hero prompt starts with th
   "same drawing style and palette as the attached picture".
 - **Ready heroes** live in `lib/pixel_lyrics/characters/<name>/`: the approved sheet, crops and
   `character.md` (hard rules of the look, the hero block, how to add angles). Use the sheet as the
-  hero reference instead of drawing a new one. First one: `hollow`.
+  hero reference instead of drawing a new one. First one: `hollow` — it also has `turnaround.png`
+  (five full-body angles), `views/` (each angle apart, plus high and low camera) and `head34.png`:
+  pass the view that matches the shot's camera, not the front sheet, when the hero is turned away.
+  `puppet/front/` is the same hero cut into parts with a rig (`lib/pixel_lyrics/puppet.py` poses it):
+  free motion — sways, waves, gestures — without buying a new picture per pose.
 - **A reference pulls the composition with it.** A bird's-eye shot asked with the room as reference
   came back as the room again. When the angle must change, reference a picture that already has that
   angle (the top-down flat-lay), not the anchor.
