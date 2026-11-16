@@ -1,0 +1,108 @@
+[
+ {
+  "name": "c1_items",
+  "aspect": "1:1",
+  "refs": [
+   "assets/gen/c1_room.png"
+  ],
+  "prompt": "Same drawing style and palette as the attached picture. A sprite sheet of four separate game item icons in a 2x2 grid on a pure black background, each centered in its cell with wide black margins: a small plastic zip bag of white powder; a square sheet of tiny perforated paper stamps printed with smiley faces; a white rectangular bar-shaped tablet with three score lines; two round white tablets. 1990s PC-98 Japanese adventure game pixel art: low resolution, limited 16-color palette, checkerboard dithering, hard dark outlines. Grim night palette: near-black violet, dusty purple, teal shadows, sickly orange lamp light, bone white, blood-red accents. No text, no letters, no UI, no watermark."
+ },
+ {
+  "name": "c2_face",
+  "aspect": "9:16",
+  "refs": [
+   "assets/gen/hero_sheet.png",
+   "assets/gen/c1_room.png"
+  ],
+  "prompt": "The boy is exactly the character from the attached reference sheet (grey fur ushanka with ear flaps, shaggy bleached hair over his eyes, oversized black hoodie, huge flared black jeans, silver chain with a cross). Same room and same drawing style as the attached room picture. Extreme close-up of his face from a low angle, wide-angle distortion: hair fallen aside showing one huge dilated pupil, jaw clenched, teeth grinding, sweat drops, lit from below by flickering TV glow, the room dark behind him. 1990s PC-98 Japanese adventure game pixel art: low resolution, limited 16-color palette, checkerboard dithering, hard dark outlines. Grim night palette: near-black violet, dusty purple, teal shadows, sickly orange lamp light, bone white, blood-red accents. Vertical frame; keep the top third dark and uncluttered. No text, no letters, no UI, no watermark."
+ },
+ {
+  "name": "c2_ceiling",
+  "aspect": "9:16",
+  "refs": [
+   "assets/gen/c1_room.png"
+  ],
+  "prompt": "Same room and same drawing style as the attached room picture. First-person view from the floor looking straight up at the ceiling of that room: cracked whitewashed ceiling, an old soviet chandelier with three dim bulbs dead center, a moth circling it, cobwebs in the corners, a water stain spreading in a spiral. Nobody in frame. 1990s PC-98 Japanese adventure game pixel art: low resolution, limited 16-color palette, checkerboard dithering, hard dark outlines. Grim night palette: near-black violet, dusty purple, teal shadows, sickly orange lamp light, bone white, blood-red accents. Vertical frame; keep the top third dark and uncluttered. No text, no letters, no UI, no watermark."
+ },
+ {
+  "name": "c3_flatlay",
+  "aspect": "9:16",
+  "refs": [
+   "assets/gen/hero_sheet.png",
+   "assets/gen/c1_room.png"
+  ],
+  "prompt": "The boy is exactly the character from the attached reference sheet (grey fur ushanka with ear flaps, shaggy bleached hair over his eyes, oversized black hoodie, huge flared black jeans, silver chain with a cross). Same room and same drawing style as the attached room picture. Top-down close view of the red patterned carpet on the floor with objects laid out in a neat row like an inventory: a small zip bag of white powder, a sheet of perforated smiley-face paper stamps, white bar-shaped tablets, round white tablets; around them a lighter, a crushed cigarette pack and an old flip phone. His pale hand with silver rings reaches in from the bottom edge. 1990s PC-98 Japanese adventure game pixel art: low resolution, limited 16-color palette, checkerboard dithering, hard dark outlines. Grim night palette: near-black violet, dusty purple, teal shadows, sickly orange lamp light, bone white, blood-red accents. Vertical frame; keep the top third dark and uncluttered. No text, no letters, no UI, no watermark."
+ },
+ {
+  "name": "c4_curl",
+  "aspect": "9:16",
+  "refs": [
+   "assets/gen/hero_sheet.png",
+   "assets/gen/c1_room.png"
+  ],
+  "prompt": "The boy is exactly the character from the attached reference sheet (grey fur ushanka with ear flaps, shaggy bleached hair over his eyes, oversized black hoodie, huge flared black jeans, silver chain with a cross). Same room and same drawing style as the attached room picture. Floor-level side view: he lies curled up on his side on the floor hugging himself and shaking, the ushanka slipping off his head, the TV static the only light, long shadows. 1990s PC-98 Japanese adventure game pixel art: low resolution, limited 16-color palette, checkerboard dithering, hard dark outlines. Grim night palette: near-black violet, dusty purple, teal shadows, sickly orange lamp light, bone white, blood-red accents. Vertical frame; keep the top third dark and uncluttered. No text, no letters, no UI, no watermark."
+ },
+ {
+  "name": "c4_topdown",
+  "aspect": "9:16",
+  "refs": [
+   "assets/gen/hero_sheet.png",
+   "assets/gen/c1_room.png"
+  ],
+  "prompt": "The boy is exactly the character from the attached reference sheet (grey fur ushanka with ear flaps, shaggy bleached hair over his eyes, oversized black hoodie, huge flared black jeans, silver chain with a cross). Same room and same drawing style as the attached room picture. Bird's-eye view straight down into the room: he lies flat on his back on a red patterned carpet in the middle of the floor, arms spread wide, hair fanned out, the ushanka beside his head, eyes wide open staring straight up at us. Edges of the sofa and TV at the frame borders, lots of dark floor around him. 1990s PC-98 Japanese adventure game pixel art: low resolution, limited 16-color palette, checkerboard dithering, hard dark outlines. Grim night palette: near-black violet, dusty purple, teal shadows, sickly orange lamp light, bone white, blood-red accents. Vertical frame; keep the top third dark and uncluttered. No text, no letters, no UI, no watermark."
+ },
+ {
+  "name": "v1_phone",
+  "aspect": "9:16",
+  "refs": [
+   "assets/gen/hero_sheet.png",
+   "assets/gen/c1_room.png"
+  ],
+  "prompt": "The boy is exactly the character from the attached reference sheet (grey fur ushanka with ear flaps, shaggy bleached hair over his eyes, oversized black hoodie, huge flared black jeans, silver chain with a cross). Same room and same drawing style as the attached room picture. He lies face-down on the sofa bed, completely drained, one arm hanging down to the floor. On the floor next to his hand an old flip phone is lit up and ringing, its green screen glow lighting his fingers. Medium shot. 1990s PC-98 Japanese adventure game pixel art: low resolution, limited 16-color palette, checkerboard dithering, hard dark outlines. Grim night palette: near-black violet, dusty purple, teal shadows, sickly orange lamp light, bone white, blood-red accents. Vertical frame; keep the top third dark and uncluttered. No text, no letters, no UI, no watermark."
+ },
+ {
+  "name": "v2_finger",
+  "aspect": "9:16",
+  "refs": [
+   "assets/gen/hero_sheet.png",
+   "assets/gen/c1_room.png"
+  ],
+  "prompt": "The boy is exactly the character from the attached reference sheet (grey fur ushanka with ear flaps, shaggy bleached hair over his eyes, oversized black hoodie, huge flared black jeans, silver chain with a cross). Same room and same drawing style as the attached room picture. Medium close-up: he sits up on the sofa bed glaring from under his hair, holding the glowing flip phone in one hand and showing his middle finger to its screen with the other hand. 1990s PC-98 Japanese adventure game pixel art: low resolution, limited 16-color palette, checkerboard dithering, hard dark outlines. Grim night palette: near-black violet, dusty purple, teal shadows, sickly orange lamp light, bone white, blood-red accents. Vertical frame; keep the top third dark and uncluttered. No text, no letters, no UI, no watermark."
+ },
+ {
+  "name": "v3_kiosk",
+  "aspect": "9:16",
+  "refs": [
+   "assets/gen/hero_sheet.png",
+   "assets/gen/c1_room.png"
+  ],
+  "prompt": "The boy is exactly the character from the attached reference sheet (grey fur ushanka with ear flaps, shaggy bleached hair over his eyes, oversized black hoodie, huge flared black jeans, silver chain with a cross). Same drawing style and palette as the attached room picture. Night street between dark panel apartment blocks, dirty snow, one streetlamp cone. A tiny lit street kiosk with a hooded seller silhouette inside its window. He stands at the window slamming a thick stack of banknotes on the counter, stuffed plastic bags at his feet. 1990s PC-98 Japanese adventure game pixel art: low resolution, limited 16-color palette, checkerboard dithering, hard dark outlines. Grim night palette: near-black violet, dusty purple, teal shadows, sickly orange lamp light, bone white, blood-red accents. Vertical frame; keep the top third dark and uncluttered. No text, no letters, no UI, no watermark."
+ },
+ {
+  "name": "v4_clothes",
+  "aspect": "9:16",
+  "refs": [
+   "assets/gen/hero_sheet.png",
+   "assets/gen/c1_room.png"
+  ],
+  "prompt": "The boy is exactly the character from the attached reference sheet (grey fur ushanka with ear flaps, shaggy bleached hair over his eyes, oversized black hoodie, huge flared black jeans, silver chain with a cross). Same room and same drawing style as the attached room picture. In that room an enormous mountain of black designer clothes with dangling price tags is piled up to the ceiling. He is buried in it up to his chest, only the ushanka, hair and one arm holding a clothes hanger sticking out. 1990s PC-98 Japanese adventure game pixel art: low resolution, limited 16-color palette, checkerboard dithering, hard dark outlines. Grim night palette: near-black violet, dusty purple, teal shadows, sickly orange lamp light, bone white, blood-red accents. Vertical frame; keep the top third dark and uncluttered. No text, no letters, no UI, no watermark."
+ },
+ {
+  "name": "v4_wallet",
+  "aspect": "9:16",
+  "refs": [
+   "assets/gen/hero_sheet.png",
+   "assets/gen/c1_room.png"
+  ],
+  "prompt": "The boy is exactly the character from the attached reference sheet (grey fur ushanka with ear flaps, shaggy bleached hair over his eyes, oversized black hoodie, huge flared black jeans, silver chain with a cross). Same room and same drawing style as the attached room picture. Close-up of his pale hands with silver rings holding open a worn, completely empty wallet; a moth flies out of it and a single coin falls. Dark background. 1990s PC-98 Japanese adventure game pixel art: low resolution, limited 16-color palette, checkerboard dithering, hard dark outlines. Grim night palette: near-black violet, dusty purple, teal shadows, sickly orange lamp light, bone white, blood-red accents. Vertical frame; keep the top third dark and uncluttered. No text, no letters, no UI, no watermark."
+ },
+ {
+  "name": "v5_eyes",
+  "aspect": "9:16",
+  "refs": [
+   "assets/gen/hero_sheet.png",
+   "assets/gen/c1_room.png"
+  ],
+  "prompt": "The boy is exactly the character from the attached reference sheet (grey fur ushanka with ear flaps, shaggy bleached hair over his eyes, oversized black hoodie, huge flared black jeans, silver chain with a cross). Same drawing style and palette as the attached room picture. Close-up of his face hit by a harsh flashlight beam from the left in a dark stairwell with peeling paint: hair pushed aside, both eyes wide open and extremely bloodshot red with tiny pupils, a deadpan guilty expression. 1990s PC-98 Japanese adventure game pixel art: low resolution, limited 16-color palette, checkerboard dithering, hard dark outlines. Grim night palette: near-black violet, dusty purple, teal shadows, sickly orange lamp light, bone white, blood-red accents. Vertical frame; keep the top third dark and uncluttered. No text, no letters, no UI, no watermark."
+ }
+]

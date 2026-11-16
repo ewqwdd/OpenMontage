@@ -1,0 +1,42 @@
+<!doctype html><meta charset="utf-8"><title>pixel-lyrics dev</title>
+<style>html,body{margin:0;background:#111;color:#9f9;font:12px monospace}
+.root{position:relative;width:1080px;height:1920px;transform-origin:0 0}
+#ui{position:fixed;left:8px;bottom:8px;z-index:9;background:#000c;padding:6px 10px}</style>
+<div id="imgs" style="display:none"></div><div id="stage"></div><div id="ui"></div>
+<script src="/packages/pixel-lyrics/client/engine.js"></script>
+<script>
+// Instant preview without rendering. Serve the project root statically (tools/shot.mjs does it for you).
+//   ?edit=chorus&play (click to play with sound) · ?edit=verse&f=120&scale=.4 · ?edit=chorus&sheet=10,20,30&cols=6&cell=180 · &accent=warm
+const FONTS = [{ url: '/packages/pixel-lyrics/client/font/cyrillic.woff2', range: 'U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116' }, { url: '/packages/pixel-lyrics/client/font/latin.woff2', range: 'U+0000-00FF,U+2000-206F,U+20AC,U+2212' }];
+(async () => {
+  const q = new URLSearchParams(location.search), W = await (await fetch('/productions/words.final.json')).json();
+  const edit = q.get('edit') || Object.keys(W.edits)[0], E = W.edits[edit], FPS = W.fps || 30, LEAD = W.lead == null ? .35 : W.lead;
+  await new Promise((res, rej) => { const s = document.createElement('script'); s.src = `/packages/pixel-lyrics/client/scenes/${edit}.js`; s.onload = res; s.onerror = () => rej(new Error('no scene set ' + edit)); document.head.appendChild(s); });
+  const words = W.words.filter(w => w.edit === edit).map(w => ({ t: w.text.trim(), f: Math.max(0, Math.round((w.start - E.start) * FPS - LEAD)) }));
+  for (let i = 1; i < words.length; i++) if (words[i].f <= words[i - 1].f) words[i].f = words[i - 1].f + 1;
+  const total = E.frames, box = document.getElementById('imgs');
+  const IMGS = await (await fetch('/packages/pixel-lyrics/client/img/manifest.json')).json();
+  await Promise.all(IMGS.map(n => new Promise(res => { const i = new Image(); i.dataset.img = n.slice(0, -4); i.onload = i.onerror = res; i.src = `/packages/pixel-lyrics/client/img/${n}`; box.appendChild(i); })));
+  const make = host => { for (const i of box.children) host.appendChild(i.cloneNode()); return setupPixel(host, { fps: FPS, total, variant: edit, accent: q.get('accent') || W.accent || 'cold', words, fonts: FONTS }); };
+  const settle = async () => { await new Promise(r => setTimeout(r, 60)); await document.fonts.ready; await new Promise(r => setTimeout(r, 120)); };
+  const stage = document.getElementById('stage'), ui = document.getElementById('ui');
+  if (q.has('sheet')) {
+    const spec = q.get('sheet'), cols = +(q.get('cols') || 6), cell = +(q.get('cell') || 180);
+    const fs = spec.includes('-') ? (() => { const [a, b, st] = spec.split('-').map(Number), r = []; for (let f = a; f <= b; f += (st || 1)) r.push(f); return r; })() : spec.split(',').map(Number);
+    ui.remove(); stage.style.cssText = `display:grid;grid-template-columns:repeat(${cols},${cell}px);gap:3px`;
+    const host = document.createElement('div'); host.className = 'root'; host.style.cssText = 'position:absolute;left:-9999px'; document.body.appendChild(host);
+    const render = make(host), src = host.querySelector('canvas'); await settle();
+    for (const f of fs) { render(f); const c = document.createElement('canvas'); c.width = cell; c.height = Math.round(cell * 16 / 9); const x = c.getContext('2d'); x.imageSmoothingEnabled = cell < 540; x.drawImage(src, 0, 0, c.width, c.height); x.fillStyle = '#000'; x.fillRect(0, c.height - 13, 62, 13); x.fillStyle = '#9f9'; x.font = '11px monospace'; x.fillText('f' + f + ' ' + (E.start + f / FPS).toFixed(2), 2, c.height - 3); stage.appendChild(c); }
+    window.cuts = JSON.parse(host.dataset.cuts || '[]'); document.title = 'sheet ready'; return;
+  }
+  const host = document.createElement('div'); host.className = 'root'; const sc = +(q.get('scale') || .45); host.style.transform = `scale(${sc})`; stage.appendChild(host);
+  const render = make(host); await settle();
+  window.cuts = JSON.parse(host.dataset.cuts || '[]');
+  window.go = f => { render(f); ui.textContent = `${edit} f=${f} t=${(E.start + f / FPS).toFixed(2)}`; };
+  go(+(q.get('f') || 0));
+  if (q.has('play')) {
+    const a = new Audio(`/assets/audio/${edit}.wav`); document.body.addEventListener('click', () => a.paused ? a.play() : a.pause());
+    const loop = () => { if (!a.paused) go(Math.min(total - 1, Math.floor(a.currentTime * FPS))); requestAnimationFrame(loop); }; loop(); ui.textContent = 'click to play';
+  }
+})();
+</script>

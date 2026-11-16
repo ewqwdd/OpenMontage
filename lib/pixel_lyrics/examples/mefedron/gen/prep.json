@@ -1,0 +1,23 @@
+{
+ "skip": [
+  "hero_sheet"
+ ],
+ "sprites": {
+  "c1_items": [
+   "it_meph",
+   "it_marki",
+   "it_xan",
+   "it_oxy"
+  ]
+ },
+ "mosaic": {
+  "c3_flatlay": [
+   [
+    106,
+    992,
+    206,
+    1082
+   ]
+  ]
+ }
+}

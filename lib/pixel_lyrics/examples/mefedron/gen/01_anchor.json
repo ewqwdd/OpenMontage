@@ -1,0 +1,10 @@
+[
+ {
+  "name": "c1_room",
+  "aspect": "9:16",
+  "refs": [
+   "assets/gen/hero_sheet.png"
+  ],
+  "prompt": "The boy is exactly the character from the attached reference sheet (grey fur ushanka with ear flaps, shaggy bleached hair over his eyes, oversized black hoodie, huge flared black jeans, silver chain with a cross). Medium-wide shot of his room in a run-down post-soviet panel apartment at night: a big red patterned carpet hanging on the wall, a sagging sofa bed, an old CRT TV glowing with static, empty bottles, an ashtray, black clothes tangled on the floor, a window showing dark panel blocks with a few lit windows. He sits cross-legged on the floor in the middle of the room facing us, slouched, a faint blissed-out smirk. 1990s PC-98 Japanese adventure game pixel art: low resolution, limited 16-color palette, checkerboard dithering, hard dark outlines. Grim night palette: near-black violet, dusty purple, teal shadows, sickly orange lamp light, bone white, blood-red accents. Vertical frame; keep the top third dark and uncluttered. No text, no letters, no UI, no watermark."
+ }
+]

@@ -1,0 +1,26 @@
+[
+ {
+  "name": "c1_room_b",
+  "aspect": "9:16",
+  "refs": [
+   "assets/gen/c1_room.png"
+  ],
+  "prompt": "Redraw this exact picture with the same composition, room, pixel style and palette. Only change the boy's pose slightly: his head is tilted back and his mouth is a little open. Everything else identical."
+ },
+ {
+  "name": "c2_face_b",
+  "aspect": "9:16",
+  "refs": [
+   "assets/gen/c2_face.png"
+  ],
+  "prompt": "Redraw this exact picture with the same composition, pixel style and palette. Only change: his head is jerked a little to the side and his eye is rolled upward. Everything else identical."
+ },
+ {
+  "name": "v5_drops",
+  "aspect": "9:16",
+  "refs": [
+   "assets/gen/v5_eyes.png"
+  ],
+  "prompt": "Redraw this exact picture with the same composition, pixel style and palette. Only change: he now holds up a tiny bottle of eye drops next to his face and points at his red eye with a finger, deadpan. Everything else identical."
+ }
+]

@@ -1,0 +1,8 @@
+[
+ {
+  "name": "c4_topdown",
+  "aspect": "9:16",
+  "refs": ["assets/gen/hero_sheet.png", "assets/gen/c3_flatlay.png"],
+  "prompt": "Strict top-down bird's-eye view: the camera is on the ceiling looking straight down at the floor, and the floor fills the entire frame. The red patterned carpet from the attached top-down picture lies in the middle of a dark wooden floor. The boy from the attached reference sheet (grey fur ushanka with ear flaps, shaggy bleached hair, oversized black hoodie, huge flared black jeans, silver chain with a cross) lies flat on his back on the carpet, seen from directly above, his head toward the top of the frame, arms spread wide, legs slightly apart, hair fanned out, eyes wide open staring straight up into the camera with a blank blissed-out face. Scattered around him on the floor: empty green bottles, a flip phone, a few white pills, crumpled black clothes. No walls, no horizon, no upright furniture, nobody standing. Same 1990s PC-98 Japanese adventure game pixel art as the attached picture: low resolution, limited 16-color palette, checkerboard dithering, hard dark outlines. Grim night palette: near-black violet, dusty purple, teal shadows, bone white, blood-red accents. No text, no letters, no brand names, no UI, no watermark."
+ }
+]
