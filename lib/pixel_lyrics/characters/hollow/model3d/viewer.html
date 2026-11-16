@@ -75,6 +75,7 @@ new GLTFLoader().load(file, (gltf) => {
   button('pose', 'А-поза', play(null));
   button('pose', 'стоит', play('stand'), true);
   button('pose', 'идёт', play('walk_in_place'));
+  button('pose', 'пальцы', play('fingers'));
   [1, 2, 3, 4].forEach((p) => button('px', p === 1 ? 'гладко' : `пиксель ×${p}`, () => { pixel = p; resize(); }, p === pixel));
   play('stand')();
   window.__hollow = { gltf, mixer, renderer, scene, camera, controls };

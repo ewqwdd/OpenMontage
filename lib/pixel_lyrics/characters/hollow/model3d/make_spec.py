@@ -84,6 +84,7 @@ def face_mask(rgb, inside, sockets, min_area=60):
 FRONT_ZONE = 68.0     # hair: the front drawing reaches this far round (degrees from straight ahead), then the side one
 SKIN = (223, 215, 204)
 HAIR_DARK = (41, 33, 47)
+SKIN_SHADE = (172, 153, 163)      # the second skin shade of the character's palette (character.md)
 PROFILE_K = 0.35      # how much of the drawn nose bump the profile keeps: the face is flat seen from the side
 FACE_N = 3.0          # the front of the head seen from above: 2 = round, more = flatter across the face
 SKULL_W = 53.0        # half-width of the head under the hair, drawing pixels
@@ -158,7 +159,7 @@ def mode_colour(rgb, mask):
 
 # flat paints, one 8x8 block each
 SY, SX = np.mgrid[0:side.shape[0], 0:side.shape[1]]
-PAL_RGB = dict(skin=SKIN, hair=HAIR_DARK,
+PAL_RGB = dict(skin=SKIN, skin_shade=SKIN_SHADE, hair=HAIR_DARK,
                shoe_black=mode_colour(side, side_sil & (SY > 960) & (SY < 974) & (SX > 125) & (SX < 160)),
                shoe_white=mode_colour(side, side_sil & (SY > 955) & (SY < 972) & (SX > 172) & (SX < 195) & (lum(side) > 150)),
                denim=mode_colour(side, side_sil & (SY > 880) & (SY < 925)))
@@ -290,6 +291,21 @@ def loft_rings(name, rings, cents, w):
         o.uv.append(uv)
     OBJS.append(o)
     return o
+
+
+def merge(name, part_names):
+    """Several solids -> one mesh."""
+    o = Obj(name)
+    for pn in part_names:
+        src = next(q for q in OBJS if q.name == pn)
+        off = len(o.v)
+        o.v += src.v
+        o.meta += src.meta
+        o.w += src.w
+        o.f += [[i + off for i in f] for f in src.f]
+        o.uv += src.uv
+        OBJS.remove(src)
+    OBJS.append(o)
 
 
 def zone(o, ids, phi_front=45.0, phi_back=45.0):
@@ -715,24 +731,30 @@ def build_arm(sd):
                                                   int(sk["xc"] + sk["hw"] + 15), int(sk["yc"] + sk["hh"] + 15)))
         print("sleeve skull patch", {k: round(v, 1) for k, v in sk.items()})
     secs = []
+    hs = [(p0 + p1) / 2 for s, p0, p1 in zip(stations, p0s, p1s) if t_hand <= s["t"] <= t_hand + 12]
     for s, p0, p1 in zip(stations, p0s, p1s):
         t = s["t"]
+        if t >= t_hand:
+            break                                           # the sleeve ends at the cuff: the hand is built apart
         if t < t_hand - 20:
             p0 = max(p0, p1 - SLEEVE_W)                     # keep the upper edge, drop the drape below it
         ball = math.sqrt(max(0.03, 1 - (min(t, 0.0) / (SHOULDER_R + 2)) ** 2))    # the sleeve starts as a round shoulder:
         a = max((p1 - p0) / 2 * ball, 2)                    # rounded off from below, the top line of the sleeve runs on
         c2 = S + t * u + (p1 - a) * w                       # into the body
-        hand = blend(t, t_hand - 4, t_hand + 8)
-        b = a * ((1.4 - 0.3 * blend(t, 40, t_hand)) * (1 - hand) + 0.7 * hand)   # an oversized sleeve is deeper than wide
+        hand = 0.0
+        b = a * (1.4 - 0.3 * blend(t, 40, t_hand))          # an oversized sleeve is deeper than wide
         e = blend(t, tE - 14, tE + 14)
-        hw = blend(t, t_hand - 6, t_hand + 6)
+        hw = 0.0                                            # the cuff stays with the forearm when the wrist bends
         sh = blend(t, -6, 42)                               # the top of the sleeve stays with the body: a sloping shoulder
         wts = {"chest": 1 - sh, f"upper_arm.{sd.upper()}": sh * (1 - e), f"forearm.{sd.upper()}": e * (1 - hw),
                f"hand.{sd.upper()}": e * hw}
         tw = 0.0
         secs.append(dict(c=(c2[0], c2[1], dS), a=a, b=b, ax_u=(w[0], w[1], 0), ax_v=AX_D, n=2.0,
                          w={k: v for k, v in wts.items() if v > 1e-4}, tw=tw, t=t, hand=hand))
-    ARM_TIP[sd] = dict(S=S, E=E, u=u, t_hand=t_hand, t_tip=stations[-1]["t"], d=dS)
+    ARM_TIP[sd] = dict(S=S, E=E, u=u, w=w, t_hand=t_hand, t_tip=stations[-1]["t"], d=dS, cw=float(np.mean(hs)),
+                       t_cuff=secs[-1]["t"])
+    print("hand", sd, "t_hand", t_hand, "t_tip", stations[-1]["t"], "centre off axis", round(float(np.mean(hs)), 1),
+          "widths", [(s["t"], round(p1 - p0, 1)) for s, p0, p1 in zip(stations, p0s, p1s) if s["t"] >= t_hand - 6])
 
     def uv(o, ids, nrm):
         ring = [i for i in ids if o.meta[i]["th"] is not None]
@@ -768,6 +790,85 @@ def build_arm(sd):
 
 build_arm("l")
 build_arm("r")
+
+# ============================================================ hands: a palm, four fingers and a thumb, each a solid
+# of its own with its own bones. One flat skin paint; the sides of the fingers are a shade darker so that they read
+# apart. Rest pose: an open hand in the plane of the drawing, its back to the viewer, the thumb on the lower side:
+# lowered and turned by the "stand" pose (forearm roll), the palm then faces the thigh and the thumb points forward.
+# Sizes are shares of the drawn length of the hand (wrist to fingertip).
+PALM_L = 0.46         # palm, wrist to knuckles
+PALM_A, WRIST_A, PALM_B = 0.27, 0.20, 0.085     # half-width at the knuckles and at the wrist, half-thickness
+FING_A, FING_B = 0.062, 0.052                   # a finger at its base: half-width, half-thickness
+FINGERS = [           # name, place across the knuckles (-1..1, + = thumb side), fan angle, length
+    ("f_index", 0.75, 9.0, 0.50), ("f_middle", 0.25, 2.0, 0.54), ("f_ring", -0.25, -6.0, 0.49), ("f_pinky", -0.75, -15.0, 0.39)]
+THUMB = dict(at=0.22, ang=50.0, lift=0.25, ln=0.40, a=0.072, b=0.062)
+JOINTS = (0.42, 0.72)                           # the two joints of a finger, shares of its length
+HAND_BONES = []
+
+
+def skin_uv(lat):
+    def uv(o, ids, nrm):
+        return "pal", [PAL["skin_shade" if abs(float(np.dot(nrm, lat))) > 0.55 else "skin"]] * len(ids)
+    return uv
+
+
+def build_hand(sd):
+    A, up = ARM_TIP[sd], sd.upper()
+    U, Wd, N = np.array([*A["u"], 0.0]), np.array([*A["w"], 0.0]), np.array([0.0, 0.0, 1.0])
+    Lh = A["t_tip"] - A["t_hand"]
+    O = np.array([*(A["S"] + A["t_hand"] * A["u"] + A["cw"] * A["w"]), A["d"]])
+    Wd, N = -Wd, -N                                         # from here on: Wd = the thumb side, N = out of the palm
+    Lp = PALM_L * Lh
+    hb = f"hand.{up}"
+    names = [f"palm_{sd}"]
+    # the palm: starts inside the cuff, widens to the knuckles, rounded off at its end
+    secs = []
+    for q in list(np.arange(A["t_cuff"] - A["t_hand"] - 6, Lp - 3.5, 3.0)) + [Lp - 3.5, Lp - 1.5, Lp]:
+        k = math.sqrt(max(0.2, 1 - (max(0.0, q - (Lp - 3.5)) / 4.2) ** 2))
+        a = (WRIST_A + (PALM_A - WRIST_A) * blend(q, 0, Lp * 0.75)) * Lh * (0.5 + 0.5 * k)
+        secs.append(dict(c=tuple(O + q * U), a=a, b=PALM_B * Lh * k, ax_u=tuple(Wd), ax_v=tuple(N), n=3.0, w={hb: 1.0}))
+    loft(names[0], secs, skin_uv(Wd), m=12)
+
+    def finger(name, base, F, lat, nrm_, L, a0, b0, zdir):
+        """One finger: a tapering solid along F with a round tip, three bones, the weights blended over each joint."""
+        bn = [f"{name}.0{i}.{up}" for i in (1, 2, 3)]
+        js = (0.0, JOINTS[0] * L, JOINTS[1] * L, L)
+        n_ = max(8, int(round((L + 4) / 2.0)))
+        secs = []
+        for q in np.linspace(-4.0, L, n_ + 1):
+            k = 1 - 0.22 * max(0.0, q) / L
+            rt = a0 * 1.1
+            if q > L - rt:
+                k *= math.sqrt(max(0.06, 1 - ((q - (L - rt)) / rt) ** 2))
+            w1, w2, w3 = blend(q, -1.5, 1.5), blend(q, js[1] - 1.5, js[1] + 1.5), blend(q, js[2] - 1.5, js[2] + 1.5)
+            wts = {hb: 1 - w1, bn[0]: w1 * (1 - w2), bn[1]: w2 * (1 - w3), bn[2]: w3}
+            secs.append(dict(c=tuple(base + q * F), a=a0 * k, b=b0 * k, ax_u=tuple(lat), ax_v=tuple(nrm_), n=2.4,
+                             w={k_: v for k_, v in wts.items() if v > 1e-4}))
+        loft(f"{name}_{sd}", secs, skin_uv(lat), m=8)
+        names.append(f"{name}_{sd}")
+        for i in range(3):
+            HAND_BONES.append(dict(name=bn[i], head=base + js[i] * F, tail=base + js[i + 1] * F,
+                                   parent=bn[i - 1] if i else hb, connect=i > 0, z=zdir))
+
+    for name, pos, ang, ln in FINGERS:
+        r = math.radians(ang)
+        F, lat = math.cos(r) * U + math.sin(r) * Wd, -math.sin(r) * U + math.cos(r) * Wd
+        base = O + (Lp - 2.0 - 3.0 * pos * pos) * U + pos * (PALM_A - FING_A) * Lh * Wd
+        finger(name, base, F, lat, N, ln * Lh, FING_A * Lh, FING_B * Lh, N)
+    r = math.radians(THUMB["ang"])
+    F = math.cos(r) * U + math.sin(r) * Wd + THUMB["lift"] * N
+    F /= np.linalg.norm(F)
+    lat = np.cross(F, N)
+    lat /= np.linalg.norm(lat)
+    nrm_ = np.cross(lat, F)
+    base = O + THUMB["at"] * Lp * U + (WRIST_A + 0.02) * Lh * Wd
+    flex = 0.6 * N + 0.8 * (math.sin(r) * U - math.cos(r) * Wd)          # the thumb closes across the palm
+    finger("thumb", base, F, lat, nrm_, THUMB["ln"] * Lh, THUMB["a"] * Lh, THUMB["b"] * Lh, flex)
+    merge(f"hand_{sd}", names)
+
+
+build_hand("l")
+build_hand("r")
 
 # ============================================================ legs: the jeans down to the hem
 LEG_TOP, MIRROR_Y = 506, 640
@@ -879,21 +980,6 @@ for i_ in range(SOLE_H + 6):
 TEX["sole"] = dict(rgba=sole_img, smooth=sole_img, ox=0, oy=SOLE - SOLE_H - 3)
 
 
-def merge(name, part_names):
-    """Several solids -> one mesh."""
-    o = Obj(name)
-    for pn in part_names:
-        src = next(q for q in OBJS if q.name == pn)
-        off = len(o.v)
-        o.v += src.v
-        o.meta += src.meta
-        o.w += src.w
-        o.f += [[i + off for i in f] for f in src.f]
-        o.uv += src.uv
-        OBJS.remove(src)
-    OBJS.append(o)
-
-
 def build_shoe(sd):
     up, sgn = sd.upper(), (-1 if sd == "r" else 1)
     f0, f1 = (fill_edges(a) for a in ext(legs_m[sd], 2.0))
@@ -978,9 +1064,10 @@ for key, fname in (("rgba", "atlas.png"), ("smooth", "atlas_smooth.png")):   # a
 BONES = []
 
 
-def bone(name, head, tail, parent, connect=False):
+def bone(name, head, tail, parent, connect=False, z=None):
+    """z: where the bone's own Z looks (drawing axes). Turning the bone round its own X then moves it that way."""
     BONES.append(dict(name=name, head=[float(c) for c in head], tail=[float(c) for c in tail], parent=parent,
-                      connect=connect))
+                      connect=connect, z=None if z is None else [float(c) for c in z]))
 
 
 dP = D_TORSO(540)
@@ -1004,6 +1091,9 @@ for sd in "rl":
     bone(f"thigh.{up}", (*hip, D_LEG(600)), (*knee, D_LEG(705)), "pelvis")
     bone(f"shin.{up}", (*knee, D_LEG(705)), (*ank, D_LEG(900)), f"thigh.{up}", True)
     bone(f"foot.{up}", (*ank, D_LEG(900)), (ank[0], SOLE - 8, at(sl1, 985) - CS - 10), f"shin.{up}", True)
+
+for b_ in HAND_BONES:                                       # the fingers, after the hands they hang on
+    bone(**b_)
 
 # ============================================================ write the spec
 out = dict(px_height=SOLE + 1 - HEAD_TOP, sole_y=SOLE + 1, cx=CX, atlas=[AW, AH], bones=BONES, objects=[])

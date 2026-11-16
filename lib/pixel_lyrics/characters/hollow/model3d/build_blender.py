@@ -84,6 +84,9 @@ for b in SPEC["bones"]:
     if b["parent"]:
         eb.parent = arm_data.edit_bones[b["parent"]]
         eb.use_connect = b["connect"]
+    if b.get("z"):                                          # a finger: its own Z looks into the palm, so that
+        dx, dy, dd = b["z"]                                 # turning it round its own X closes the hand
+        eb.align_roll(Vector((dx, -dd, -dy)))
 bpy.ops.object.mode_set(mode="OBJECT")
 arm_data.display_type = "STICK"
 
@@ -119,6 +122,10 @@ def turn(bone, deg, axis="Y"):
     """Rotate a pose bone around a WORLD axis through its head.
     Y: clockwise on screen in the front view. X: negative swings a hanging limb forward. ROLL: round its own length."""
     pb = arm.pose.bones[bone]
+    if axis in ("CURL", "SPREAD"):                          # fingers: round the bone's own X (closes) or Z (fans)
+        pb.matrix_basis = pb.matrix_basis @ Matrix.Rotation(math.radians(deg), 4, "X" if axis == "CURL" else "Z")
+        bpy.context.view_layer.update()
+        return
     if axis == "ROLL":
         pb.matrix = pb.matrix @ Matrix.Rotation(math.radians(deg), 4, "Y")
         bpy.context.view_layer.update()
@@ -130,9 +137,32 @@ def turn(bone, deg, axis="Y"):
     bpy.context.view_layer.update()
 
 
-STAND = [("upper_arm.R", -48, "Y"), ("upper_arm.L", 48, "Y"), ("forearm.R", -4, "Y"), ("forearm.L", 4, "Y"),
-         ("forearm.R", 70, "ROLL"), ("forearm.L", -70, "ROLL"),          # palms towards the thighs
-         ("thigh.R", -3, "Y"), ("thigh.L", 3, "Y")]
+FINGER_NAMES = ("thumb", "f_index", "f_middle", "f_ring", "f_pinky")
+
+
+def fingers(sd, curl):
+    """curl: degrees for (thumb, index, middle, ring, pinky), or one number for all; 0 = open hand, 90 = a fist."""
+    if not isinstance(curl, (list, tuple)):
+        curl = [curl] * 5
+    out = []
+    for name, c in zip(FINGER_NAMES, curl):
+        k = (0.35, 0.45, 0.6) if name == "thumb" else (0.95, 1.1, 0.75)
+        out += [(f"{name}.0{i + 1}.{sd}", c * k[i], "CURL") for i in range(3)]
+    return out
+
+
+RELAXED = (12, 16, 22, 28, 34)                              # a hanging hand: half closed, more towards the little finger
+ARMS = [("upper_arm.R", -48, "Y"), ("upper_arm.L", 48, "Y"), ("forearm.R", -4, "Y"), ("forearm.L", 4, "Y"),
+        ("forearm.R", 70, "ROLL"), ("forearm.L", -70, "ROLL"),          # palms towards the thighs
+        ("thigh.R", -3, "Y"), ("thigh.L", 3, "Y")]
+STAND = ARMS + fingers("R", RELAXED) + fingers("L", RELAXED)
+
+
+def finger_test(ph):
+    """The hands held up in front, the fingers closing one after another into a fist and opening again. ph = 0..1."""
+    tri = 1 - abs(2 * ph - 1)
+    curl = [90 * min(1.0, max(0.0, tri * 1.9 - 0.2 * (4 - i))) for i in range(5)]
+    return (ARMS + [("forearm.R", -75, "X"), ("forearm.L", -75, "X")] + fingers("R", curl) + fingers("L", curl))
 
 
 def walk(ph):
@@ -265,6 +295,41 @@ if "--head" in ARGS:                                        # a ring of close sh
         shoot_head(f"head_low_{az:+04d}.png", az, -25)
         shoot_head(f"head_high_{az:+04d}.png", az, 30)
     mat.use_backface_culling = False
+def shoot_at(name, bone, az, elev=0.0, px=600, span=150, off=(0, 0, 0)):
+    """Close shot aimed at a bone (4 screen pixels per drawing pixel)."""
+    scene.render.resolution_x = scene.render.resolution_y = px
+    scene.render.resolution_percentage = 100
+    cam_data.ortho_scale = span * S
+    a, e = math.radians(az), math.radians(elev)
+    d = Vector((-math.sin(a) * math.cos(e), -math.cos(a) * math.cos(e), math.sin(e)))
+    pb = arm.pose.bones[bone]
+    target = arm.matrix_world @ ((pb.head + pb.tail) / 2) + Vector(off) * S
+    cam.location = target + d * 6
+    cam.rotation_euler = (-d).to_track_quat("-Z", "Y").to_euler()
+    scene.render.filepath = str(RDIR / name)
+    bpy.ops.render.render(write_still=True)
+
+
+HAND_POSES = {"open": fingers("R", 0), "relaxed": fingers("R", RELAXED), "fist": fingers("R", (80, 90, 90, 90, 90)),
+              "point": fingers("R", (70, 0, 90, 90, 90)), "two": fingers("R", (70, 0, 0, 90, 90))}
+if "--hands" in ARGS:                                       # the right hand close, in several poses and from several sides
+    set_pose("apose")
+    shoot_at("hand_apose_front.png", "f_middle.01.R", 0)
+    shoot_at("hand_apose_back.png", "f_middle.01.R", 180)
+    shoot_at("hand_apose_top.png", "f_middle.01.R", 0, elev=70)
+    for tag, fp in HAND_POSES.items():
+        set_pose(ARMS + [("forearm.R", -75, "X"), ("forearm.L", -75, "X")] + fp)
+        for vn, az, el in (("front", 0, 0), ("f34", -50, 15), ("side", 90, 0), ("out", 55, 10)):
+            shoot_at(f"hand_{tag}_{vn}.png", "f_middle.01.R", az, el)
+    for i in range(12):
+        set_pose(finger_test(i / 24))
+        shoot_at(f"fingers_{i:02d}.png", "f_middle.01.R", 55, 10)
+    set_pose(finger_test(0.5))
+    shoot("fingers_fist_front.png", 0)
+    set_pose("stand")
+    shoot_at("hand_stand_front.png", "hand.R", 0, span=200)
+    shoot_at("hand_stand_side.png", "hand.R", 90, span=200)
+    shoot_at("hand_stand_f34.png", "hand.R", 45, span=200)
 if "--turn" in ARGS:
     n = int(ARGS[ARGS.index("--turn") + 1])
     set_pose("stand")
@@ -281,6 +346,8 @@ if "--walk" in ARGS:
 N_WALK = 24
 bake_action("stand", [STAND, STAND])
 bake_action("walk_in_place", [walk(i / N_WALK) for i in range(N_WALK + 1)])
+N_FING = 48
+bake_action("fingers", [finger_test(i / N_FING) for i in range(N_FING + 1)])
 set_pose("apose")
 scene.frame_start, scene.frame_end = 1, N_WALK + 1
 scene.render.fps = 24

@@ -1,4 +1,4 @@
-"""preview/ from the renders. Run after: build_blender.py -- --smooth --views --head --turn 36 --walk 24,
+"""preview/ from the renders. Run after: build_blender.py -- --smooth --views --head --hands --turn 36 --walk 24,
 then compare.py x, heads_check.py, head_ring.py (project .venv python; needs ffmpeg on PATH)."""
 import shutil
 import subprocess
@@ -38,6 +38,19 @@ for k in range(5 * n):
     pair.paste(flat(R / f"walkside_{k % n:03d}.png").crop((144, 0, 624, 768)), (480, 0))
     pair.save(SEQ / f"walk_{k:03d}.png")
 video("walk_%03d.png", 24, "walk_test.mp4")
+
+# the hands: five poses of the fingers, then the rest pose and the hanging hand of "stand"
+hd = Image.new("RGB", (5 * 300, 2 * 300), BG)
+for i, v in enumerate(["open", "relaxed", "fist", "point", "two"]):
+    hd.paste(flat(R / f"hand_{v}_out.png").resize((300, 300), Image.NEAREST), (i * 300, 0))
+for i, v in enumerate(["apose_front", "apose_back", "stand_front", "stand_side", "stand_f34"]):
+    hd.paste(flat(R / f"hand_{v}.png").resize((300, 300), Image.NEAREST), (i * 300, 300))
+hd.save(PV / "hands.png")
+fr = sorted(R.glob("fingers_[0-9]*.png"))
+loop = fr + fr[-2:0:-1]
+for k in range(4 * len(loop)):
+    flat(loop[k % len(loop)]).resize((480, 480), Image.NEAREST).save(SEQ / f"fingers_{k:03d}.png")
+video("fingers_%03d.png", 12, "fingers.mp4")
 
 sh = Image.new("RGB", (4 * 360, 300), BG)
 for i, v in enumerate(["front", "front34", "side", "back34"]):
