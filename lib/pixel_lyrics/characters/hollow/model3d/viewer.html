@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>hollow 3D</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  html, body { margin: 0; height: 100%; background: rgb(75, 63, 77); color: #dfd7cc; font: 13px/1.4 system-ui, sans-serif; overflow: hidden; }
+  canvas { display: block; width: 100vw; height: 100vh; image-rendering: pixelated; }
+  #bar { position: fixed; left: 12px; top: 12px; display: flex; gap: 6px; flex-wrap: wrap; max-width: calc(100vw - 24px); }
+  button { background: #241d2a; color: #dfd7cc; border: 1px solid #6d5f66; padding: 6px 10px; font: inherit; cursor: pointer; }
+  button.on { background: #dfd7cc; color: #241d2a; }
+  #info { position: fixed; left: 12px; bottom: 10px; opacity: .7; }
+</style>
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<div id="bar"></div>
+<div id="info">мышь: вращать · колесо: приблизить · правая кнопка: двигать</div>
+<script type="module">
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+const renderer = new THREE.WebGLRenderer({ antialias: false });
+renderer.setClearColor(new THREE.Color('rgb(75,63,77)'));
+document.body.appendChild(renderer.domElement);
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(28, 1, 0.1, 50);
+camera.position.set(1.6, 1.15, 4.2);
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.target.set(0, 0.9, 0);
+controls.update();
+
+let pixel = 3;                       // one picture pixel = this many screen pixels. x3 is the preferred look (user); 1 = smooth
+function resize() {
+  renderer.setPixelRatio(1 / pixel);
+  renderer.setSize(innerWidth, innerHeight, false);
+  camera.aspect = innerWidth / innerHeight;
+  camera.updateProjectionMatrix();
+}
+addEventListener('resize', resize);
+resize();
+
+const bar = document.getElementById('bar');
+const buttons = {};
+function button(group, label, fn, on) {
+  const b = document.createElement('button');
+  b.textContent = label;
+  b.onclick = () => { (buttons[group] || []).forEach(x => x.classList.remove('on')); b.classList.add('on'); fn(); };
+  (buttons[group] = buttons[group] || []).push(b);
+  if (on) b.classList.add('on');
+  bar.appendChild(b);
+}
+
+let mixer, current;
+const clock = new THREE.Clock();
+// ?m=dither loads the textures exactly as drawn; the default has the dither smoothed (no shimmer in motion)
+const file = new URLSearchParams(location.search).get('m') === 'dither' ? 'hollow.glb' : 'hollow_smooth.glb';
+new GLTFLoader().load(file, (gltf) => {
+  scene.add(gltf.scene);
+  gltf.scene.traverse((o) => { if (o.isMesh) o.frustumCulled = false; });
+  mixer = new THREE.AnimationMixer(gltf.scene);
+  const play = (name) => () => {
+    if (current) current.stop();
+    current = null;
+    const clip = gltf.animations.find((c) => c.name === name);
+    if (clip) { current = mixer.clipAction(clip); current.play(); } else { mixer.stopAllAction(); }
+  };
+  button('pose', 'А-поза', play(null));
+  button('pose', 'стоит', play('stand'), true);
+  button('pose', 'идёт', play('walk_in_place'));
+  [1, 2, 3, 4].forEach((p) => button('px', p === 1 ? 'гладко' : `пиксель ×${p}`, () => { pixel = p; resize(); }, p === pixel));
+  play('stand')();
+  window.__hollow = { gltf, mixer, renderer, scene, camera, controls };
+}, undefined, (e) => { document.getElementById('info').textContent = 'не загрузилось: ' + e; });
+
+renderer.setAnimationLoop(() => {
+  if (mixer) mixer.update(clock.getDelta());
+  renderer.render(scene, camera);
+});
+</script>
+</body>
+</html>

@@ -4,20 +4,54 @@
     {
       "name": "backlot",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "backlot", "serve", "--port", "4750"],
+      "runtimeArgs": [
+        "-m",
+        "backlot",
+        "serve",
+        "--port",
+        "4750"
+      ],
       "port": 4750
     },
     {
       "name": "mockups",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "4788", "--bind", "127.0.0.1"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "4788",
+        "--bind",
+        "127.0.0.1"
+      ],
       "port": 4788
     },
     {
       "name": "mef-dev",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "4791", "--bind", "127.0.0.1", "--directory", "projects/mefedron-snippets"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "4791",
+        "--bind",
+        "127.0.0.1",
+        "--directory",
+        "projects/mefedron-snippets"
+      ],
       "port": 4791
+    },
+    {
+      "name": "hollow-3d",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "4793",
+        "--bind",
+        "127.0.0.1",
+        "--directory",
+        "lib/pixel_lyrics/characters/hollow/model3d"
+      ],
+      "port": 4793
     }
   ]
 }
