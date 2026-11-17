@@ -1,0 +1,180 @@
+{
+ "note": "Track time in seconds. Forced alignment on the vocal stem, checked per syllable (from the pixel-lyric edit).",
+ "fps": 30,
+ "edits": {
+  "chorus": {
+   "start": 13.95,
+   "frames": 442
+  }
+ },
+ "words": [
+  {
+   "edit": "chorus",
+   "line": 0,
+   "text": "Я",
+   "start": 14.103,
+   "end": 14.384
+  },
+  {
+   "edit": "chorus",
+   "line": 0,
+   "text": "люблю",
+   "start": 14.384,
+   "end": 15.088
+  },
+  {
+   "edit": "chorus",
+   "line": 0,
+   "text": "мефедрон,",
+   "start": 15.088,
+   "end": 15.992
+  },
+  {
+   "edit": "chorus",
+   "line": 0,
+   "text": "марки,",
+   "start": 15.992,
+   "end": 16.393
+  },
+  {
+   "edit": "chorus",
+   "line": 0,
+   "text": "ксан",
+   "start": 16.393,
+   "end": 16.795
+  },
+  {
+   "edit": "chorus",
+   "line": 0,
+   "text": "оксикодон",
+   "start": 16.795,
+   "end": 17.72
+  },
+  {
+   "edit": "chorus",
+   "line": 1,
+   "text": "Пидорасит",
+   "start": 17.88,
+   "end": 18.705
+  },
+  {
+   "edit": "chorus",
+   "line": 1,
+   "text": "слишком",
+   "start": 18.705,
+   "end": 19.167
+  },
+  {
+   "edit": "chorus",
+   "line": 1,
+   "text": "сильно,",
+   "start": 19.167,
+   "end": 19.65
+  },
+  {
+   "edit": "chorus",
+   "line": 1,
+   "text": "залипаю",
+   "start": 19.65,
+   "end": 20.454
+  },
+  {
+   "edit": "chorus",
+   "line": 1,
+   "text": "в",
+   "start": 20.454,
+   "end": 20.575
+  },
+  {
+   "edit": "chorus",
+   "line": 1,
+   "text": "потолок",
+   "start": 20.575,
+   "end": 21.26
+  },
+  {
+   "edit": "chorus",
+   "line": 2,
+   "text": "Я",
+   "start": 21.53,
+   "end": 21.731
+  },
+  {
+   "edit": "chorus",
+   "line": 2,
+   "text": "люблю",
+   "start": 21.731,
+   "end": 22.413
+  },
+  {
+   "edit": "chorus",
+   "line": 2,
+   "text": "мефедрон,",
+   "start": 22.413,
+   "end": 23.275
+  },
+  {
+   "edit": "chorus",
+   "line": 2,
+   "text": "марки,",
+   "start": 23.275,
+   "end": 23.636
+  },
+  {
+   "edit": "chorus",
+   "line": 2,
+   "text": "ксан",
+   "start": 23.636,
+   "end": 24.017
+  },
+  {
+   "edit": "chorus",
+   "line": 2,
+   "text": "оксикодон",
+   "start": 24.017,
+   "end": 24.88
+  },
+  {
+   "edit": "chorus",
+   "line": 3,
+   "text": "Пидорасит",
+   "start": 25.12,
+   "end": 25.943
+  },
+  {
+   "edit": "chorus",
+   "line": 3,
+   "text": "слишком",
+   "start": 25.943,
+   "end": 26.424
+  },
+  {
+   "edit": "chorus",
+   "line": 3,
+   "text": "сильно,",
+   "start": 26.424,
+   "end": 26.905
+  },
+  {
+   "edit": "chorus",
+   "line": 3,
+   "text": "залипаю",
+   "start": 26.905,
+   "end": 27.727
+  },
+  {
+   "edit": "chorus",
+   "line": 3,
+   "text": "в",
+   "start": 27.727,
+   "end": 27.828
+  },
+  {
+   "edit": "chorus",
+   "line": 3,
+   "text": "потолок",
+   "start": 27.828,
+   "end": 28.66
+  }
+ ]
+}
