@@ -43,6 +43,7 @@ Rules the user set on this style, keep them unless told otherwise:
   in-betweens for as long as the camera is up there. Never a smooth sway from above, never a frozen head there.
 - **Text.** The glitch-drop Cormorant line stays. A white bitmap font and a yellow bold font were tried and
   turned down; do not offer them again.
-- **Pixels x3 on everything**, colder and bluer than the reference, glitch on the head in every shot.
+- **Pixels x3 on everything, with hard edges** (no edge smoothing in Blender; the kit's default). Bigger pixels
+  (x6) were tried and turned down. Colder and bluer than the reference, glitch on the head in every shot.
 
 **After touching the kit**: `pytest tests/lib/test_lyrics3d.py` and the frame comparison in Part 2 of the guide.

@@ -526,7 +526,7 @@ for eng in ("BLENDER_EEVEE", "BLENDER_EEVEE_NEXT"):
 scene.render.resolution_x, scene.render.resolution_y, scene.render.resolution_percentage = W, H, 100
 scene.render.fps = FPS
 scene.render.film_transparent = False
-scene.render.filter_size = 0.8
+scene.render.filter_size = float(arg("--filter", 0))        # 0 = no edge smoothing: hard pixel stairs (the user's choice)
 scene.render.image_settings.file_format = "PNG"
 scene.render.image_settings.color_mode = "RGB"
 scene.view_settings.view_transform = "Standard"

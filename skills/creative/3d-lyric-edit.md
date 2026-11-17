@@ -2,7 +2,7 @@
 
 A TikTok lyric snippet shot as a low-poly horror video game: the user's 3D hero in one dim room, one shot per sung
 line, the head glitching all the time, glitch text. Approved by the user on the chorus of «mefedron master 4»,
-2026-11-17 (`projects/mefedron-3d/renders/chorus_3d_v3.mp4`).
+2026-11-17 (`projects/mefedron-3d/renders/chorus_3d_v5_hardpixel.mp4`, also saved as `chorus_3d_approved.mp4`).
 
 Everything is local and free: Blender (EEVEE), numpy, PIL, ffmpeg. No paid generation anywhere in this style.
 
@@ -40,6 +40,11 @@ Everything is local and free: Blender (EEVEE), numpy, PIL, ffmpeg. No paid gener
   hand-held camera. Its warm brown palette was **not** taken: the user asked for colder, bluer colours.
 - **Pixels ×3 on everything.** The frame is rendered at 360×640 and enlarged ×3 with no smoothing. Text and glitch
   are drawn in the same 360×640 grid. Then a 4×4 ordered dither to 5 bits per channel.
+- **Hard pixel edges.** Blender renders with the pixel filter at 0 (`scene.py`, `--filter`), so outlines are
+  stairs, as in the hero's `viewer.html` (`antialias: false`). With the old filter of 0.8 the outlines were
+  smoothed and the user saw no pixels at all ("графика как будто не пикселизированная").
+- **Tried and not taken on 2026-11-17:** pixels ×6 (180×320 picture, 16 levels per channel, the text left at ×3).
+  The user looked at it and kept the ×3 hard-edge version ("v5 оставим").
 - **Colour.** Cold: navy shadows, pale ice highlights, a few wine-red and cardboard accents. Saturation 0.86,
   channel gains (0.93, 1.0, 1.09), blue lifted in the dark, an S-curve, vignette 0.62.
 - **Light.** A bare bulb as a spot from above (the pool on the rug), a CRT with blue static as the key light on the
@@ -168,7 +173,8 @@ Where two meta files cover a frame, the newer one wins, so partial re-renders ar
 - `.venv/Scripts/python -m pytest tests/lib/test_lyrics3d.py`
 - Render the example and compare with the approved frames: `init` a scratch project, `stills` at
   60 100 121 180 290 325 350 430, and the raw frames in `renders/test/` must match
-  `projects/mefedron-3d/renders/seq/` (mean difference 0.000 at the time of writing).
+  `projects/mefedron-3d/renders/seq/` (mean difference 0.000 at the time of writing). `seq/` holds the hard-edge
+  frames of v5; the smoothed frames of v1–v4 are in `seq_soft_v3/` and match `stills … --filter 0.8` only.
 
 ## History of the user's corrections (mefedron chorus, 2026-11-17)
 
@@ -178,3 +184,6 @@ Where two meta files cover a frame, the newer one wins, so partial re-renders ar
 | v2 | smooth only at the start; from above jerk sharply as before | sharp throws back, now for the whole shot |
 | v3 | the text is hard to read, try another font and colour | two variants made (white bitmap, yellow bold) |
 | v4 | "старый короче топ оставляем" | v3 stays: the Cormorant line |
+| v3 again | the picture does not look pixelated, do it like the hero viewer's pixel button | edge smoothing off (v5) |
+| v5 | try an even stronger version | pixels ×6 with a visible dither (v6) |
+| v6 | "v5 оставим" | v5 is the approved file; hard edges are the kit's default |

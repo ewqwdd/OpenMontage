@@ -1,8 +1,8 @@
 """3D horror-game lyric edit: project commands.
 
     python -m lib.lyrics3d init   projects/<id> [--example mefedron]
-    python -m lib.lyrics3d stills projects/<id> 60 150 290 [--dbg side|front|back|top] [--raw]
-    python -m lib.lyrics3d render projects/<id> [--frames A B] [--jobs 2]
+    python -m lib.lyrics3d stills projects/<id> 60 150 290 [--dbg side|front|back|top] [--raw] [--filter 0.8]
+    python -m lib.lyrics3d render projects/<id> [--frames A B] [--jobs 2] [--filter 0.8]
     python -m lib.lyrics3d post   projects/<id> [--out renders/<edit>_3d.mp4] [--notext] [--small]
 
 Blender is taken from .runtime/blender/*/ in the repo, else from PATH. Everything is local and free.
@@ -80,10 +80,12 @@ def main(argv: list[str] | None = None) -> None:
     a.add_argument("--dbg", choices=["side", "front", "back", "top"], help="look at the pose from outside the shot")
     a.add_argument("--raw", action="store_true", help="stop after Blender: no glitch, grade or text")
     a.add_argument("--notext", action="store_true")
+    a.add_argument("--filter", help="Blender pixel filter; 0 (default) = hard pixel edges, 0.8 = the old smoothed look")
     a = sub.add_parser("render", help="render the frame sequence to renders/seq")
     a.add_argument("project")
     a.add_argument("--frames", type=int, nargs=2, metavar=("A", "B"))
     a.add_argument("--jobs", type=int, default=2)
+    a.add_argument("--filter", help="Blender pixel filter; 0 (default) = hard pixel edges, 0.8 = the old smoothed look")
     a = sub.add_parser("post", help="glitch, grade, text, x3, sound -> mp4")
     a.add_argument("project")
     a.add_argument("--out")
@@ -96,10 +98,11 @@ def main(argv: list[str] | None = None) -> None:
         init(project, args.example)
         return
     edit = json.loads((project / "edit.json").read_text(encoding="utf-8"))
+    flt = ["--filter", args.filter] if getattr(args, "filter", None) else []
     if args.cmd == "stills":
         tag = f"{args.dbg}_" if args.dbg else ""
         seq = project / "renders" / "test"
-        extra = ["--tag", tag, "--stills", *map(str, args.frames)]
+        extra = [*flt, "--tag", tag, "--stills", *map(str, args.frames)]
         if args.dbg:
             extra = ["--dbg", args.dbg, "--nofog", "--bulb", "600", *extra]      # bright and clear: it is a pose check
         run_scene([scene_cmd(project, seq, extra)])
@@ -113,7 +116,7 @@ def main(argv: list[str] | None = None) -> None:
         n = max(1, min(args.jobs, b0 - a0 + 1))
         step = -(-(b0 - a0 + 1) // n)
         seq = project / "renders" / "seq"
-        cmds = [scene_cmd(project, seq, ["--frames", str(a), str(min(b0, a + step - 1))]) for a in range(a0, b0 + 1, step)]
+        cmds = [scene_cmd(project, seq, [*flt, "--frames", str(a), str(min(b0, a + step - 1))]) for a in range(a0, b0 + 1, step)]
         run_scene(cmds)
         print("frames ->", seq)
     elif args.cmd == "post":
